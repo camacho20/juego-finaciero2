@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace juefi2 {
+namespace juefi2.Views {
     
     
-    public partial class WebForm1 {
+    public partial class jairo {
     }
 }

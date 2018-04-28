@@ -6786,6 +6786,7 @@
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
+    <Content Include="Views\jairo.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -7293,7 +7294,6 @@
     <Content Include="Content\stilos\estiloadmin\dist\css\adminlte.min.css.map" />
     <Content Include="Content\stilos\estiloadmin\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\stilos\estiloadmin\plugins\input-mask\phone-codes\phone-codes.json" />
-    <Content Include="WebForm1.aspx" />
     <None Include="inicio.html" />
     <Content Include="Views\web.config" />
     <Content Include="Views\pagina_maestra\paginamaestra.Master" />
@@ -7334,6 +7334,13 @@
     </Compile>
     <Compile Include="Views\balance\balanceinicial.aspx.designer.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jairo.aspx.cs">
+      <DependentUpon>jairo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jairo.aspx.designer.cs">
+      <DependentUpon>jairo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
@@ -7376,13 +7383,6 @@
     </Compile>
     <Compile Include="Views\usuario\registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
