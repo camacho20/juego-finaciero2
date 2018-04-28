@@ -7293,6 +7293,7 @@
     <Content Include="Content\stilos\estiloadmin\dist\css\adminlte.min.css.map" />
     <Content Include="Content\stilos\estiloadmin\plugins\input-mask\phone-codes\phone-be.json" />
     <Content Include="Content\stilos\estiloadmin\plugins\input-mask\phone-codes\phone-codes.json" />
+    <Content Include="WebForm1.aspx" />
     <None Include="inicio.html" />
     <Content Include="Views\web.config" />
     <Content Include="Views\pagina_maestra\paginamaestra.Master" />
@@ -7375,6 +7376,13 @@
     </Compile>
     <Compile Include="Views\usuario\registro.aspx.designer.cs">
       <DependentUpon>registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
