@@ -136,11 +136,13 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
+         <li class="active"><a href="../usuario/principal.aspx"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
         <li><a href="../reglas/gestionarreglas.aspx"><i class="fa fa-pencil-square-o"></i> <span>Gestionar reglas</span></a></li>
         <li><a href="../reglas/gestionarpuc.aspx"><i class="fa  fa-usd"></i> <span>Plan de Cuentas</span></a></li>>
      <li><a href="../balance/balanceinicial.aspx"><i class="fa  fa-balance-scale"></i> <span>Balance General</span></a></li>
-      </ul>
+     <li><a href="../empresa/empresa.aspx"><i class="fa  fa-television"></i> <span>Empresa</span></a></li>
+
+            </ul>
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

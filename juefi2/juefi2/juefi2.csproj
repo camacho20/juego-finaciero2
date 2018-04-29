@@ -231,6 +231,11 @@
     <Content Include="Content\imagenes\calendar\september.jpg" />
     <Content Include="Content\imagenes\imagesinicio\1.jpg" />
     <Content Include="Content\imagenes\imagesinicio\fondo.JPG" />
+    <Content Include="Content\imagenes\imagesinicio\slider1.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider2.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider3.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider4.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider5.jpg" />
     <Content Include="Content\imagenes\imagesinicio\usuario.png" />
     <Content Include="Content\imagenes\images\search.png" />
     <Content Include="Content\imagenes\images\stars\1.png" />
