@@ -22,13 +22,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblefectivo;
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtefectivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtefectivo;
         
         /// <summary>
         /// Control lblcdt.
@@ -40,13 +40,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblcdt;
         
         /// <summary>
-        /// Control TextBox3.
+        /// Control txtcdt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtcdt;
         
         /// <summary>
         /// Control lbltitulos_de_descuento.
@@ -58,13 +58,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lbltitulos_de_descuento;
         
         /// <summary>
-        /// Control TextBox5.
+        /// Control txttitulos_de_descuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox txttitulos_de_descuento;
         
         /// <summary>
         /// Control lblaccione.
@@ -76,13 +76,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblaccione;
         
         /// <summary>
-        /// Control TextBox6.
+        /// Control txtaccione.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox txtaccione;
         
         /// <summary>
         /// Control lblcommodities.
@@ -94,13 +94,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblcommodities;
         
         /// <summary>
-        /// Control TextBox8.
+        /// Control txtcommodities.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox8;
+        protected global::System.Web.UI.WebControls.TextBox txtcommodities;
         
         /// <summary>
         /// Control lbldivisas.
@@ -112,13 +112,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lbldivisas;
         
         /// <summary>
-        /// Control TextBox10.
+        /// Control txtdivisas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox10;
+        protected global::System.Web.UI.WebControls.TextBox txtdivisas;
         
         /// <summary>
         /// Control lblcuentascobrar.
@@ -130,13 +130,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblcuentascobrar;
         
         /// <summary>
-        /// Control TextBox7.
+        /// Control txtcuentasporcobrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox txtcuentasporcobrar;
         
         /// <summary>
         /// Control lblmateriaprima.
@@ -148,13 +148,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblmateriaprima;
         
         /// <summary>
-        /// Control TextBox2.
+        /// Control txtmateriaprima.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox txtmateriaprima;
         
         /// <summary>
         /// Control lblproducterminado.
@@ -166,13 +166,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblproducterminado;
         
         /// <summary>
-        /// Control TextBox4.
+        /// Control txtproducterminado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtproducterminado;
         
         /// <summary>
         /// Control lbltotalactivos.
@@ -184,13 +184,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lbltotalactivos;
         
         /// <summary>
-        /// Control Label13.
+        /// Control lbltotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label13;
+        protected global::System.Web.UI.WebControls.Label lbltotal;
         
         /// <summary>
         /// Control btnEditar1.
@@ -220,202 +220,202 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Button btnCancelar1;
         
         /// <summary>
-        /// Control Label1.
+        /// Control lblconstruccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblconstruccion;
         
         /// <summary>
-        /// Control TextBox11.
+        /// Control txtconstruccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox11;
+        protected global::System.Web.UI.WebControls.TextBox txtconstruccion;
         
         /// <summary>
-        /// Control Label2.
+        /// Control lbldpre1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lbldpre1;
         
         /// <summary>
-        /// Control TextBox12.
+        /// Control txtdpre1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox12;
+        protected global::System.Web.UI.WebControls.TextBox txtdpre1;
         
         /// <summary>
-        /// Control Label3.
+        /// Control lblmaequind.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
+        protected global::System.Web.UI.WebControls.Label lblmaequind;
         
         /// <summary>
-        /// Control TextBox13.
+        /// Control txtmaequind.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox13;
+        protected global::System.Web.UI.WebControls.TextBox txtmaequind;
         
         /// <summary>
-        /// Control Label4.
+        /// Control lbldpre2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label lbldpre2;
         
         /// <summary>
-        /// Control TextBox14.
+        /// Control txtdepre2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox14;
+        protected global::System.Web.UI.WebControls.TextBox txtdepre2;
         
         /// <summary>
-        /// Control Label5.
+        /// Control lblmuequiofi.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label lblmuequiofi;
         
         /// <summary>
-        /// Control TextBox15.
+        /// Control txtmuequiofi.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox15;
+        protected global::System.Web.UI.WebControls.TextBox txtmuequiofi;
         
         /// <summary>
-        /// Control Label6.
+        /// Control lbldpre3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
+        protected global::System.Web.UI.WebControls.Label lbldpre3;
         
         /// <summary>
-        /// Control TextBox16.
+        /// Control txtdpre3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox16;
+        protected global::System.Web.UI.WebControls.TextBox txtdpre3;
         
         /// <summary>
-        /// Control Label8.
+        /// Control lblequicomput.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label lblequicomput;
         
         /// <summary>
-        /// Control TextBox18.
+        /// Control txtequicompu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox18;
+        protected global::System.Web.UI.WebControls.TextBox txtequicompu;
         
         /// <summary>
-        /// Control Label7.
+        /// Control lbldpre4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label7;
+        protected global::System.Web.UI.WebControls.Label lbldpre4;
         
         /// <summary>
-        /// Control TextBox17.
+        /// Control txtdpre4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox17;
+        protected global::System.Web.UI.WebControls.TextBox txtdpre4;
         
         /// <summary>
-        /// Control Label9.
+        /// Control lblvehiequitrans.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label9;
+        protected global::System.Web.UI.WebControls.Label lblvehiequitrans;
         
         /// <summary>
-        /// Control TextBox19.
+        /// Control txtvehiequitrans.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox19;
+        protected global::System.Web.UI.WebControls.TextBox txtvehiequitrans;
         
         /// <summary>
-        /// Control Label10.
+        /// Control lbldpre5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lbldpre5;
         
         /// <summary>
-        /// Control TextBox20.
+        /// Control txtdepre5.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox20;
+        protected global::System.Web.UI.WebControls.TextBox txtdepre5;
         
         /// <summary>
-        /// Control Label12.
+        /// Control lbltotalpro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label12;
+        protected global::System.Web.UI.WebControls.Label lbltotalpro;
         
         /// <summary>
-        /// Control Label11.
+        /// Control lbltotal2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label11;
+        protected global::System.Web.UI.WebControls.Label lbltotal2;
         
         /// <summary>
         /// Control btnEditar2.
@@ -445,94 +445,94 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Button btnCancelar2;
         
         /// <summary>
-        /// Control Label14.
+        /// Control lblrendicobrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label14;
+        protected global::System.Web.UI.WebControls.Label lblrendicobrar;
         
         /// <summary>
-        /// Control TextBox9.
+        /// Control txtrendicobrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox9;
+        protected global::System.Web.UI.WebControls.TextBox txtrendicobrar;
         
         /// <summary>
-        /// Control Label15.
+        /// Control lblpagoanticipado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label15;
+        protected global::System.Web.UI.WebControls.Label lblpagoanticipado;
         
         /// <summary>
-        /// Control TextBox21.
+        /// Control txtintepagoantipipado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox21;
+        protected global::System.Web.UI.WebControls.TextBox txtintepagoantipipado;
         
         /// <summary>
-        /// Control Label16.
+        /// Control lblsegupagaanti.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label16;
+        protected global::System.Web.UI.WebControls.Label lblsegupagaanti;
         
         /// <summary>
-        /// Control TextBox22.
+        /// Control txtsegupagannti.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox22;
+        protected global::System.Web.UI.WebControls.TextBox txtsegupagannti;
         
         /// <summary>
-        /// Control Label17.
+        /// Control lblanticipos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label17;
+        protected global::System.Web.UI.WebControls.Label lblanticipos;
         
         /// <summary>
-        /// Control TextBox23.
+        /// Control txtanticipos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox23;
+        protected global::System.Web.UI.WebControls.TextBox txtanticipos;
         
         /// <summary>
-        /// Control Label18.
+        /// Control lbltotalotrosactivos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label lbltotalotrosactivos;
         
         /// <summary>
-        /// Control Label19.
+        /// Control lbltotal3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label19;
+        protected global::System.Web.UI.WebControls.Label lbltotal3;
         
         /// <summary>
         /// Control btnEditar3.
@@ -562,22 +562,22 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Button btnCancelar3;
         
         /// <summary>
-        /// Control Label20.
+        /// Control lbltotalac.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label20;
+        protected global::System.Web.UI.WebControls.Label lbltotalac;
         
         /// <summary>
-        /// Control Label21.
+        /// Control lbltotaldeltotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label21;
+        protected global::System.Web.UI.WebControls.Label lbltotaldeltotal;
         
         /// <summary>
         /// Control Label22.
@@ -1120,12 +1120,12 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Button btnGuardar6;
         
         /// <summary>
-        /// Control btnCnacelar6.
+        /// Control btnCancelar6.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCnacelar6;
+        protected global::System.Web.UI.WebControls.Button btnCancelar6;
     }
 }

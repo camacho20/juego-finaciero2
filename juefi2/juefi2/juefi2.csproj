@@ -7314,12 +7314,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivosController.cs" />
     <Compile Include="Controllers\PucController.cs" />
     <Compile Include="Controllers\ReglaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\PucModel.cs" />
     <Compile Include="Models\ReglaModel.cs" />
