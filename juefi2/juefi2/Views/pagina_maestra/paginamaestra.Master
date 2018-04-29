@@ -232,7 +232,12 @@
 <script src="../../Content/stilos/estiloadmin/bower_components/moment/min/moment.min.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
+<script src="../../Content/stilos/estiloadmin/bower_components/moment/min/moment.min.js"></script>
+<script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
+
+
 <!-- Bootstrap WYSIHTML5 -->
 <script src="../../Content/stilos/estiloadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
@@ -247,7 +252,22 @@
 <script src="../../Content/stilos/estiloadmin/dist/js/demo.js"></script>
 
     <script src="../../Content/stilos/estilotab/main.js"></script>
-    
+
+     <script>
+    //Date picker
+    $('#datepicker').datepicker({
+      autoclose: true
+    })
+    //Colorpicker
+    $('.my-colorpicker1').colorpicker()
+    //color picker with addon
+    $('.my-colorpicker2').colorpicker()
+
+    //Timepicker
+    $('.timepicker').timepicker({
+      showInputs: false
+    })
+ </script>
 
 
 </body>

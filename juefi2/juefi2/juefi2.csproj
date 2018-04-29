@@ -6786,7 +6786,7 @@
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
-    <Content Include="Views\jairo.aspx" />
+    <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -7335,12 +7335,12 @@
     <Compile Include="Views\balance\balanceinicial.aspx.designer.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\jairo.aspx.cs">
-      <DependentUpon>jairo.aspx</DependentUpon>
+    <Compile Include="Views\empresa\empresa.aspx.cs">
+      <DependentUpon>empresa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\jairo.aspx.designer.cs">
-      <DependentUpon>jairo.aspx</DependentUpon>
+    <Compile Include="Views\empresa\empresa.aspx.designer.cs">
+      <DependentUpon>empresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
