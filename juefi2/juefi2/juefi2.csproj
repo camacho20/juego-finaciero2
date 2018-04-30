@@ -6792,6 +6792,7 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
+    <Content Include="Views\jugadas\compra_materia_prima.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -7348,6 +7349,13 @@
     </Compile>
     <Compile Include="Views\empresa\empresa.aspx.designer.cs">
       <DependentUpon>empresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\compra_materia_prima.aspx.cs">
+      <DependentUpon>compra_materia_prima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\compra_materia_prima.aspx.designer.cs">
+      <DependentUpon>compra_materia_prima.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
