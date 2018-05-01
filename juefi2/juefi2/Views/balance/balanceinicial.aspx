@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Balance General</title>
 
+      
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <section class="content-header">
@@ -53,8 +56,10 @@
                                     <div class="row">
                                         <div class="col-md-4 col-md-offset-2">
                                             <div class="input-group">
-                                                <asp:Label ID="lblefectivo" runat="server" Text="Efectivo :"></asp:Label>
-                                                <asp:TextBox ID="txtefectivo" runat="server" CssClass="form-control"></asp:TextBox>
+                                                
+                                               <asp:Label ID="lblefectivo" runat="server" Text="Efectivo :"></asp:Label>
+                                                <asp:Label ID="lblmostrar1" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtefectivo" runat="server" onkeydown="return validNumericos(event)"  CssClass="form-control"></asp:TextBox>
 
                                             </div>
 
@@ -64,21 +69,25 @@
 
 
                                             <div class="input-group">
-                                                <asp:Label ID="lblcdt" runat="server" Text="CDT"></asp:Label>
-                                                <asp:TextBox ID="txtcdt" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblcdt" runat="server" Text="CDT :"></asp:Label>
+                                                <asp:Label ID="lblmostrar2" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtcdt" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lbltitulos_de_descuento" runat="server" Text="Títulos de Descuento"></asp:Label>
-                                                <asp:TextBox ID="txttitulos_de_descuento" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbltitulos_de_descuento" runat="server" Text="Títulos de Descuento :"></asp:Label>
+                                                <asp:Label ID="lblmostrar3" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txttitulos_de_descuento" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblaccione" runat="server" Text="Acciones"></asp:Label>
-                                                <asp:TextBox ID="txtaccione" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblaccione" runat="server" Text="Acciones :"></asp:Label>
+                                                <asp:Label ID="lblmostrar4" runat="server" Text=""></asp:Label>
+                                                 <asp:TextBox ID="txtaccione" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
 
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblcommodities" runat="server" Text="Commodities"></asp:Label>
-                                                <asp:TextBox ID="txtcommodities" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblcommodities" runat="server" Text="Commodities :"></asp:Label>
+                                                <asp:Label ID="lblmostrar5" runat="server" Text=""></asp:Label>
+                                                 <asp:TextBox ID="txtcommodities" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
 
@@ -88,24 +97,28 @@
 
 
                                             <div class="input-group">
-                                                <asp:Label ID="lbldivisas" runat="server" Text="Divisas"></asp:Label>
-                                                <asp:TextBox ID="txtdivisas" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbldivisas" runat="server" Text="Divisas :"></asp:Label>
+                                                <asp:Label ID="lblmostrar6" runat="server" Text=""></asp:Label>  
+                                                <asp:TextBox ID="txtdivisas" onkeydown="return validNumericos(event)"  runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                             <div class="input-group">
-                                                <asp:Label ID="lblcuentascobrar" runat="server" Text="Cuentas por Cobrar:"></asp:Label>
-                                                <asp:TextBox ID="txtcuentasporcobrar" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblcuentascobrar" runat="server" Text="Cuentas por Cobrar :"></asp:Label>
+                                                <asp:Label ID="lblmostrar7" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtcuentasporcobrar" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                             <h4>Inventarios:</h4>
 
                                             <div class="input-group">
-                                                <asp:Label ID="lblmateriaprima" runat="server" Text="Materias Primas (20.000 unid)"></asp:Label>
-                                                <asp:TextBox ID="txtmateriaprima" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmateriaprima" runat="server" Text="Materias Primas (20.000 unid) :"></asp:Label>
+                                                <asp:Label ID="lblmostrar8" runat="server" Text=""></asp:Label>  
+                                                <asp:TextBox ID="txtmateriaprima" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblproducterminado" runat="server" Text="Prod. Terminados (10.000 unid)"></asp:Label>
-                                                <asp:TextBox ID="txtproducterminado" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblproducterminado" runat="server" Text="Prod. Terminados (10.000 unid) :"></asp:Label>
+                                                <asp:Label ID="lblmostrar9" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtproducterminado" onkeydown="return validNumericos(event)" runat="server" CssClass="form-control"></asp:TextBox>
 
                                             </div>
                                             <div class="input-group">
@@ -125,61 +138,73 @@
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="tab_2-2">
                                     <div class="row">
-                                        <div class="col-md-5 col-md-offset-1">
+                                        <div class="col-md-4 col-md-offset-2">
                                             <div class="input-group">
 
-                                                <asp:Label ID="lblconstruccion" runat="server" Text="Construcciones"></asp:Label>
-                                                <asp:TextBox ID="txtconstruccion" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblconstruccion" runat="server" Text="Construcciones :"></asp:Label>
+                                                <asp:Label ID="lblmostrar10" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtconstruccion" onkeydown="return validNumericos(event)"  runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lbldpre1" runat="server" Text="Depreciación Acumulada"></asp:Label>
-                                                <asp:TextBox ID="txtdpre1" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbldpre1" runat="server" Text="Depreciación Acumulada :"></asp:Label>
+                                                <asp:Label ID="lblmostrar11" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtdpre1" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblmaequind" runat="server" Text="Maquinarias y Equipo Industrial"></asp:Label>
-                                                <asp:TextBox ID="txtmaequind" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmaequind" runat="server" Text="Maquinarias y Equipo Industrial :"></asp:Label>
+                                                <asp:Label ID="lblmostrar12" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtmaequind" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
 
-                                                <asp:Label ID="lbldpre2" runat="server" Text="Depreciación Acumulada"></asp:Label>
-                                                <asp:TextBox ID="txtdepre2" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbldpre2" runat="server" Text="Depreciación Acumulada :"></asp:Label>
+                                                <asp:Label ID="lblmostrar13" runat="server" Text=""></asp:Label>
+                                                 <asp:TextBox ID="txtdepre2" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblmuequiofi" runat="server" Text="Muebles y Equipo de Oficina"></asp:Label>
-                                                <asp:TextBox ID="txtmuequiofi" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmuequiofi" runat="server" Text="Muebles y Equipo de Oficina :"></asp:Label>
+                                                <asp:Label ID="lblmostrar14" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtmuequiofi" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
 
+                                            </div>
+
+                                            <div class="input-group">
+
+                                                <asp:Label ID="lbldpre3" runat="server" Text="Depreciación Acumulada :"></asp:Label>
+                                                <asp:Label ID="lblmostrar15" runat="server" Text="Label"></asp:Label>
+                                                 <asp:TextBox ID="txtdpre3" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
 
 
 
                                         </div>
-                                        <div class="col-md-5 ">
+                                        <div class="col-md-4 ">
+                                            
                                             <div class="input-group">
-
-                                                <asp:Label ID="lbldpre3" runat="server" Text="Depreciación Acumulada"></asp:Label>
-                                                <asp:TextBox ID="txtdpre3" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblequicomput" runat="server" Text="Equipos de Comunic. y Comput. :"></asp:Label>
+                                                <asp:Label ID="lblmostrar16" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtequicompu" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblequicomput" runat="server" Text="Equipos de Comunic. y Comput."></asp:Label>
-                                                <asp:TextBox ID="txtequicompu" runat="server" CssClass="form-control"></asp:TextBox>
-                                            </div>
-                                            <div class="input-group">
-                                                <asp:Label ID="lbldpre4" runat="server" Text="Depreciación Acumulada"></asp:Label>
-                                                <asp:TextBox ID="txtdpre4" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbldpre4" runat="server" Text="Depreciación Acumulada :"></asp:Label>
+                                                <asp:Label ID="lblmostrar17" runat="server" Text=""></asp:Label>  
+                                                <asp:TextBox ID="txtdpre4" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                             <div class="input-group">
 
-                                                <asp:Label ID="lblvehiequitrans" runat="server" Text="Vehículos y Eq. de Transporte"></asp:Label>
-                                                <asp:TextBox ID="txtvehiequitrans" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblvehiequitrans" runat="server" Text="Vehículos y Eq. de Transporte :"></asp:Label>
+                                                <asp:Label ID="lblmostrar18" runat="server" Text=""></asp:Label>
+                                                <asp:TextBox ID="txtvehiequitrans" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lbldpre5" runat="server" Text="Depreciación Acumulada"></asp:Label>
-                                                <asp:TextBox ID="txtdepre5" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbldpre5" runat="server" Text="Depreciación Acumulada :"></asp:Label>
+                                                <asp:Label ID="lblmostrar19" runat="server" Text="Label"></asp:Label> 
+                                                <asp:TextBox ID="txtdepre5" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
 
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lbltotalpro" runat="server" Text="Total Prop., Planta y Equipo"></asp:Label>
+                                                <asp:Label ID="lbltotalpro" runat="server" Text="Total Prop., Planta y Equipo :"></asp:Label>
                                                 <br />
                                                 <asp:Label ID="lbltotal2" runat="server" Text=""></asp:Label>
                                             </div>
@@ -192,38 +217,42 @@
 
                                     </div>
                                     <div class=" box-footer">
-                                        <asp:Button ID="btnEditar2" runat="server" CssClass="btn btn-success" Text="Editar" />
-                                        <asp:Button ID="btnGuardar2" runat="server" CssClass="btn btn-primary" Text="Guardar" />
-                                        <asp:Button ID="btnCancelar2" runat="server" Text="Cancelar" CssClass="btn  btn-default" />
+                                        <asp:Button ID="btnEditar2" runat="server" CssClass="btn btn-success" OnClick="btnEditar2_Click" Text="Editar" />
+                                        <asp:Button ID="btnGuardar2" runat="server" CssClass="btn btn-primary" OnClick="btnGuardar2_Click" Text="Guardar" />
+                                        <asp:Button ID="btnCancelar2" runat="server" Text="Cancelar"  OnClick="btnCancelar2_Click" CssClass="btn  btn-default" />
                                     </div>
                                 </div>
                                 <!-- /.tab-pane -->
                                 <div class="tab-pane" id="tab_3-2">
                                     <div class="row">
-                                        <div class="col-md-5 col-md-offset-1">
+                                        <div class="col-md-4 col-md-offset-2">
                                             <div class="input-group">
-                                                <asp:Label ID="lblrendicobrar" runat="server" Text="Rendimientos Fcros por Cobrar"></asp:Label>
-                                                <asp:TextBox ID="txtrendicobrar" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblrendicobrar" runat="server" Text="Rendimientos Fcros por Cobrar :"></asp:Label>
+                                                <asp:Label ID="lblmostrar20" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtrendicobrar" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lblpagoanticipado" runat="server" Text="Intereses Pagados por Anticipado"></asp:Label>
-                                                <asp:TextBox ID="txtintepagoantipipado" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblpagoanticipado" runat="server" Text="Intereses Pagados por Anticipado :"></asp:Label>
+                                                <asp:Label ID="lblmostrar21" runat="server" Text="Label"></asp:Label>
+                                                 <asp:TextBox ID="txtintepagoantipipado" runat="server" onkeydown="return validNumericos(event)"  CssClass="form-control"></asp:TextBox>
 
                                             </div>
 
                                         </div>
-                                        <div class="col-md-5 ">
+                                        <div class="col-md-4 ">
                                             <div class="input-group">
-                                                <asp:Label ID="lblsegupagaanti" runat="server" Text="Seguros Pagados por Anticipado"></asp:Label>
-                                                <asp:TextBox ID="txtsegupagannti" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblsegupagaanti" runat="server" Text="Seguros Pagados por Anticipado :"></asp:Label>
+                                                <asp:Label ID="lblmostrar22" runat="server" Text="Label"></asp:Label>  
+                                                <asp:TextBox ID="txtsegupagannti" runat="server" onkeydown="return validNumericos(event)"  CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                             <div class="input-group">
-                                                <asp:Label ID="lblanticipos" runat="server" Text="Anticipos de Impuestos"></asp:Label>
-                                                <asp:TextBox ID="txtanticipos" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblanticipos" runat="server" Text="Anticipos de Impuestos :"></asp:Label>
+                                                <asp:Label ID="lblmostrar23" runat="server" Text="Label"></asp:Label> 
+                                                <asp:TextBox ID="txtanticipos" runat="server" onkeydown="return validNumericos(event)" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="lbltotalotrosactivos" runat="server" Text="Total Otros Activos"></asp:Label>
+                                                <asp:Label ID="lbltotalotrosactivos" runat="server" Text="Total Otros Activos :"></asp:Label>
                                                 <br />
                                                 <asp:Label ID="lbltotal3" runat="server" Text="42,563.000"></asp:Label>
                                             </div>
@@ -232,9 +261,9 @@
 
                                     </div>
                                     <div class=" box-footer">
-                                        <asp:Button ID="btnEditar3" runat="server" CssClass="btn btn-success" Text="Editar" />
-                                        <asp:Button ID="btnGuardar3" runat="server" CssClass="btn btn-primary" Text="Guardar" />
-                                        <asp:Button ID="btnCancelar3" runat="server" Text="Cancelar" CssClass="btn  btn-default" />
+                                        <asp:Button ID="btnEditar3" runat="server" OnClick="btnEditar3_Click" CssClass="btn btn-success" Text="Editar" />
+                                        <asp:Button ID="btnGuardar3" runat="server" OnClick="btnGuardar3_Click" CssClass="btn btn-primary" Text="Guardar" />
+                                        <asp:Button ID="btnCancelar3" runat="server" OnClick="btnCancelar3_Click" Text="Cancelar" CssClass="btn  btn-default" />
                                     </div>
                                 </div>
                                 <div class=" box-footer">
@@ -266,7 +295,7 @@
                                         <div class="col-md-5 col-md-offset-1">
                                             <div class="input-group">
                                                 <asp:Label ID="Label22" runat="server" Text="Proveedores"></asp:Label>
-                                                <asp:TextBox ID="TextBox24" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:TextBox ID="txtproveedor" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <h4>Obligaciones Bancarias:</h4>
 

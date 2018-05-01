@@ -22,6 +22,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblefectivo;
         
         /// <summary>
+        /// Control lblmostrar1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar1;
+        
+        /// <summary>
         /// Control txtefectivo.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblcdt;
+        
+        /// <summary>
+        /// Control lblmostrar2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar2;
         
         /// <summary>
         /// Control txtcdt.
@@ -58,6 +76,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lbltitulos_de_descuento;
         
         /// <summary>
+        /// Control lblmostrar3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar3;
+        
+        /// <summary>
         /// Control txttitulos_de_descuento.
         /// </summary>
         /// <remarks>
@@ -74,6 +101,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblaccione;
+        
+        /// <summary>
+        /// Control lblmostrar4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar4;
         
         /// <summary>
         /// Control txtaccione.
@@ -94,6 +130,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblcommodities;
         
         /// <summary>
+        /// Control lblmostrar5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar5;
+        
+        /// <summary>
         /// Control txtcommodities.
         /// </summary>
         /// <remarks>
@@ -110,6 +155,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldivisas;
+        
+        /// <summary>
+        /// Control lblmostrar6.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar6;
         
         /// <summary>
         /// Control txtdivisas.
@@ -130,6 +184,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblcuentascobrar;
         
         /// <summary>
+        /// Control lblmostrar7.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar7;
+        
+        /// <summary>
         /// Control txtcuentasporcobrar.
         /// </summary>
         /// <remarks>
@@ -148,6 +211,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblmateriaprima;
         
         /// <summary>
+        /// Control lblmostrar8.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar8;
+        
+        /// <summary>
         /// Control txtmateriaprima.
         /// </summary>
         /// <remarks>
@@ -164,6 +236,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblproducterminado;
+        
+        /// <summary>
+        /// Control lblmostrar9.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar9;
         
         /// <summary>
         /// Control txtproducterminado.
@@ -229,6 +310,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblconstruccion;
         
         /// <summary>
+        /// Control lblmostrar10.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar10;
+        
+        /// <summary>
         /// Control txtconstruccion.
         /// </summary>
         /// <remarks>
@@ -245,6 +335,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldpre1;
+        
+        /// <summary>
+        /// Control lblmostrar11.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar11;
         
         /// <summary>
         /// Control txtdpre1.
@@ -265,6 +364,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblmaequind;
         
         /// <summary>
+        /// Control lblmostrar12.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar12;
+        
+        /// <summary>
         /// Control txtmaequind.
         /// </summary>
         /// <remarks>
@@ -281,6 +389,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldpre2;
+        
+        /// <summary>
+        /// Control lblmostrar13.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar13;
         
         /// <summary>
         /// Control txtdepre2.
@@ -301,6 +418,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblmuequiofi;
         
         /// <summary>
+        /// Control lblmostrar14.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar14;
+        
+        /// <summary>
         /// Control txtmuequiofi.
         /// </summary>
         /// <remarks>
@@ -317,6 +443,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldpre3;
+        
+        /// <summary>
+        /// Control lblmostrar15.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar15;
         
         /// <summary>
         /// Control txtdpre3.
@@ -337,6 +472,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblequicomput;
         
         /// <summary>
+        /// Control lblmostrar16.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar16;
+        
+        /// <summary>
         /// Control txtequicompu.
         /// </summary>
         /// <remarks>
@@ -353,6 +497,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldpre4;
+        
+        /// <summary>
+        /// Control lblmostrar17.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar17;
         
         /// <summary>
         /// Control txtdpre4.
@@ -373,6 +526,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblvehiequitrans;
         
         /// <summary>
+        /// Control lblmostrar18.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar18;
+        
+        /// <summary>
         /// Control txtvehiequitrans.
         /// </summary>
         /// <remarks>
@@ -389,6 +551,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbldpre5;
+        
+        /// <summary>
+        /// Control lblmostrar19.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar19;
         
         /// <summary>
         /// Control txtdepre5.
@@ -454,6 +625,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblrendicobrar;
         
         /// <summary>
+        /// Control lblmostrar20.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar20;
+        
+        /// <summary>
         /// Control txtrendicobrar.
         /// </summary>
         /// <remarks>
@@ -470,6 +650,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblpagoanticipado;
+        
+        /// <summary>
+        /// Control lblmostrar21.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar21;
         
         /// <summary>
         /// Control txtintepagoantipipado.
@@ -490,6 +679,15 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label lblsegupagaanti;
         
         /// <summary>
+        /// Control lblmostrar22.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar22;
+        
+        /// <summary>
         /// Control txtsegupagannti.
         /// </summary>
         /// <remarks>
@@ -506,6 +704,15 @@ namespace juefi2.Views.balance {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblanticipos;
+        
+        /// <summary>
+        /// Control lblmostrar23.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblmostrar23;
         
         /// <summary>
         /// Control txtanticipos.
@@ -589,13 +796,13 @@ namespace juefi2.Views.balance {
         protected global::System.Web.UI.WebControls.Label Label22;
         
         /// <summary>
-        /// Control TextBox24.
+        /// Control txtproveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox24;
+        protected global::System.Web.UI.WebControls.TextBox txtproveedor;
         
         /// <summary>
         /// Control Label23.

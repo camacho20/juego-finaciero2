@@ -17,8 +17,18 @@ namespace juefi2.Controllers
             return actico.Consultaractivos();
         }
 
-
-
+        public bool editaracticorrientes(ActivosModel corrientesedi)
+        {
+            return actico.editaractivoscorrientes(corrientesedi);
+        }
+        public bool editaractipropie(ActivosModel proedi)
+        {
+            return actico.editaractivospropiedad(proedi);
+        }
+        public bool editaractiotros(ActivosModel otrosedi)
+        {
+            return actico.editaractivosotros(otrosedi);
+        }
 
     }
 }

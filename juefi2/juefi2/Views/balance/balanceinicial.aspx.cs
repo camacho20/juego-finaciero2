@@ -1,4 +1,5 @@
 ﻿using juefi2.Controllers;
+using juefi2.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,13 +13,19 @@ namespace juefi2.Views.balance
     public partial class balanceinicial : System.Web.UI.Page
     {
         ActivosController activos = new ActivosController();
+        ActivosModel acti = new ActivosModel();
+        PasivopatrimmonioController pasivos = new PasivopatrimmonioController();
+        PasivopatrimonioModel pasi = new PasivopatrimonioModel();
         public DataTable datablaConsulta = new DataTable();
         public DataRow darowConsulta;
+        public DataTable datablaConsulta2 = new DataTable();
+        public DataRow darowConsulta2;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //activos
-
-            inhabilitartexbox();
+            ocultartexbox();
             cargar_de_nuevo_activos();
 
             btnCancelar1.Enabled = false;
@@ -38,7 +45,7 @@ namespace juefi2.Views.balance
 
             btnCancelar6.Enabled = false;
             btnGuardar6.Enabled = false;
-
+          
 
         }
 
@@ -51,33 +58,33 @@ namespace juefi2.Views.balance
                 for (int i = 0; i < datablaConsulta.Rows.Count; i++)
                 {
                     darowConsulta = datablaConsulta.Rows[i];
-                    txtefectivo.Text = Convert.ToDecimal(darowConsulta["efectivo1"]).ToString("N1");
-                    txtcdt.Text = Convert.ToDecimal(darowConsulta["cdt"]).ToString("N1");
-                    txttitulos_de_descuento.Text = Convert.ToDecimal(darowConsulta["titudescuen"]).ToString("N1");
-                    txtaccione.Text = Convert.ToDecimal(darowConsulta["acciones1"]).ToString("N1");
-                    txtcommodities.Text = Convert.ToDecimal(darowConsulta["comoditi"]).ToString("N1");
-                    txtdivisas.Text = Convert.ToDecimal(darowConsulta["divisa"]).ToString("N1");
-                    txtcuentasporcobrar.Text = Convert.ToDecimal(darowConsulta["cuentaspor"]).ToString("N1");
-                    txtmateriaprima.Text = Convert.ToDecimal(darowConsulta["materprima"]).ToString("N1");
-                    txtproducterminado.Text = Convert.ToDecimal(darowConsulta["protermina"]).ToString("N1");
+                    lblmostrar1.Text = Convert.ToDecimal(darowConsulta["efectivo1"]).ToString("N1");
+                    lblmostrar2.Text = Convert.ToDecimal(darowConsulta["cdt"]).ToString("N1");
+                    lblmostrar3.Text = Convert.ToDecimal(darowConsulta["titudescuen"]).ToString("N1");
+                    lblmostrar4.Text = Convert.ToDecimal(darowConsulta["acciones1"]).ToString("N1");
+                    lblmostrar5.Text = Convert.ToDecimal(darowConsulta["comoditi"]).ToString("N1");
+                    lblmostrar6.Text = Convert.ToDecimal(darowConsulta["divisa"]).ToString("N1");
+                    lblmostrar7.Text = Convert.ToDecimal(darowConsulta["cuentaspor"]).ToString("N1");
+                    lblmostrar8.Text = Convert.ToDecimal(darowConsulta["materprima"]).ToString("N1");
+                    lblmostrar9.Text = Convert.ToDecimal(darowConsulta["protermina"]).ToString("N1");
                     lbltotal.Text = Convert.ToDecimal(darowConsulta["totaacticorri"]).ToString("N1");
 
-                    txtconstruccion.Text = Convert.ToDecimal(darowConsulta["construcc"]).ToString("N1");
-                    txtdpre1.Text = Convert.ToDecimal(darowConsulta["depreacu1"]).ToString("N1");
-                    txtmaequind.Text = Convert.ToDecimal(darowConsulta["maquiequipo"]).ToString("N1");
-                    txtdepre2.Text = Convert.ToDecimal(darowConsulta["depreacul2"]).ToString("N1");
-                    txtmuequiofi.Text = Convert.ToDecimal(darowConsulta["muebleequiofi"]).ToString("N1");
-                    txtdpre3.Text = Convert.ToDecimal(darowConsulta["depeacumu3"]).ToString("N1");
-                    txtequicompu.Text = Convert.ToDecimal(darowConsulta["equicomunicomp"]).ToString("N1");
-                    txtdpre4.Text = Convert.ToDecimal(darowConsulta["depreacumu4"]).ToString("N1");
-                    txtvehiequitrans.Text = Convert.ToDecimal(darowConsulta["transpor"]).ToString("N1");
-                    txtdepre5.Text = Convert.ToDecimal(darowConsulta["depreacumu5"]).ToString("N1");
+                    lblmostrar10.Text = Convert.ToDecimal(darowConsulta["construcc"]).ToString("N1");
+                    lblmostrar11.Text = Convert.ToDecimal(darowConsulta["depreacu1"]).ToString("N1");
+                    lblmostrar12.Text = Convert.ToDecimal(darowConsulta["maquiequipo"]).ToString("N1");
+                    lblmostrar13.Text = Convert.ToDecimal(darowConsulta["depreacul2"]).ToString("N1");
+                    lblmostrar14.Text = Convert.ToDecimal(darowConsulta["muebleequiofi"]).ToString("N1");
+                     lblmostrar15.Text = Convert.ToDecimal(darowConsulta["depeacumu3"]).ToString("N1");
+                    lblmostrar16.Text = Convert.ToDecimal(darowConsulta["equicomunicomp"]).ToString("N1");
+                    lblmostrar17.Text = Convert.ToDecimal(darowConsulta["depreacumu4"]).ToString("N1");
+                    lblmostrar18.Text = Convert.ToDecimal(darowConsulta["transpor"]).ToString("N1");
+                    lblmostrar19.Text = Convert.ToDecimal(darowConsulta["depreacumu5"]).ToString("N1");
                     lbltotal2.Text = Convert.ToDecimal(darowConsulta["totalproplanta"]).ToString("N1");
 
-                    txtrendicobrar.Text = Convert.ToDecimal(darowConsulta["rendimiento"]).ToString("N1");
-                    txtintepagoantipipado.Text = Convert.ToDecimal(darowConsulta["intepagadoanti"]).ToString("N1");
-                    txtsegupagannti.Text = Convert.ToDecimal(darowConsulta["seguanticipado"]).ToString("N1");
-                    txtanticipos.Text = Convert.ToDecimal(darowConsulta["antiimpues"]).ToString("N1");
+                    lblmostrar20.Text = Convert.ToDecimal(darowConsulta["rendimiento"]).ToString("N1");
+                    lblmostrar21.Text = Convert.ToDecimal(darowConsulta["intepagadoanti"]).ToString("N1");
+                    lblmostrar22.Text = Convert.ToDecimal(darowConsulta["seguanticipado"]).ToString("N1");
+                    lblmostrar23.Text = Convert.ToDecimal(darowConsulta["antiimpues"]).ToString("N1");
                     lbltotal3.Text = Convert.ToDecimal(darowConsulta["totalotrosactivos"]).ToString("N1");
 
 
@@ -88,7 +95,22 @@ namespace juefi2.Views.balance
 
             }//cerrar activos
 
+            //pasivos
+            datablaConsulta2 = pasivos.Consultarpasivo();
 
+            if (datablaConsulta2.Rows.Count > 0)
+            {
+
+                for (int i = 0; i < datablaConsulta2.Rows.Count; i++)
+                {
+                    darowConsulta2 = datablaConsulta2.Rows[i];
+
+
+                }
+
+               
+
+                }
 
         }
 
@@ -98,76 +120,132 @@ namespace juefi2.Views.balance
 
 
         //activos textbox
-        protected void inhabilitartexbox()
+        protected void ocultartexbox()
         {
-            txtefectivo.ReadOnly = true;
-            txtcdt.ReadOnly = true;
-            txttitulos_de_descuento.ReadOnly = true;
-            txtaccione.ReadOnly = true;
-            txtcommodities.ReadOnly = true;
-            txtdivisas.ReadOnly = true;
-            txtcuentasporcobrar.ReadOnly = true;
-            txtmateriaprima.ReadOnly = true;
-            txtproducterminado.ReadOnly = true;
+            txtefectivo.Visible = false;
+            txtcdt.Visible = false;
+            txttitulos_de_descuento.Visible = false;
+            txtaccione.Visible = false;
+            txtcommodities.Visible = false;
+            txtdivisas.Visible = false;
+            txtcuentasporcobrar.Visible = false;
+            txtmateriaprima.Visible = false;
+            txtproducterminado.Visible = false;
 
 
-            txtconstruccion.ReadOnly = true;
-            txtdpre1.ReadOnly = true;
-            txtmaequind.ReadOnly = true;
-            txtdepre2.ReadOnly = true;
-            txtmuequiofi.ReadOnly = true;
-            txtdpre3.ReadOnly = true;
-            txtequicompu.ReadOnly = true;
-            txtdpre4.ReadOnly = true;
-            txtvehiequitrans.ReadOnly = true;
-            txtdepre5.ReadOnly = true;
+            txtconstruccion.Visible = false;
+            txtdpre1.Visible = false;
+            txtmaequind.Visible = false;
+            txtdepre2.Visible = false;
+            txtmuequiofi.Visible = false;
+            txtdpre3.Visible = false;
+            txtequicompu.Visible = false;
+            txtdpre4.Visible = false;
+            txtvehiequitrans.Visible = false;
+            txtdepre5.Visible = false;
 
-            txtrendicobrar.ReadOnly = true;
-            txtintepagoantipipado.ReadOnly = true;
-            txtsegupagannti.ReadOnly = true;
-            txtanticipos.ReadOnly = true;
+            txtrendicobrar.Visible = false;
+            txtintepagoantipipado.Visible = false;
+            txtsegupagannti.Visible = false;
+            txtanticipos.Visible = false;
 
 
+            lblmostrar1.Visible = true;
+            lblmostrar2.Visible = true;
+            lblmostrar3.Visible = true;
+            lblmostrar4.Visible = true;
+            lblmostrar5.Visible = true;
+            lblmostrar6.Visible = true;
+            lblmostrar7.Visible = true;
+            lblmostrar8.Visible = true;
+            lblmostrar9.Visible = true;
+
+            lblmostrar10.Visible = true;
+            lblmostrar11.Visible = true;
+            lblmostrar12.Visible = true;
+            lblmostrar13.Visible = true;
+            lblmostrar14.Visible = true;
+            lblmostrar15.Visible = true;
+            lblmostrar16.Visible = true;
+            lblmostrar17.Visible = true;
+            lblmostrar18.Visible = true;
+            lblmostrar19.Visible = true;
+
+            lblmostrar20.Visible = true;
+            lblmostrar21.Visible = true;
+            lblmostrar22.Visible = true;
+            lblmostrar23.Visible = true;
+
+        }
+
+        protected void mostrartextboxcorrientes()
+        {
+
+            txtefectivo.Visible = true;
+            txtcdt.Visible = true;
+            txttitulos_de_descuento.Visible = true;
+            txtaccione.Visible = true;
+            txtcommodities.Visible = true;
+            txtdivisas.Visible = true;
+            txtcuentasporcobrar.Visible = true;
+            txtmateriaprima.Visible = true;
+            txtproducterminado.Visible = true;
+
+            lblmostrar1.Visible = false;
+            lblmostrar2.Visible = false;
+            lblmostrar3.Visible = false;
+            lblmostrar4.Visible = false;
+            lblmostrar5.Visible = false;
+            lblmostrar6.Visible = false;
+            lblmostrar7.Visible = false;
+            lblmostrar8.Visible = false;
+            lblmostrar9.Visible = false;
 
 
 
 
 
         }
-
-        protected void habilitartextboxcorrientes()
+        protected void mostrartextboxpropiedad()
         {
 
-            txtefectivo.ReadOnly = false;
-            txtcdt.ReadOnly = false;
-            txttitulos_de_descuento.ReadOnly = false;
-            txtaccione.ReadOnly = false;
-            txtcommodities.ReadOnly = false;
-            txtdivisas.ReadOnly = false;
-            txtcuentasporcobrar.ReadOnly = false;
-            txtmateriaprima.ReadOnly = false;
-            txtproducterminado.ReadOnly = false;
+            txtconstruccion.Visible = true;
+            txtdpre1.Visible = true;
+            txtmaequind.Visible = true;
+            txtdepre2.Visible = true;
+            txtmuequiofi.Visible = true;
+            txtdpre3.Visible = true;
+            txtequicompu.Visible = true;
+            txtdpre4.Visible = true;
+            txtvehiequitrans.Visible = true;
+            txtdepre5.Visible = true;
+
+            lblmostrar10.Visible = false;
+            lblmostrar11.Visible = false;
+            lblmostrar12.Visible = false;
+            lblmostrar13.Visible = false;
+            lblmostrar14.Visible = false;
+            lblmostrar15.Visible = false;
+            lblmostrar16.Visible = false;
+            lblmostrar17.Visible = false;
+            lblmostrar18.Visible = false;
+            lblmostrar19.Visible = false;
+
+
+
         }
-        protected void habilitartextboxpropiedad()
+        protected void mostrartextboxotrosactivos()
         {
+            txtrendicobrar.Visible = true;
+            txtintepagoantipipado.Visible = true;
+            txtsegupagannti.Visible = true;
+            txtanticipos.Visible = true;
 
-            txtconstruccion.ReadOnly = false;
-            txtdpre1.ReadOnly = false;
-            txtmaequind.ReadOnly = false;
-            txtdepre2.ReadOnly = false;
-            txtmuequiofi.ReadOnly = false;
-            txtdpre3.ReadOnly = false;
-            txtequicompu.ReadOnly = false;
-            txtdpre4.ReadOnly = false;
-            txtvehiequitrans.ReadOnly = false;
-            txtdepre5.ReadOnly = false;
-        }
-        protected void habilitartextboxotrosactivos()
-        {
-            txtrendicobrar.ReadOnly = false;
-            txtintepagoantipipado.ReadOnly = false;
-            txtsegupagannti.ReadOnly = false;
-            txtanticipos.ReadOnly = false;
+            lblmostrar20.Visible = false;
+            lblmostrar21.Visible = false;
+            lblmostrar22.Visible = false;
+            lblmostrar23.Visible = false;
+
         }
         //cerrrar activos textbox
 
@@ -175,7 +253,10 @@ namespace juefi2.Views.balance
         //activos correintes
         protected void btnEditar1_Click(object sender, EventArgs e)
         {
-            habilitartextboxcorrientes();
+
+            mostrartextboxcorrientes();
+
+
             btnCancelar1.Enabled = true;
             btnGuardar1.Enabled = true;
             btnEditar1.Enabled = false;
@@ -184,24 +265,151 @@ namespace juefi2.Views.balance
         protected void btnCancelar1_Click(object sender, EventArgs e)
         {
             btnEditar1.Enabled = true;
-            inhabilitartexbox();
+            ocultartexbox();
 
         }
 
         protected void btnGuardar1_Click(object sender, EventArgs e)
+
         {
-            btnCancelar1.Enabled = false;
-            btnGuardar1.Enabled = false;
-            btnEditar1.Enabled = true;
-            inhabilitartexbox();
+           
+                if (txtefectivo.Text=="" ||  txtcdt.Text=="" ||
+                txttitulos_de_descuento.Text==""|| txtaccione.Text==""||
+                txtcommodities.Text==""||  txtdivisas.Text==""||
+                txtcuentasporcobrar.Text==""|| txtmateriaprima.Text==""||
+                txtproducterminado.Text=="" )
+                {
+
+                    Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                    return;
+                }
+
+                acti.efectivo = Convert.ToDecimal(txtefectivo.Text);
+                acti.cdt = Convert.ToDecimal(txtcdt.Text);
+                acti.titulos_descuento = Convert.ToDecimal(txttitulos_de_descuento.Text);
+                acti.acciones = Convert.ToDecimal(txtaccione.Text);
+                acti.commodities = Convert.ToDecimal(txtcommodities.Text);
+                acti.divisas = Convert.ToDecimal(txtdivisas.Text);
+                acti.cuentas_por_cobrar = Convert.ToDecimal(txtcuentasporcobrar.Text);
+                acti.materia_prima = Convert.ToDecimal(txtmateriaprima.Text);
+                acti.prod_terminado = Convert.ToDecimal(txtproducterminado.Text);
+
+                activos.editaracticorrientes(acti);
+
+
+
+
+                btnCancelar1.Enabled = false;
+                btnGuardar1.Enabled = false;
+              btnEditar1.Enabled = true;
+            ocultartexbox();
+                cargar_de_nuevo_activos();
+            
+        }
+        //activos plantas
+
+        protected void btnCancelar2_Click(object sender, EventArgs e)
+        {
+
+            btnEditar2.Enabled = true;
+            ocultartexbox();
+
+        }
+        protected void btnEditar2_Click(object sender, EventArgs e)
+        {
+            mostrartextboxpropiedad();
+            btnCancelar2.Enabled = true;
+            btnGuardar2.Enabled = true;
+            btnEditar2.Enabled = false;
+        }
+
+        protected void btnGuardar2_Click(object sender, EventArgs e)
+        {
+            if (txtconstruccion.Text==""|| txtdpre1.Text==""|| txtmaequind.Text==""||txtdepre2.Text==""||
+            txtmuequiofi.Text==""|| txtdpre3.Text==""|| txtequicompu.Text==""||txtdpre4.Text==""||
+            txtvehiequitrans.Text==""||txtdepre5.Text=="")
+            {
+
+                Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                return;
+            }
+
+            acti.construcciones = Convert.ToDecimal(txtconstruccion.Text);
+            acti.depreciacion_acomulada_1 = Convert.ToDecimal(txtdpre1.Text);
+            acti.maquinaria_equipo = Convert.ToDecimal(txtmaequind.Text);
+            acti.depreciacion_acomulada_2 = Convert.ToDecimal(txtdepre2.Text);
+            acti.muebles_equipo_oficina = Convert.ToDecimal(txtmuequiofi.Text);
+            acti.depreciacion_acomulada_3 = Convert.ToDecimal(txtdpre3.Text);
+            acti.equipos_comunicacion_computo = Convert.ToDecimal(txtequicompu.Text);
+            acti.depreciacion_acomulada_4 = Convert.ToDecimal(txtdpre4.Text);
+            acti.vehiculo_eq_trasnporte = Convert.ToDecimal(txtvehiequitrans.Text);
+            acti.depreciacion_acomulada_5 = Convert.ToDecimal(txtdepre5.Text);
+
+
+            activos.editaractipropie(acti);
+
+
+
+
+            btnCancelar2.Enabled = false;
+            btnGuardar2.Enabled = false;
+            btnEditar2.Enabled = true;
+            ocultartexbox();
             cargar_de_nuevo_activos();
+
+
+        }
+
+        //otros activos
+
+        protected void btnCancelar3_Click(object sender, EventArgs e)
+        {
+            btnEditar3.Enabled = true;
+            ocultartexbox();
+
+
+        }
+        protected void btnEditar3_Click(object sender, EventArgs e)
+        {
+            mostrartextboxotrosactivos();
+            btnCancelar3.Enabled = true;
+            btnGuardar3.Enabled = true;
+            btnEditar3.Enabled = false;
+        }
+
+        protected void btnGuardar3_Click(object sender, EventArgs e)
+        {
+
+            if (txtrendicobrar.Text==""|| txtintepagoantipipado.Text==""||txtsegupagannti.Text==""||txtanticipos.Text=="")
+            {
+
+                Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                return;
+            }
+
+            acti.rendimiento_fcros = Convert.ToDecimal(txtrendicobrar.Text);
+            acti.intereses_pagados_anticipado = Convert.ToDecimal(txtintepagoantipipado.Text);
+            acti.seguro_pagado_anticipado = Convert.ToDecimal(txtsegupagannti.Text);
+            acti.anticipo_impuestos = Convert.ToDecimal(txtanticipos.Text);
+
+
+            activos.editaractiotros(acti);
+            btnCancelar3.Enabled = false;
+            btnGuardar3.Enabled = false;
+            btnEditar3.Enabled = true;
+            ocultartexbox();
+            cargar_de_nuevo_activos();
+
         }
 
 
 
+        //pasivos
 
-        //activos plantas
-        //otros activos
+
+       
+      
+
 
 
 
