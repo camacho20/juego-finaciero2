@@ -106,6 +106,8 @@ namespace juefi2.Views.balance
                     darowConsulta2 = datablaConsulta2.Rows[i];
 
 
+
+
                 }
 
                
