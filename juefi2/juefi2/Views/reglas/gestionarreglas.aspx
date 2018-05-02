@@ -149,7 +149,20 @@
       
          <li><a href="../balance/balanceinicial.aspx"><i class="fa  fa-balance-scale"></i> <span>Balance General</span></a></li>
        <li><a href="../empresa/empresa.aspx"><i class="fa  fa-television"></i> <span>Empresa</span></a></li>
+           <li><a href="../proveedores/proveedores.aspx"><i class="fa   fa-cart-arrow-down"></i> <span>Proveedores</span></a></li>
+       
 
+ <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Jugadas</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="../jugadas/compra_materia_prima.aspx"><i class="fa fa-circle-o"></i>Compra de Materia Prima </a></li>
+             </ul>
+        </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

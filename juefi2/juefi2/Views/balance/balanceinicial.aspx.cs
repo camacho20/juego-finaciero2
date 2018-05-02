@@ -529,8 +529,7 @@ namespace juefi2.Views.balance
             lblpasivos15.Visible = false;
             lblpasivos16.Visible = false;
             lblpasivos17.Visible = false;
-
-
+            
 
 
 
@@ -580,25 +579,25 @@ namespace juefi2.Views.balance
                 return;
             }
 
-            pasi.proveedores = txtproveedor.Text;
-            pasi.moneda_kt = txtmonedanakt.Text;
-            pasi.moneda_af = txtmonedanaf.Text;
-            pasi.moneda_extranjera = txtmonextra.Text;
-            pasi.gastos_causados_pagar = txtgastosxpagar.Text;
-            pasi.aportes_parafiscales = txtaporparafis.Text;
-            pasi.fondos_pension = txtfonpensiones.Text;
-            pasi.seg_social_riesgos = txtsocialres.Text;
-            pasi.pimpuestos_renta = txtimpusrenta.Text;
-            pasi.impuesto_industria_comercio = txtinducomer.Text;
-            pasi.iva_pagar = txtiva.Text;
-            pasi.retefuente_pagar = txtfuporpagar.Text;
-            pasi.reteica_pagar = txticapagar.Text;
-            pasi.intereses_causados_pagar = txtintercapagar.Text;
-            pasi.ingresos_recibidos_anticipado = txtinrecianti.Text;
-            pasi.cesantias = txtcesantia.Text;
-            pasi.intereses_cesantias = txtintcesan.Text;
+            pasi.proveedores = Convert.ToDecimal(txtproveedor.Text);
+            pasi.moneda_kt = Convert.ToDecimal(txtmonedanakt.Text);
+            pasi.moneda_af = Convert.ToDecimal(txtmonedanaf.Text);
+            pasi.moneda_extranjera = Convert.ToDecimal(txtmonextra.Text);
+            pasi.gastos_causados_pagar = Convert.ToDecimal(txtgastosxpagar.Text);
+            pasi.aportes_parafiscales = Convert.ToDecimal(txtaporparafis.Text);
+            pasi.fondos_pension = Convert.ToDecimal(txtfonpensiones.Text);
+            pasi.seg_social_riesgos = Convert.ToDecimal(txtsocialres.Text);
+            pasi.pimpuestos_renta = Convert.ToDecimal(txtimpusrenta.Text);
+            pasi.impuesto_industria_comercio = Convert.ToDecimal(txtinducomer.Text);
+            pasi.iva_pagar = Convert.ToDecimal(txtiva.Text);
+            pasi.retefuente_pagar = Convert.ToDecimal(txtfuporpagar.Text);
+            pasi.reteica_pagar = Convert.ToDecimal(txticapagar.Text);
+            pasi.intereses_causados_pagar = Convert.ToDecimal(txtintercapagar.Text);
+            pasi.ingresos_recibidos_anticipado = Convert.ToDecimal(txtinrecianti.Text);
+            pasi.cesantias = Convert.ToDecimal(txtcesantia.Text);
+            pasi.intereses_cesantias = Convert.ToDecimal(txtintcesan.Text);
 
-            
+            pasivos.editarpasicorrientes(pasi);
 
 
 
@@ -608,10 +607,53 @@ namespace juefi2.Views.balance
             btnCancelar.Enabled = false;
             btnGuardar4.Enabled = false;
             btnEditar4.Enabled = true;
-            ocultartexbox();
+            ocultartexboxpasi();
             cargar_de_nuevo_activos();
         }
+        //largo plazo
 
-        
+        protected void btnCancelar5_Click(object sender, EventArgs e)
+        {
+            btnEditar5.Enabled = true;
+            ocultartexboxpasi();
+        }
+
+        protected void btnEditar5_Click(object sender, EventArgs e)
+        {
+            mostrartextboxpasivolargoplazo();
+            btnCancelar5.Enabled = true;
+            btnGuardar5.Enabled = true;
+            btnEditar5.Enabled = false;
+        }
+
+        protected void btnGuardar5_Click(object sender, EventArgs e)
+        {
+            if (txtmonnaaf.Text == "" || txtmonextran2.Text=="")
+            {
+
+                Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                return;
+            }
+
+            pasi.moneda_nacional_af = Convert.ToDecimal(txtmonnaaf.Text);
+            pasi.modena_extranjera_2 = Convert.ToDecimal(txtmonextran2.Text);
+
+            pasivos.editarpasilargo(pasi);
+
+            btnCancelar5.Enabled = false;
+            btnGuardar5.Enabled = false;
+            btnEditar5.Enabled = true;
+            ocultartexboxpasi();
+            cargar_de_nuevo_activos();
+
+
+
+        }
+
+       
+
+
+     
+
     }
 }

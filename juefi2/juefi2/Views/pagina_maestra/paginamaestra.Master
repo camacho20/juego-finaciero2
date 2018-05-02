@@ -172,7 +172,9 @@
           <li><a href="../reglas/gestionarpuc.aspx"><i class="fa  fa-usd"></i> <span>Plan de Cuentas</span></a></li>
        <li><a href="../balance/balanceinicial.aspx"><i class="fa  fa-balance-scale"></i> <span>Balance General</span></a></li>
           <li><a href="../empresa/empresa.aspx"><i class="fa  fa-television"></i> <span>Empresa</span></a></li>
-        <li><a href="../proveedores/proveedoress.aspx"><i class="fa   fa-cart-arrow-down"></i> <span>Proveedores</span></a></li>
+        <li><a href="../proveedores/proveedores.aspx"><i class="fa   fa-cart-arrow-down"></i> <span>Proveedores</span></a></li>
+       
+
  <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Jugadas</span>

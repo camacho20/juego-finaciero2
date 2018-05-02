@@ -17,5 +17,19 @@ namespace juefi2.Controllers
             return pasivo.Consultaractivos();
         }
 
+        public bool editarpasicorrientes(PasivopatrimonioModel pasicorrientesedi)
+        {
+            return pasivo.editarpasivoscorrientes(pasicorrientesedi);
+        }
+        public bool editarpasilargo(PasivopatrimonioModel pasilargoedi)
+        {
+            return pasivo.editarpasivoslargoplazo(pasilargoedi);
+        }
+        public bool editarpatrimonio(PasivopatrimonioModel patriedi)
+        {
+            return pasivo.editarpatrimonio(patriedi);
+        }
+
+
     }
 }

@@ -435,9 +435,9 @@
 
                                     </div>
                                     <div class=" box-footer">
-                                        <asp:Button ID="btnEditar5" runat="server" CssClass="btn btn-success" Text="Editar" />
-                                        <asp:Button ID="btnGuardar5" runat="server" CssClass="btn btn-primary" Text="Guardar" />
-                                        <asp:Button ID="btnCancelar5" runat="server" Text="Cancelar" CssClass="btn  btn-default" />
+                                        <asp:Button ID="btnEditar5" runat="server" CssClass="btn btn-success" OnClick="btnEditar5_Click" Text="Editar" />
+                                        <asp:Button ID="btnGuardar5" runat="server" CssClass="btn btn-primary" OnClick="btnGuardar5_Click" Text="Guardar" />
+                                        <asp:Button ID="btnCancelar5" runat="server" Text="Cancelar"   OnClick="btnCancelar5_Click" CssClass="btn  btn-default" />
                                     </div>
                                 </div>
                                 <!-- /.tab-pane -->
