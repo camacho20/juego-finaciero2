@@ -26,6 +26,7 @@ namespace juefi2.Views.balance
         {
             //activos
             ocultartexbox();
+            ocultartexboxpasi();
             cargar_de_nuevo_activos();
 
             btnCancelar1.Enabled = false;
@@ -105,8 +106,35 @@ namespace juefi2.Views.balance
                 {
                     darowConsulta2 = datablaConsulta2.Rows[i];
 
+                    lblpasivo1.Text = Convert.ToDecimal(darowConsulta2["proveedor"]).ToString("N1");
+                    lblpasivo2.Text = Convert.ToDecimal(darowConsulta2["monedamk"]).ToString("N1");
+                    lblpasivo3.Text = Convert.ToDecimal(darowConsulta2["monedaf"]).ToString("N1");
+                    lblpasivo4.Text = Convert.ToDecimal(darowConsulta2["monedaextran"]).ToString("N1");
+                    lblpasivos5.Text = Convert.ToDecimal(darowConsulta2["gastocausa"]).ToString("N1");
+                    lblpasivos6.Text = Convert.ToDecimal(darowConsulta2["aporparais"]).ToString("N1");
+                    lblpasivos7.Text = Convert.ToDecimal(darowConsulta2["fonpen"]).ToString("N1");
+                    lblpasivos8.Text = Convert.ToDecimal(darowConsulta2["segsocial"]).ToString("N1");
+                    lblpasivos9.Text = Convert.ToDecimal(darowConsulta2["impurenta"]).ToString("N1");
 
 
+                    lblpasivos10.Text = Convert.ToDecimal(darowConsulta2["impuinducomer"]).ToString("N1");
+                    lblpasivos11.Text = Convert.ToDecimal(darowConsulta2["ivapagar"]).ToString("N1");
+                    lblpasivos12.Text = Convert.ToDecimal(darowConsulta2["reteuente"]).ToString("N1");
+                    lblpasivos13.Text = Convert.ToDecimal(darowConsulta2["reteica"]).ToString("N1");
+                    lblpasivos14.Text = Convert.ToDecimal(darowConsulta2["intercaus"]).ToString("N1");
+                    lblpasivos15.Text = Convert.ToDecimal(darowConsulta2["ingrereanti"]).ToString("N1");
+                    lblpasivos16.Text = Convert.ToDecimal(darowConsulta2["cesantia"]).ToString("N1");
+                    lblpasivos17.Text = Convert.ToDecimal(darowConsulta2["intecesantias"]).ToString("N1");
+
+
+                    lblpasivos18.Text = Convert.ToDecimal(darowConsulta2["monenaf"]).ToString("N1");
+                    lblpasivos19.Text = Convert.ToDecimal(darowConsulta2["monextra"]).ToString("N1");
+
+
+                    lblpasivos20.Text = Convert.ToDecimal(darowConsulta2["capipagado"]).ToString("N1");
+                    lblpasivos21.Text = Convert.ToDecimal(darowConsulta2["reselegal"]).ToString("N1");
+                    lblpasivos22.Text = Convert.ToDecimal(darowConsulta2["utireteni"]).ToString("N1");
+                  
 
                 }
 
@@ -408,12 +436,182 @@ namespace juefi2.Views.balance
 
         //pasivos
 
+        protected void ocultartexboxpasi()
+        {
+            txtproveedor.Visible = false;
+            txtmonedanakt.Visible = false;
+            txtmonedanaf.Visible = false;
+            txtmonextra.Visible = false;
+            txtgastosxpagar.Visible = false;
+            txtaporparafis.Visible = false;
+            txtfonpensiones.Visible = false;
+            txtsocialres.Visible = false;
+            txtimpusrenta.Visible = false;
+            txtinducomer.Visible = false;
+            txtiva.Visible = false;
+            txtfuporpagar.Visible = false;
+            txticapagar.Visible = false;
+            txtintercapagar.Visible = false;
+            txtinrecianti.Visible = false;
+            txtcesantia.Visible = false;
+            txtintcesan.Visible = false;
+            txtmonnaaf.Visible = false;
+            txtmonextran2.Visible = false;
+
+
+            lblpasivo1.Visible = true;
+            lblpasivo2.Visible = true;
+            lblpasivo3.Visible = true;
+            lblpasivo4.Visible = true;
+            lblpasivos5.Visible = true;
+            lblpasivos6.Visible = true;
+            lblpasivos7.Visible = true;
+            lblpasivos8.Visible = true;
+            lblpasivos9.Visible = true;
+
+
+            lblpasivos10.Visible = true;
+            lblpasivos11.Visible = true;
+            lblpasivos12.Visible = true;
+            lblpasivos13.Visible = true;
+            lblpasivos14.Visible = true;
+            lblpasivos15.Visible = true;
+            lblpasivos16.Visible = true;
+            lblpasivos17.Visible = true;
+
+
+            lblpasivos18.Visible = true;
+            lblpasivos19.Visible = true;
+
+
+
+
+        }
+
+
+        protected void mostrartextboxpasivoscorrientes()
+        {
+
+            txtproveedor.Visible = true;
+            txtmonedanakt.Visible = true;
+            txtmonedanaf.Visible = true;
+            txtmonextra.Visible = true;
+            txtgastosxpagar.Visible = true;
+            txtaporparafis.Visible = true;
+            txtfonpensiones.Visible = true;
+            txtsocialres.Visible = true;
+            txtimpusrenta.Visible = true;
+            txtinducomer.Visible = true;
+            txtiva.Visible = true;
+            txtfuporpagar.Visible = true;
+            txticapagar.Visible = true;
+            txtintercapagar.Visible = true;
+            txtinrecianti.Visible = true;
+            txtcesantia.Visible = true;
+            txtintcesan.Visible = true;
+
+            lblpasivo1.Visible = false;
+            lblpasivo2.Visible = false;
+            lblpasivo3.Visible = false;
+            lblpasivo4.Visible = false;
+            lblpasivos5.Visible = false;
+            lblpasivos6.Visible = false;
+            lblpasivos7.Visible = false;
+            lblpasivos8.Visible = false;
+            lblpasivos9.Visible = false;
+
+
+            lblpasivos10.Visible = false;
+            lblpasivos11.Visible = false;
+            lblpasivos12.Visible = false;
+            lblpasivos13.Visible = false;
+            lblpasivos14.Visible = false;
+            lblpasivos15.Visible = false;
+            lblpasivos16.Visible = false;
+            lblpasivos17.Visible = false;
+
+
+
+
+
+        }
+
+
+        protected void mostrartextboxpasivolargoplazo()
+        {
+
+            txtmonextran2.Visible = true;
+            txtmonnaaf.Visible = true;
+
+            lblmostrar18.Visible = false;
+            lblmostrar19.Visible = false;
+          
+
+        }
+
 
        
-      
+
+
+        protected void btnCancelar_Click(object sender, EventArgs e)
+        {
+            btnEditar4.Enabled = true;
+            ocultartexboxpasi();
+
+        }
+
+        protected void btnEditar4_Click(object sender, EventArgs e)
+        {
+            mostrartextboxpasivoscorrientes();
+            btnCancelar.Enabled = true;
+            btnGuardar4.Enabled = true;
+            btnEditar4.Enabled = false;
+        }
+
+        protected void btnGuardar4_Click(object sender, EventArgs e)
+        {
+            if (txtproveedor.Text==""||  txtmonedanakt.Text==""|| txtmonedanaf.Text==""|| txtmonextra.Text==""||txtgastosxpagar.Text==""||
+            txtaporparafis.Text==""|| txtfonpensiones.Text==""|| txtsocialres.Text==""||txtimpusrenta.Text==""||txtinducomer.Text==""||
+            txtiva.Text==""||txtfuporpagar.Text==""||txticapagar.Text==""||txtintercapagar.Text==""||txtinrecianti.Text==""||
+            txtcesantia.Text==""||txtintcesan.Text=="")
+            {
+
+                Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                return;
+            }
+
+            pasi.proveedores = txtproveedor.Text;
+            pasi.moneda_kt = txtmonedanakt.Text;
+            pasi.moneda_af = txtmonedanaf.Text;
+            pasi.moneda_extranjera = txtmonextra.Text;
+            pasi.gastos_causados_pagar = txtgastosxpagar.Text;
+            pasi.aportes_parafiscales = txtaporparafis.Text;
+            pasi.fondos_pension = txtfonpensiones.Text;
+            pasi.seg_social_riesgos = txtsocialres.Text;
+            pasi.pimpuestos_renta = txtimpusrenta.Text;
+            pasi.impuesto_industria_comercio = txtinducomer.Text;
+            pasi.iva_pagar = txtiva.Text;
+            pasi.retefuente_pagar = txtfuporpagar.Text;
+            pasi.reteica_pagar = txticapagar.Text;
+            pasi.intereses_causados_pagar = txtintercapagar.Text;
+            pasi.ingresos_recibidos_anticipado = txtinrecianti.Text;
+            pasi.cesantias = txtcesantia.Text;
+            pasi.intereses_cesantias = txtintcesan.Text;
+
+            
 
 
 
 
+
+            activos.editaractiotros(acti);
+            btnCancelar.Enabled = false;
+            btnGuardar4.Enabled = false;
+            btnEditar4.Enabled = true;
+            ocultartexbox();
+            cargar_de_nuevo_activos();
+        }
+
+        
     }
 }

@@ -294,46 +294,54 @@
                                     <div class="row">
                                         <div class="col-md-5 col-md-offset-1">
                                             <div class="input-group">
-                                                <asp:Label ID="Label22" runat="server" Text="Proveedores"></asp:Label>
-                                                <asp:TextBox ID="txtproveedor" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblproveedor" runat="server" Text="Proveedores"></asp:Label>
+                                                <asp:Label ID="lblpasivo1" runat="server" Text="Label"></asp:Label>
+                                                  <asp:TextBox ID="txtproveedor" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <h4>Obligaciones Bancarias:</h4>
 
                                             <div class="input-group">
-                                                <asp:Label ID="Label23" runat="server" Text="Moneda Nacional (KT)"></asp:Label>
-                                                <asp:TextBox ID="TextBox25" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmonedanakt" runat="server" Text="Moneda Nacional (KT)"></asp:Label>
+                                                <asp:Label ID="lblpasivo2" runat="server" Text="Label"></asp:Label>
+                                                  <asp:TextBox ID="txtmonedanakt" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label24" runat="server" Text="Moneda Nacional (AF)"></asp:Label>
-                                                <asp:TextBox ID="TextBox26" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmonedanaf" runat="server" Text="Moneda Nacional (AF)"></asp:Label>
+                                                <asp:Label ID="lblpasivo3" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtmonedanaf" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label25" runat="server" Text="Moneda Extranjera"></asp:Label>
-                                                <asp:TextBox ID="TextBox27" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmonextra" runat="server" Text="Moneda Extranjera"></asp:Label>
+                                                <asp:Label ID="lblpasivo4" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtmonextra" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <h4>Cuentas por Pagar:</h4>
 
                                             <div class="input-group">
-                                                <asp:Label ID="Label26" runat="server" Text="Gastos Causados X Pagar"></asp:Label>
-                                                <asp:TextBox ID="TextBox28" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblgastosxpagar" runat="server" Text="Gastos Causados X Pagar"></asp:Label>
+                                                <asp:Label ID="lblpasivos5" runat="server" Text="Label"></asp:Label>        
+                                                <asp:TextBox ID="txtgastosxpagar" runat="server" CssClass="form-control"></asp:TextBox>
 
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label27" runat="server" Text="Aportes Parafiscales"></asp:Label>
-                                                <asp:TextBox ID="TextBox29" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblaporparafis" runat="server" Text="Aportes Parafiscales"></asp:Label>
+                                                <asp:Label ID="lblpasivos6" runat="server" Text="Label"></asp:Label> 
+                                                 <asp:TextBox ID="txtaporparafis" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label28" runat="server" Text="Fondo de Pensiones"></asp:Label>
-                                                <asp:TextBox ID="TextBox30" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblfonpensiones" runat="server" Text="Fondo de Pensiones"></asp:Label>
+                                                <asp:Label ID="lblpasivos7" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtfonpensiones" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label29" runat="server" Text="Seg.Social y Riesgos"></asp:Label>
-                                                <asp:TextBox ID="TextBox31" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblsocialries" runat="server" Text="Seg.Social y Riesgos"></asp:Label>
+                                                <asp:Label ID="lblpasivos8" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtsocialres" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label39" runat="server" Text="Total Pasivo Corriente"></asp:Label>
+                                                <asp:Label ID="lbltotalpasivoco" runat="server" Text="Total Pasivo Corriente"></asp:Label>
                                                 <br />
-                                                <asp:Label ID="Label40" runat="server" Text="658.372.000"></asp:Label>
+                                                <asp:Label ID="lbltotalpasivoscorrien" runat="server" Text="658.372.000"></asp:Label>
                                             </div>
 
                                         </div>
@@ -341,50 +349,59 @@
                                             <h4>Impuestos Por Pagar:</h4>
 
                                             <div class="input-group">
-                                                <asp:Label ID="Label30" runat="server" Text="Impuesto de Renta"></asp:Label>
-                                                <asp:TextBox ID="TextBox32" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblimpusrenta" runat="server" Text="Impuesto de Renta"></asp:Label>
+                                                <asp:Label ID="lblpasivos9" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtimpusrenta" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label31" runat="server" Text="Impto de Industria y Comercio"></asp:Label>
-                                                <asp:TextBox ID="TextBox33" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblinducomer" runat="server" Text="Impto de Industria y Comercio"></asp:Label>
+                                                <asp:Label ID="lblpasivos10" runat="server" Text="Label"></asp:Label>
+                                                  <asp:TextBox ID="txtinducomer" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label32" runat="server" Text="IVA por Pagar"></asp:Label>
-                                                <asp:TextBox ID="TextBox34" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lbliva" runat="server" Text="IVA por Pagar"></asp:Label>
+                                                <asp:Label ID="lblpasivos11" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtiva" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label33" runat="server" Text="Rte Fuente por Pagar"></asp:Label>
-                                                <asp:TextBox ID="TextBox35" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblfuporpagar" runat="server" Text="Rte Fuente por Pagar"></asp:Label>
+                                                <asp:Label ID="lblpasivos12" runat="server" Text="Label"></asp:Label>
+                                                 <asp:TextBox ID="txtfuporpagar" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label34" runat="server" Text="Rte ICA por Pagar"></asp:Label>
-                                                <asp:TextBox ID="TextBox36" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblicapagar" runat="server" Text="Rte ICA por Pagar"></asp:Label>
+                                                <asp:Label ID="lblpasivos13" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txticapagar" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label35" runat="server" Text="Intereses Causados por Pagar"></asp:Label>
-                                                <asp:TextBox ID="TextBox37" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblintercapagar" runat="server" Text="Intereses Causados por Pagar"></asp:Label>
+                                                <asp:Label ID="lblpasivos14" runat="server" Text="Label"></asp:Label>
+                                                 <asp:TextBox  ID="txtintercapagar"  runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label36" runat="server" Text="Ingresos Recibidos por Anticip."></asp:Label>
-                                                <asp:TextBox ID="TextBox38" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblinrecianti" runat="server" Text="Ingresos Recibidos por Anticip."></asp:Label>
+                                                <asp:Label ID="lblpasivos15" runat="server" Text="Label"></asp:Label>
+                                                  <asp:TextBox ID="txtinrecianti" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                             <h4>Obligaciones Laborales:</h4>
                                             <div class="input-group">
-                                                <asp:Label ID="Label37" runat="server" Text="Cesantías"></asp:Label>
-                                                <asp:TextBox ID="TextBox39" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblcesantia" runat="server" Text="Cesantías"></asp:Label>
+                                                <asp:Label ID="lblpasivos16" runat="server" Text="Label"></asp:Label>
+                                                 <asp:TextBox ID="txtcesantia" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label38" runat="server" Text="Intereses sobre Cesantías"></asp:Label>
-                                                <asp:TextBox ID="TextBox40" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblintcesan" runat="server" Text="Intereses sobre Cesantías"></asp:Label>
+                                                <asp:Label ID="lblpasivos17" runat="server" Text="Label"></asp:Label> 
+                                                 <asp:TextBox ID="txtintcesan" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
 
                                         </div>
                                         <div class=" box-footer">
-                                            <asp:Button ID="btnEditar4" runat="server" CssClass="btn btn-success" Text="Editar" />
-                                            <asp:Button ID="btnGuardar4" runat="server" CssClass="btn btn-primary" Text="Guardar" />
-                                            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn  btn-default" />
+                                            <asp:Button ID="btnEditar4" runat="server" OnClick="btnEditar4_Click" CssClass="btn btn-success" Text="Editar" />
+                                            <asp:Button ID="btnGuardar4" runat="server" OnClick="btnGuardar4_Click" CssClass="btn btn-primary" Text="Guardar" />
+                                            <asp:Button ID="btnCancelar" runat="server" OnClick="btnCancelar_Click" Text="Cancelar" CssClass="btn  btn-default" />
                                         </div>
 
 
@@ -396,21 +413,23 @@
                                         <div class="col-md-5 col-md-offset-1">
                                             <h4>Obligaciones Bancarias:</h4>
                                             <div class="input-group">
-                                                <asp:Label ID="Label41" runat="server" Text="Moneda Nacional (AF)"></asp:Label>
-                                                <asp:TextBox ID="TextBox41" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmonnaaf" runat="server" Text="Moneda Nacional (AF)"></asp:Label>
+                                                <asp:Label ID="lblpasivos18" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtmonnaaf" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                         </div>
 
                                         <div class="col-md-5 ">
                                             <div class="input-group">
-                                                <asp:Label ID="Label42" runat="server" Text="Moneda Extranjera"></asp:Label>
-                                                <asp:TextBox ID="TextBox42" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblmonextran2" runat="server" Text="Moneda Extranjera"></asp:Label>
+                                                <asp:Label ID="lblpasivos19" runat="server" Text="Label"></asp:Label>  
+                                                <asp:TextBox ID="txtmonextran2" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label43" runat="server" Text="Total Pasivo a Largo Plazo"></asp:Label>
+                                                <asp:Label ID="lbltotallargopasitos" runat="server" Text="Total Pasivo a Largo Plazo"></asp:Label>
                                                 <br />
-                                                <asp:Label ID="Label44" runat="server" Text="214.808.000"></asp:Label>
+                                                <asp:Label ID="lbltotallargoplazo" runat="server" Text="214.808.000"></asp:Label>
                                             </div>
                                         </div>
 
@@ -423,8 +442,8 @@
                                 </div>
                                 <!-- /.tab-pane -->
                                 <div class=" box-footer">
-                                    <asp:Label ID="Label45" runat="server" Text="Total Pasivos:"></asp:Label>
-                                    <asp:Label ID="Label46" runat="server" Text="873.180.000"></asp:Label>
+                                    <asp:Label ID="lblpsivos" runat="server" Text="Total Pasivos:"></asp:Label>
+                                    <asp:Label ID="lbltotalpasivos" runat="server" Text="873.180.000"></asp:Label>
                                 </div>
                                 <!-- /.tab-pane -->
                             </div>
@@ -448,25 +467,28 @@
                                     <div class="row">
                                         <div class="col-md-5 col-md-offset-1">
                                             <div class="input-group">
-                                                <asp:Label ID="Label47" runat="server" Text="Capital Pagado (50.000 acc.)"></asp:Label>
-                                                <asp:TextBox ID="TextBox43" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblcapipagado" runat="server" Text="Capital Pagado (50.000 acc.)"></asp:Label>
+                                                <asp:Label ID="lblpasivos20" runat="server" Text="Label"></asp:Label>
+                                                <asp:TextBox ID="txtcapipagado" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label48" runat="server" Text="Reserva Legal"></asp:Label>
-                                                <asp:TextBox ID="TextBox44" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblreselegal" runat="server" Text="Reserva Legal"></asp:Label>
+                                                <asp:Label ID="lblpasivos21" runat="server" Text="Label"></asp:Label>
+                                                  <asp:TextBox ID="txtreselegal" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
 
                                         </div>
 
                                         <div class="col-md-5 ">
                                             <div class="input-group">
-                                                <asp:Label ID="Label49" runat="server" Text="Utilidades Retenidas"></asp:Label>
-                                                <asp:TextBox ID="TextBox45" runat="server" CssClass="form-control"></asp:TextBox>
+                                                <asp:Label ID="lblutiretenidos" runat="server" Text="Utilidades Retenidas"></asp:Label>
+                                                <asp:Label ID="lblpasivos22" runat="server" Text="Label"></asp:Label>  
+                                                <asp:TextBox ID="txtutiretenidos" runat="server" CssClass="form-control"></asp:TextBox>
                                             </div>
                                             <div class="input-group">
-                                                <asp:Label ID="Label50" runat="server" Text="Total Patrimonio"></asp:Label>
+                                                <asp:Label ID="lbltotalpatri" runat="server" Text="Total Patrimonio"></asp:Label>
                                                 <br />
-                                                <asp:Label ID="Label51" runat="server" Text="434.224.000"></asp:Label>
+                                                <asp:Label ID="lbltotalpatrimonio" runat="server" Text="434.224.000"></asp:Label>
                                             </div>
                                         </div>
 
