@@ -6793,6 +6793,7 @@
     <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\compra_materia_prima.aspx" />
+    <Content Include="Views\proveedores\proveedores.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -7325,7 +7326,9 @@
     </Compile>
     <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
+    <Compile Include="Models\Compra_materia_primaModel.cs" />
     <Compile Include="Models\PasivopatrimonioModel.cs" />
+    <Compile Include="Models\ProveedoresModel.cs" />
     <Compile Include="Models\PucModel.cs" />
     <Compile Include="Models\ReglaModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
@@ -7365,6 +7368,13 @@
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\proveedores\proveedores.aspx.cs">
+      <DependentUpon>proveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\proveedores\proveedores.aspx.designer.cs">
+      <DependentUpon>proveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\gestionarpuc.aspx.cs">
       <DependentUpon>gestionarpuc.aspx</DependentUpon>
