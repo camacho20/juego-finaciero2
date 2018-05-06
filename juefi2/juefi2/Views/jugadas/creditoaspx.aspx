@@ -45,7 +45,7 @@
             <!-- /.box-body -->
 
             <div class="box-footer">
-                <asp:Button ID="guardar" runat="server" Text="Relizar Cretido" CssClass="btn btn-primary"  />
+                <asp:Button ID="guardar" runat="server" Text="Realizar Cretido" CssClass="btn btn-primary"  />
             </div>
 
         </div>
