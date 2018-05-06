@@ -184,6 +184,7 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="../jugadas/compra_materia_prima.aspx"><i class="fa fa-circle-o"></i>Compra de Materia Prima </a></li>
+                           <li> <a href="../credito/credito.aspx"><i class="fa  fa-circle-o"></i> <span>Credito</span></a></li>
              </ul>
         </li>
       <!-- /.sidebar-menu -->
