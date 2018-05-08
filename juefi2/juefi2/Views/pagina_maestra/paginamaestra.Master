@@ -184,7 +184,11 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="../jugadas/compra_materia_prima.aspx"><i class="fa fa-circle-o"></i>Compra de Materia Prima </a></li>
+                           <li> <a href="../credito/credito.aspx"><i class="fa  fa-circle-o"></i> <span>Credito</span></a></li>
+                           <li><a href="../jugadas/inversion_tecnologia.aspx"><i class="fa  fa-circle-o"></i> <span>Inversión en Tecnologia</span></a></li>
+                           <li> <a href="../jugadas/gastos_publicidad.aspx"><i class="fa  fa-circle-o"></i> <span>Gastos de Públicidad</span></a></li>
              </ul>
+     
         </li>
       <!-- /.sidebar-menu -->
     </section>

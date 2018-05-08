@@ -16,10 +16,7 @@
             <div class="box-body">
                 <div class="row">
 
-
-
-
-                      <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
                             <label>Nit de la Empresa</label>
                             <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
@@ -42,7 +39,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-4  col-md-offset-1 ">
+
+                    <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
                             <label>Fecha de Inicio</label>
 
@@ -54,10 +52,78 @@
                             </div>
                             <!-- /.input group -->
                         </div>
-                        <!-- /.form group -->
-
-                        <!-- Date range -->
                     </div>
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Cargo</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Gerencia General</option>
+                                <option>Gerencia Financiera</option>
+                                <option>Gerencia de Produccion </option>
+                                <option>Gerencia de Mercadeo </option>
+                                <option>Gerencia de Planeación</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Cargo</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Gerencia General</option>
+                                <option>Gerencia Financiera</option>
+                                <option>Gerencia de Produccion </option>
+                                <option>Gerencia de Mercadeo </option>
+                                <option>Gerencia de Planeación</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Usuario</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option></option>
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Cargo</label>
+                            <select class="form-control select2" style="width: 100%;">
+                                <option selected="selected">Gerencia General</option>
+                                <option>Gerencia Financiera</option>
+                                <option>Gerencia de Produccion </option>
+                                <option>Gerencia de Mercadeo </option>
+                                <option>Gerencia de Planeación</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="col-md-4 col-md-offset-1  ">
                         <div class="form-group">
                             <label>Capital</label>
@@ -66,20 +132,20 @@
                     </div>
 
                     <div class="col-md-9  col-md-offset-1 ">
-                  <label>Politicas de la Empresa</label>
-                  <textarea class="form-control" rows="3" placeholder="Enter ...">
+                        <label>Politicas de la Empresa</label>
+                        <textarea class="form-control" rows="3" placeholder="Enter ...">
                   </textarea>
-                </div>
+                    </div>
 
 
                 </div>
-            <!-- /.box-body -->
+                <!-- /.box-body -->
 
-            <div class="box-footer">
-                <asp:Button ID="guardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="guardar_Click" />
+                <div class="box-footer">
+                    <asp:Button ID="guardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="guardar_Click" />
+                </div>
+
             </div>
-
-        </div>
 
 
         <!-- nav-tabs-custom -->

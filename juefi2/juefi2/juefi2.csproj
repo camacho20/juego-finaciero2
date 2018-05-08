@@ -6793,6 +6793,9 @@
     <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\compra_materia_prima.aspx" />
+    <Content Include="Views\jugadas\creditoaspx.aspx" />
+    <Content Include="Views\jugadas\gastos_publicidad.aspx" />
+    <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\proveedores\proveedores.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
@@ -7327,6 +7330,9 @@
     <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\Compra_materia_primaModel.cs" />
+    <Compile Include="Models\CreditoModel.cs" />
+    <Compile Include="Models\Gastos_publicidadModel.cs" />
+    <Compile Include="Models\Inversion_tecnologiaModel.cs" />
     <Compile Include="Models\PasivopatrimonioModel.cs" />
     <Compile Include="Models\ProveedoresModel.cs" />
     <Compile Include="Models\PucModel.cs" />
@@ -7361,6 +7367,27 @@
     </Compile>
     <Compile Include="Views\jugadas\compra_materia_prima.aspx.designer.cs">
       <DependentUpon>compra_materia_prima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\creditoaspx.aspx.cs">
+      <DependentUpon>creditoaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\creditoaspx.aspx.designer.cs">
+      <DependentUpon>creditoaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\gastos_publicidad.aspx.cs">
+      <DependentUpon>gastos_publicidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\gastos_publicidad.aspx.designer.cs">
+      <DependentUpon>gastos_publicidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\inversion_tecnologia.aspx.cs">
+      <DependentUpon>inversion_tecnologia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\inversion_tecnologia.aspx.designer.cs">
+      <DependentUpon>inversion_tecnologia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
