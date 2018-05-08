@@ -6796,6 +6796,7 @@
     <Content Include="Views\jugadas\creditoaspx.aspx" />
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
+    <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\proveedores\proveedores.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
@@ -7388,6 +7389,13 @@
     </Compile>
     <Compile Include="Views\jugadas\inversion_tecnologia.aspx.designer.cs">
       <DependentUpon>inversion_tecnologia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\liquidacion_impuestos_compra.aspx.cs">
+      <DependentUpon>liquidacion_impuestos_compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\liquidacion_impuestos_compra.aspx.designer.cs">
+      <DependentUpon>liquidacion_impuestos_compra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
