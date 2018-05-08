@@ -16,7 +16,15 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
+<<<<<<< HEAD
           <StartPageUrl>Views/jugadas/liquidacion_impuestos_compra.aspx</StartPageUrl>
+=======
+<<<<<<< HEAD
+          <StartPageUrl>Views/balance/balanceinicial.aspx</StartPageUrl>
+=======
+          <StartPageUrl>Views/jugadas/gastos_publicidad.aspx</StartPageUrl>
+>>>>>>> b41eb28682239689cd405d4c51c3f977ba67059c
+>>>>>>> 1efa357be7c398521cb88a823ca77796caba0685
           <StartAction>SpecificPage</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>

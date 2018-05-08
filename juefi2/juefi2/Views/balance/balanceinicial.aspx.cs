@@ -27,6 +27,7 @@ namespace juefi2.Views.balance
             //activos
             ocultartexbox();
             ocultartexboxpasi();
+            ocultartexboxpatri();
             cargar_de_nuevo_activos();
 
             btnCancelar1.Enabled = false;
@@ -614,8 +615,9 @@ namespace juefi2.Views.balance
 
         protected void btnCancelar5_Click(object sender, EventArgs e)
         {
-            btnEditar5.Enabled = true;
             ocultartexboxpasi();
+            btnEditar5.Enabled = true;
+           
         }
 
         protected void btnEditar5_Click(object sender, EventArgs e)
@@ -650,10 +652,82 @@ namespace juefi2.Views.balance
 
         }
 
-       
+
+        //patrimonio
+
+        protected void ocultartexboxpatri() {
+
+            txtcapipagado.Visible = false;
+            txtreselegal.Visible = false;
+            txtutiretenidos.Visible = false;
 
 
-     
+            lblpasivos20.Visible =true;
+            lblpasivos21.Visible = true;
+            lblpasivos22.Visible = true;
+
+        }
+
+        protected void mostrartextboxpatrimonio() {
+
+            txtcapipagado.Visible = true;
+            txtreselegal.Visible = true;
+            txtutiretenidos.Visible = true;
+
+
+            lblpasivos20.Visible = false;
+            lblpasivos21.Visible = false;
+            lblpasivos22.Visible = false;
+
+        }
+
+        protected void btnCancelar6_Click(object sender, EventArgs e)
+        {
+            ocultartexboxpatri();
+            btnEditar6.Enabled = true;
+        }
+
+
+        protected void btnEditar6_Click(object sender, EventArgs e)
+        {
+            mostrartextboxpatrimonio();
+            btnCancelar6.Enabled = true;
+            btnGuardar6.Enabled = true;
+            btnEditar6.Enabled = false;
+
+        }
+
+        protected void btnGuardar6_Click(object sender, EventArgs e)
+        {
+            if (txtcapipagado.Text==""|| txtreselegal.Text=="" || txtutiretenidos.Text=="")
+            {
+
+                Response.Write("<script> alert('Debe llenar todos los campos'); </script>");
+                return;
+            }
+
+            pasi.capital_pagado = Convert.ToDecimal(txtcapipagado.Text);
+            pasi.reserva_legal = Convert.ToDecimal(txtreselegal.Text);
+            pasi.utilidades_retenidas = Convert.ToDecimal(txtutiretenidos.Text);
+
+            pasivos.editarpatrimonio(pasi);
+
+            btnCancelar6.Enabled = false;
+            btnGuardar6.Enabled = false;
+            btnEditar6.Enabled = true;
+            ocultartexboxpatri();
+            cargar_de_nuevo_activos();
+
+
+        }
+
+      
+
+
+
+
+
+
 
     }
 }
