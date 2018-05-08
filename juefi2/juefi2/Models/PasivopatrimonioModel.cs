@@ -67,7 +67,7 @@ namespace juefi2.Models
 
         public bool editarpatrimonio(PasivopatrimonioModel edita)
         {
-            string sql = "UPDATE pasivos SET  capital_pagado ='" + edita.capital_pagado + "',reserva_legal ='" + edita.reserva_legal + "', utilidades_retenidas ='" + edita.reserva_legal + "'  WHERE idpasivos ='1';";
+            string sql = "UPDATE pasivos SET  capital_pagado ='" + edita.capital_pagado + "',reserva_legal ='" + edita.reserva_legal + "', utilidades_retenidas ='" + edita.utilidades_retenidas + "'  WHERE idpasivos ='1';";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
