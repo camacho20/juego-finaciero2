@@ -16,10 +16,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-<<<<<<< HEAD
+
           <StartPageUrl>Views/jugadas/liquidacion_impuestos_compra.aspx</StartPageUrl>
-=======
-<<<<<<< HEAD
+======
           <StartPageUrl>Views/balance/balanceinicial.aspx</StartPageUrl>
 =======
           <StartPageUrl>Views/jugadas/gastos_publicidad.aspx</StartPageUrl>
