@@ -17,17 +17,28 @@ namespace juefi2.Views.reglas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+
+            if (Session["id_usuario"] == null)
             {
-                PucModel emp = new PucModel();
-
-                puces.DataSource = emp.Consultarpuc();
-                puces.DataBind();
-                puces.HeaderRow.Cells[2].Text = "Nº";
-                puces.HeaderRow.Cells[3].Text = "Codigo";
-                puces.HeaderRow.Cells[4].Text = "Descripción";
-
+                Response.Redirect("../usuario/login.aspx");
             }
+            else
+            {
+                if (!this.IsPostBack)
+                {
+                    PucModel emp = new PucModel();
+
+                    puces.DataSource = emp.Consultarpuc();
+                    puces.DataBind();
+                    puces.HeaderRow.Cells[2].Text = "Nº";
+                    puces.HeaderRow.Cells[3].Text = "Codigo";
+                    puces.HeaderRow.Cells[4].Text = "Descripción";
+                }
+            }
+
+
+
+            
         }
 
 

@@ -155,8 +155,8 @@
 
                         </div>
                     </div>
-
-                    <asp:LinkButton ID="LinkButton1" runat="server" CssClass="btn btn-danger btn-round  " OnClick="LinkButton1_Click"><span class="glyphicon glyphicon-log-in"></span> Registrarse</asp:LinkButton>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn btn-danger btn-round  " Text="Registrarse" OnClick="Button1_Click" />
+                  
 
                 </form>
             </div>

@@ -89,7 +89,8 @@
   <asp:TextBox ID="contrasena" runat="server"   TextMode="password" Cssclass="form-control"  placeholder="Contraseña"  ></asp:TextBox>
     </div>
   
-    <asp:LinkButton ID="LinkButton1" runat="server"  Cssclass="btn btn-danger btn-round  "   OnClick="LinkButton1_Click"  ><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</asp:LinkButton>
+        <asp:Button ID="Button1" runat="server" Cssclass="btn btn-danger btn-round  "  OnClick="Button1_Click" Text="Iniciar Sesión" />
+    
     </form>
 	</div>
 </div>    

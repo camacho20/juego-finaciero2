@@ -23,9 +23,11 @@ namespace juefi2.Views.usuario
 
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
+        
+    
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
             try
             {
 
@@ -54,13 +56,9 @@ namespace juefi2.Views.usuario
                 {
                     Response.Write("<script> alert('CAMPOS NO PUEDEN SER VACIOS'); </script>");
                 }
-
             }
             catch (Exception) { Response.Write("<script> alert(':('); </script>"); }
         }
-
     }
-
-
 }
     

@@ -94,12 +94,12 @@ namespace juefi2.Views.usuario {
         protected global::System.Web.UI.WebControls.TextBox conficontrasena;
         
         /// <summary>
-        /// Control LinkButton1.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

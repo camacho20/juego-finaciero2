@@ -7,11 +7,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Gestionar PUC</title>
     <link href="../../Content/stilos/griview.css" rel="stylesheet" />
-   
-
-    <script language="javascript" type="text/javascript"/>
+     <script language="javascript" type="text/javascript"/>
      javascript:window.history.forward(1);
      </script>
+
+    
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
    
      <!-- Bootstrap 3.3.7 -->

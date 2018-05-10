@@ -11,7 +11,17 @@ namespace juefi2.Views.pagina_maestra
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["id_usuario"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else
+            {
+                if (!this.IsPostBack)
+                {
+                    
+                }
+            }
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

@@ -17,18 +17,28 @@ namespace juefi2.Views.reglas
         ReglaModel reg = new ReglaModel();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["id_Usuario"] == null)
             {
-                ReglaModel emp = new ReglaModel();
-                regla.DataSource = emp.Consultarregla();
-                regla.DataBind();
-                regla.HeaderRow.Cells[2].Text = "Nº Regla";
-                regla.HeaderRow.Cells[3].Text = "Descripción";
-                regla.HeaderRow.Cells[4].Text = "Valor Minimo";
-                regla.HeaderRow.Cells[5].Text = "Valor Maximo";
-                regla.HeaderRow.Cells[6].Text = "Tipo de Regla";
-
+                Response.Redirect("../usuario/login.aspx");
             }
+            else
+            {
+                if (!this.IsPostBack)
+                {
+                    ReglaModel emp = new ReglaModel();
+                    regla.DataSource = emp.Consultarregla();
+                    regla.DataBind();
+                    regla.HeaderRow.Cells[2].Text = "Nº Regla";
+                    regla.HeaderRow.Cells[3].Text = "Descripción";
+                    regla.HeaderRow.Cells[4].Text = "Valor Minimo";
+                    regla.HeaderRow.Cells[5].Text = "Valor Maximo";
+                    regla.HeaderRow.Cells[6].Text = "Tipo de Regla";
+                }
+            }
+
+
+
+            
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)
