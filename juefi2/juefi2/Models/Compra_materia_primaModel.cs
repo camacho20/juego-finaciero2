@@ -28,5 +28,15 @@ namespace juefi2.Models
             string sql = "SELECT cantidad_compra, forma_pago,valor_compra FROM compra_materia_prima order by idcompra_materia_prima;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
+        public string variable(int id)
+        {
+            string sql = "SELECT valor FROM puc where(idpuc='" + id+ "');";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string variable = dt.Rows[0]["valor"].ToString() ;
+
+            return variable;
+        }
+
     }
 }

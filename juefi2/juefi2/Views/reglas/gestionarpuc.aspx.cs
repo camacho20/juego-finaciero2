@@ -14,6 +14,9 @@ namespace juefi2.Views.reglas
     {
         PucController pu = new PucController();
         PucModel puce = new PucModel();
+        MenuController menu = new MenuController();
+        public DataTable databMenu = new DataTable();
+        public DataRow daroMenu;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,13 +36,34 @@ namespace juefi2.Views.reglas
                     puces.HeaderRow.Cells[2].Text = "Nº";
                     puces.HeaderRow.Cells[3].Text = "Codigo";
                     puces.HeaderRow.Cells[4].Text = "Descripción";
+                    puces.HeaderRow.Cells[5].Text = "Valor";
+
+                    this.CargarMenu(Session["id_usuario"].ToString());
+
                 }
             }
-
-
-
-            
         }
+
+
+             public void CargarMenu(string idCuenta)
+        {
+            databMenu = menu.consultarMenu(idCuenta);
+            if (databMenu.Rows.Count > 0)
+            {
+                daroMenu = databMenu.Rows[0];
+            }
+
+            menurepeter.DataSource = databMenu;
+            menurepeter.DataBind();
+
+            MenuController userc = new MenuController();
+            string saludo = userc.GetNombresUsuario(Int32.Parse(Session["id_usuario"].ToString())).ToUpper();
+            Session["NombreUsuario"] = saludo;
+
+            mensaje.InnerText = saludo;
+        }
+
+    
 
 
         protected void LinkButton1_Click(object sender, EventArgs e)
@@ -64,11 +88,13 @@ namespace juefi2.Views.reglas
 
             puces.EditIndex = -1;
 
+            
+
             emp.idpuc = Convert.ToInt32(((TextBox)(row.Cells[2].Controls[0])).Text);
             emp.codigo = Convert.ToInt32(((TextBox)(row.Cells[3].Controls[0])).Text);
             emp.descrip = ((TextBox)(row.Cells[4].Controls[0])).Text;
          
-           
+           emp.valor= ((TextBox)(row.Cells[5].Controls[0])).Text;
 
             //emp.tiporegla = ((DropDownList)(row.Cells[4].Controls[0])).SelectedValue;
 
@@ -92,6 +118,7 @@ namespace juefi2.Views.reglas
             puces.HeaderRow.Cells[3].Text = "Codigo";
             puces.HeaderRow.Cells[4].Text = "Descripción";
 
+            puces.HeaderRow.Cells[5].Text = "Valor";
 
         }
         protected void TaskGridView_RowEditing(object sender, GridViewEditEventArgs e)
@@ -165,8 +192,9 @@ namespace juefi2.Views.reglas
 
             puce.codigo = Int32.Parse(codigo.Text);
             puce.descrip = descrip1.Value;
-        
-            
+            puce.valor= txtValor.Text;
+
+
 
             if (pu.Registrapuc(puce) == true)
             {
