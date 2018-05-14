@@ -175,9 +175,9 @@
         <li class="active"><a href="../usuario/principal.aspx"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
         
           
-          <asp:Repeater ID="menurepeter" runat="server">
+         
 
-<<<<<<< HEAD
+
  <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Jugadas</span>
@@ -197,14 +197,13 @@
               
               
                </ul>
+      <asp:Repeater ID="menurepeter" runat="server">
      
-     
-        </li>
-=======
+        
               <ItemTemplate>
                
                    <li >
-                       <a href="<%#Eval("urlmenu") %>"><i class="<%#Eval("iconos") %>"></i><%#Eval("item") %></a>
+                       <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
                       
                    </li>
                    
@@ -219,7 +218,7 @@
          
           
           </ul>
->>>>>>> a6801c9248fec2426be977fa8f6a05182c34df9f
+
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

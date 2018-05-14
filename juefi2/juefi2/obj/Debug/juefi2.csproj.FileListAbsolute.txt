@@ -321,3 +321,6 @@ C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\es\Microsof
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\obj\Debug\juefi2.csprojResolveAssemblyReference.cache
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\obj\Debug\juefi2.dll
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\obj\Debug\juefi2.pdb
+C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.dll
+C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.Entity.EF6.dll
+C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Web.dll

@@ -52,15 +52,15 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.6.9.11\lib\net45\MySql.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Data.Entity.EF6, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Data.Entity.EF6.dll</HintPath>
+      <HintPath>..\packages\MySql.Data.Entity.6.9.11\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MySql.Web, Version=6.9.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector NET 6.10\Assemblies\v4.5.2\MySql.Web.dll</HintPath>
+      <HintPath>..\packages\MySql.Web.6.9.11\lib\net45\MySql.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ComponentModel" />
@@ -231,25 +231,7 @@
     <Content Include="Content\imagenes\calendar\september.jpg" />
     <Content Include="Content\imagenes\imagesinicio\1.jpg" />
     <Content Include="Content\imagenes\imagesinicio\fondo.JPG" />
-    <Content Include="Content\imagenes\imagesinicio\slider1.jpg" />
-    <Content Include="Content\imagenes\imagesinicio\slider2.jpg" />
-    <Content Include="Content\imagenes\imagesinicio\slider3.jpg" />
-    <Content Include="Content\imagenes\imagesinicio\slider4.jpg" />
-    <Content Include="Content\imagenes\imagesinicio\slider5.jpg" />
     <Content Include="Content\imagenes\imagesinicio\usuario.png" />
-    <Content Include="Content\imagenes\images\search.png" />
-    <Content Include="Content\imagenes\images\stars\1.png" />
-    <Content Include="Content\imagenes\images\stars\2.png" />
-    <Content Include="Content\imagenes\images\stars\3.png" />
-    <Content Include="Content\imagenes\images\stars\4.png" />
-    <Content Include="Content\imagenes\images\stars\5.png" />
-    <Content Include="Content\imagenes\images\tables\back_disabled.jpg" />
-    <Content Include="Content\imagenes\images\tables\back_enabled.jpg" />
-    <Content Include="Content\imagenes\images\tables\forward_disabled.jpg" />
-    <Content Include="Content\imagenes\images\tables\forward_enabled.jpg" />
-    <Content Include="Content\imagenes\images\tables\sort_asc.gif" />
-    <Content Include="Content\imagenes\images\tables\sort_both.gif" />
-    <Content Include="Content\imagenes\images\tables\sort_desc.gif" />
     <Content Include="Content\stilos\cssinicio\bootstrap.css" />
     <Content Include="Content\stilos\cssinicio\bootstrap.min.css" />
     <Content Include="Content\stilos\cssinicio\coming-sssoon-demo.css" />
@@ -6762,10 +6744,6 @@
     <Content Include="Content\stilos\estiloadmin\plugins\timepicker\bootstrap-timepicker.js" />
     <Content Include="Content\stilos\estiloadmin\plugins\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Content\stilos\estiloadmin\plugins\timepicker\bootstrap-timepicker.min.js" />
-    <Content Include="Content\stilos\estilotab\estilos.css" />
-    <Content Include="Content\stilos\estilotab\main.js" />
-    <Content Include="Content\stilos\griview.css" />
-    <Content Include="Content\stilos\modal.css" />
     <Content Include="Content\video\videoinicio\fondo.mp4" />
     <Content Include="Content\video\videoinicio\fondo.webm" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -6783,9 +6761,6 @@
     <Content Include="Content\fonts\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\jquery-1.4.2.min.js" />
-    <Content Include="Scripts\jquery.dataTables.min.js" />
-    <Content Include="Scripts\jquery.metadata.js" />
     <Content Include="Scripts\jsinicio\bootstrap.min.js" />
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
@@ -6801,13 +6776,9 @@
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
-<<<<<<< HEAD
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
-    <Content Include="Views\proveedores\proveedores.aspx" />
-=======
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
->>>>>>> a6801c9248fec2426be977fa8f6a05182c34df9f
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\Simulaciones\SimulacionCredito.aspx" />
@@ -7530,7 +7501,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\stilos\estiloiconos\" />
-    <Folder Include="obj\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Content\stilos\estiloadmin\bower_components\fullcalendar\dist\fullcalendar.d.ts" />
@@ -7538,9 +7508,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
