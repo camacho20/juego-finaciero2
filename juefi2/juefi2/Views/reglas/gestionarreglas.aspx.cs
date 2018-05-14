@@ -15,6 +15,11 @@ namespace juefi2.Views.reglas
 
         ReglaController re = new ReglaController();
         ReglaModel reg = new ReglaModel();
+
+        MenuController menu = new MenuController();
+        public DataTable databMenu = new DataTable();
+        public DataRow daroMenu;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["id_Usuario"] == null)
@@ -28,17 +33,37 @@ namespace juefi2.Views.reglas
                     ReglaModel emp = new ReglaModel();
                     regla.DataSource = emp.Consultarregla();
                     regla.DataBind();
+
                     regla.HeaderRow.Cells[2].Text = "Nº Regla";
                     regla.HeaderRow.Cells[3].Text = "Descripción";
                     regla.HeaderRow.Cells[4].Text = "Valor Minimo";
                     regla.HeaderRow.Cells[5].Text = "Valor Maximo";
                     regla.HeaderRow.Cells[6].Text = "Tipo de Regla";
+                    this.CargarMenu(Session["id_usuario"].ToString());
                 }
             }
 
 
 
             
+        }
+
+        public void CargarMenu(string idCuenta)
+        {
+            databMenu = menu.consultarMenu(idCuenta);
+            if (databMenu.Rows.Count > 0)
+            {
+                daroMenu = databMenu.Rows[0];
+            }
+
+            menurepeter.DataSource = databMenu;
+            menurepeter.DataBind();
+
+            MenuController userc = new MenuController();
+            string saludo = userc.GetNombresUsuario(Int32.Parse(Session["id_usuario"].ToString())).ToUpper();
+            Session["NombreUsuario"] = saludo;
+
+            mensaje.InnerText = saludo;
         }
 
         protected void LinkButton1_Click(object sender, EventArgs e)

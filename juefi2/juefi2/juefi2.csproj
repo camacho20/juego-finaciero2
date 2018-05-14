@@ -6791,6 +6791,7 @@
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
+    <Content Include="Views\empresa\DocneteEmpresa.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\almacenamiento_materia_prima.aspx" />
     <Content Include="Views\jugadas\almacenamiento_producto_terminado.aspx" />
@@ -6800,10 +6801,18 @@
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
+<<<<<<< HEAD
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\proveedores\proveedores.aspx" />
+=======
+    <Content Include="Views\reglas\EstuPuc.aspx" />
+    <Content Include="Views\reglas\EstuReglas.aspx" />
+>>>>>>> a6801c9248fec2426be977fa8f6a05182c34df9f
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
+    <Content Include="Views\Simulaciones\SimulacionCredito.aspx" />
+    <Content Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx" />
+    <Content Include="Views\Simulaciones\SimularCompra.aspx" />
     <Content Include="Views\usuario\login.aspx" />
     <Content Include="Views\usuario\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
@@ -7325,6 +7334,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActivosController.cs" />
+    <Compile Include="Controllers\CompraMateriaPrimaController.cs" />
+    <Compile Include="Controllers\CreditosController.cs" />
+    <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PasivopatrimmonioController.cs" />
     <Compile Include="Controllers\PucController.cs" />
     <Compile Include="Controllers\ReglaController.cs" />
@@ -7338,6 +7350,7 @@
     <Compile Include="Models\CreditoModel.cs" />
     <Compile Include="Models\Gastos_publicidadModel.cs" />
     <Compile Include="Models\Inversion_tecnologiaModel.cs" />
+    <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\PasivopatrimonioModel.cs" />
     <Compile Include="Models\ProveedoresModel.cs" />
     <Compile Include="Models\PucModel.cs" />
@@ -7358,6 +7371,13 @@
     </Compile>
     <Compile Include="Views\balance\balanceinicial.aspx.designer.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\empresa\DocneteEmpresa.aspx.cs">
+      <DependentUpon>DocneteEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\empresa\DocneteEmpresa.aspx.designer.cs">
+      <DependentUpon>DocneteEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\empresa\empresa.aspx.cs">
       <DependentUpon>empresa.aspx</DependentUpon>
@@ -7436,12 +7456,19 @@
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\proveedores\proveedores.aspx.cs">
-      <DependentUpon>proveedores.aspx</DependentUpon>
+    <Compile Include="Views\reglas\EstuPuc.aspx.cs">
+      <DependentUpon>EstuPuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\proveedores\proveedores.aspx.designer.cs">
-      <DependentUpon>proveedores.aspx</DependentUpon>
+    <Compile Include="Views\reglas\EstuPuc.aspx.designer.cs">
+      <DependentUpon>EstuPuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\reglas\EstuReglas.aspx.cs">
+      <DependentUpon>EstuReglas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\reglas\EstuReglas.aspx.designer.cs">
+      <DependentUpon>EstuReglas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\gestionarpuc.aspx.cs">
       <DependentUpon>gestionarpuc.aspx</DependentUpon>
@@ -7456,6 +7483,27 @@
     </Compile>
     <Compile Include="Views\reglas\gestionarreglas.aspx.designer.cs">
       <DependentUpon>gestionarreglas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimulacionCredito.aspx.cs">
+      <DependentUpon>SimulacionCredito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimulacionCredito.aspx.designer.cs">
+      <DependentUpon>SimulacionCredito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx.cs">
+      <DependentUpon>SimulacionCreditoLargoplazo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx.designer.cs">
+      <DependentUpon>SimulacionCreditoLargoplazo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimularCompra.aspx.cs">
+      <DependentUpon>SimularCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Simulaciones\SimularCompra.aspx.designer.cs">
+      <DependentUpon>SimularCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\usuario\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

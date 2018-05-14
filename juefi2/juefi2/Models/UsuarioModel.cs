@@ -60,7 +60,7 @@ namespace juefi2.Models
 
             string sql = "SELECT nombre_1_usuario, apellido_1_usuario FROM usuario where(id_usuario='" + idusuario + "');";
             DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
-            string nombres = dt.Rows[0]["nombre_1_usuario"].ToString() + ' ' + dt.Rows[0]["apellido_1_usuario"];
+            string nombres = dt.Rows[0]["nombre_1_usuario"].ToString() + "  " + dt.Rows[0]["apellido_1_usuario"].ToString();
             return nombres;
         }
         public bool Validaremail(string email)

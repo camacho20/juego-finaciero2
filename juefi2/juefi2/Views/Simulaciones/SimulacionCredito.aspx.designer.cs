@@ -7,28 +7,37 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace juefi2.Views.provedor {
+namespace juefi2.Views.Simulaciones {
     
     
-    public partial class WebForm1 {
+    public partial class SimulacionCredito {
         
         /// <summary>
-        /// Control nombre.
+        /// Control txtMonto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.TextBox txtMonto;
         
         /// <summary>
-        /// Control capital.
+        /// Control Droptiempodecredito.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox capital;
+        protected global::System.Web.UI.WebControls.DropDownList Droptiempodecredito;
+        
+        /// <summary>
+        /// Control DropTipodecredito.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropTipodecredito;
         
         /// <summary>
         /// Control guardar.
@@ -38,5 +47,14 @@ namespace juefi2.Views.provedor {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button guardar;
+        
+        /// <summary>
+        /// Control lblcuota.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblcuota;
     }
 }

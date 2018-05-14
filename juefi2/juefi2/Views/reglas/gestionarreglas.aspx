@@ -64,7 +64,7 @@
 
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini" >
+<body class="hold-transition  skin-blue sidebar-mini" >
 
 
     <form id="form1" runat="server">
@@ -89,6 +89,7 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
+        <a class="navbar-brand text-center" href="principal.aspx" id="mensaje" runat="server"></a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -144,25 +145,18 @@
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
          <li class="active"><a href="../usuario/principal.aspx"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
-        <li><a href="../reglas/gestionarreglas.aspx"><i class="fa fa-pencil-square-o"></i> <span>Gestionar reglas</span></a></li>
-          <li><a href="../reglas/gestionarpuc.aspx"><i class="fa  fa-usd"></i> <span>Plan de Cuentas</span></a></li>
-      
-         <li><a href="../balance/balanceinicial.aspx"><i class="fa  fa-balance-scale"></i> <span>Balance General</span></a></li>
-       <li><a href="../empresa/empresa.aspx"><i class="fa  fa-television"></i> <span>Empresa</span></a></li>
-           <li><a href="../proveedores/proveedores.aspx"><i class="fa   fa-cart-arrow-down"></i> <span>Proveedores</span></a></li>
-       
+        <asp:Repeater ID="menurepeter" runat="server">
 
- <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Jugadas</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="../jugadas/compra_materia_prima.aspx"><i class="fa fa-circle-o"></i>Compra de Materia Prima </a></li>
-             </ul>
-        </li>
+              <ItemTemplate>
+               
+                   <li >
+                       <a href="<%#Eval("urlmenu") %>"><i class="<%#Eval("iconos") %>"></i><%#Eval("item") %></a>
+
+                   </li>
+                   
+               
+           </ItemTemplate>
+            </asp:Repeater>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

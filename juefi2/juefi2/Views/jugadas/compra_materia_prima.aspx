@@ -51,7 +51,7 @@
                         </div>
                     </div>
 
-
+                    <a href="../Simulaciones/SimularCompra.aspx">Click para simular compra. </a>
 
 
                 </div>

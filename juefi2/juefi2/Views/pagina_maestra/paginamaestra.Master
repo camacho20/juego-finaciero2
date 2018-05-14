@@ -48,6 +48,9 @@
   <!-- Ionicons -->
   
 <link href="../../Content/stilos/estiloadmin/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
+     <!-- DataTables -->
+  <link rel="stylesheet" href="../../Content/stilos/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css"/>
+
   <!-- Theme style -->
   
 <link href="../../Content/stilos/estiloadmin/dist/css/AdminLTE.min.css" rel="stylesheet" />
@@ -115,6 +118,7 @@
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
+           <a class="navbar-brand text-center" href="principal.aspx" id="mensaje" runat="server"></a>
       <!-- Navbar Right Menu -->
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
@@ -169,13 +173,11 @@
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="../usuario/principal.aspx"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
-        <li><a href="../reglas/gestionarreglas.aspx"><i class="fa fa-pencil-square-o"></i> <span>Gestionar reglas</span></a></li>
-          <li><a href="../reglas/gestionarpuc.aspx"><i class="fa  fa-usd"></i> <span>Plan de Cuentas</span></a></li>
-       <li><a href="../balance/balanceinicial.aspx"><i class="fa  fa-balance-scale"></i> <span>Balance General</span></a></li>
-          <li><a href="../empresa/empresa.aspx"><i class="fa  fa-television"></i> <span>Empresa</span></a></li>
-        <li><a href="../proveedores/proveedores.aspx"><i class="fa   fa-cart-arrow-down"></i> <span>Proveedores</span></a></li>
-       
+        
+          
+          <asp:Repeater ID="menurepeter" runat="server">
 
+<<<<<<< HEAD
  <li class="active treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Jugadas</span>
@@ -198,6 +200,26 @@
      
      
         </li>
+=======
+              <ItemTemplate>
+               
+                   <li >
+                       <a href="<%#Eval("urlmenu") %>"><i class="<%#Eval("iconos") %>"></i><%#Eval("item") %></a>
+                      
+                   </li>
+                   
+               
+           </ItemTemplate>
+
+
+
+
+          </asp:Repeater>
+ 
+         
+          
+          </ul>
+>>>>>>> a6801c9248fec2426be977fa8f6a05182c34df9f
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -281,8 +303,23 @@
 <script src="../../Content/stilos/estiloadmin/bower_components/moment/min/moment.min.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-
-
+<!-- DataTables -->
+<script src="../../Content/stilos/estiloadmin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../Content/stilos/estiloadmin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 
 <!-- Bootstrap WYSIHTML5 -->
 <script src="../../Content/stilos/estiloadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>

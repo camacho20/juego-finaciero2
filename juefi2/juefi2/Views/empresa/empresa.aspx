@@ -32,11 +32,14 @@
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
                             <label>Numero de Integrantes</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+
+                            <asp:DropDownList ID="DropIntegrantes" CssClass="form-control select2" runat="server">
+                                <asp:ListItem Value="none">-------</asp:ListItem>
+                                <asp:ListItem Value="3">3</asp:ListItem>
+                                <asp:ListItem Value="5">5</asp:ListItem>
+                                
+                            </asp:DropDownList>
+
                         </div>
                     </div>
 
@@ -48,87 +51,65 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" id="datepicker">
+                                <input type="text" class="form-control pull-right" runat="server" id="datepicker">
                             </div>
                             <!-- /.input group -->
                         </div>
                     </div>
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
-                            <label>Usuario</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected"></option>
-                                <option></option>
-                                <option></option>
-                            </select>
+                            <label>Usuario 1</label>
+                            <asp:DropDownList ID="usuario1"  CssClass="form-control select2" runat="server">
+                           <asp:ListItem Value="none">-------</asp:ListItem>
+                            </asp:DropDownList>
+  
                         </div>
+
+                        <div class="form-group">
+                            <label>Usuario 3</label>
+                             <asp:DropDownList ID="usuario3"  CssClass="form-control select2" runat="server">
+                           <asp:ListItem Value="none">-------</asp:ListItem>
+                            </asp:DropDownList>
+                        </div>
+                          <div class="form-group">
+                            <label>Uduario 5</label>
+                          <asp:DropDownList ID="usuario5"  CssClass="form-control select2" runat="server">
+                           <asp:ListItem Value="none">-------</asp:ListItem>
+                             </asp:DropDownList>
+                        </div>
+
                     </div>
 
+                   
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
-                            <label>Cargo</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Gerencia General</option>
-                                <option>Gerencia Financiera</option>
-                                <option>Gerencia de Produccion </option>
-                                <option>Gerencia de Mercadeo </option>
-                                <option>Gerencia de Planeación</option>
-                            </select>
+                            <label>Usuario 2</label>
+                            <asp:DropDownList ID="usuario2"  CssClass="form-control select2" runat="server">
+                           <asp:ListItem Value="none">-------</asp:ListItem>
+                            </asp:DropDownList>   
                         </div>
-                    </div>
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Usuario</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected"></option>
-                                <option></option>
-                                <option></option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Cargo</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Gerencia General</option>
-                                <option>Gerencia Financiera</option>
-                                <option>Gerencia de Produccion </option>
-                                <option>Gerencia de Mercadeo </option>
-                                <option>Gerencia de Planeación</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Usuario</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected"></option>
-                                <option></option>
-                                <option></option>
-                            </select>
+                         <div class="form-group">
+                            <label>Usuario 4</label>
+                           <asp:DropDownList ID="Usuario4"  CssClass="form-control select2" runat="server">
+                           <asp:ListItem Value="none">-------</asp:ListItem>
+                             </asp:DropDownList>
                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Cargo</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">Gerencia General</option>
-                                <option>Gerencia Financiera</option>
-                                <option>Gerencia de Produccion </option>
-                                <option>Gerencia de Mercadeo </option>
-                                <option>Gerencia de Planeación</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-1  ">
-                        <div class="form-group">
+                      <div class="form-group">
                             <label>Capital</label>
                             <asp:TextBox ID="capital" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
+
+                        </div>
+                    </div>
+
+                   
+
+                    
+
+                    <div class="col-md-4 col-md-offset-1  ">
+                        >
                     </div>
 
                     <div class="col-md-9  col-md-offset-1 ">

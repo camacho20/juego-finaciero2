@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace juefi2.Views.jugadas {
+namespace juefi2.Views.Simulaciones {
     
     
-    public partial class creditoaspx {
+    public partial class SimulacionCreditoLargoplazo {
     }
 }
