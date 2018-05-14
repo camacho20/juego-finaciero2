@@ -6792,11 +6792,15 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
+    <Content Include="Views\jugadas\almacenamiento_materia_prima.aspx" />
+    <Content Include="Views\jugadas\almacenamiento_producto_terminado.aspx" />
+    <Content Include="Views\jugadas\asquisicion_maquinaria_equipos.aspx" />
     <Content Include="Views\jugadas\compra_materia_prima.aspx" />
     <Content Include="Views\jugadas\creditoaspx.aspx" />
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
+    <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\proveedores\proveedores.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
@@ -7362,6 +7366,27 @@
     <Compile Include="Views\empresa\empresa.aspx.designer.cs">
       <DependentUpon>empresa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\jugadas\almacenamiento_materia_prima.aspx.cs">
+      <DependentUpon>almacenamiento_materia_prima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\almacenamiento_materia_prima.aspx.designer.cs">
+      <DependentUpon>almacenamiento_materia_prima.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\almacenamiento_producto_terminado.aspx.cs">
+      <DependentUpon>almacenamiento_producto_terminado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\almacenamiento_producto_terminado.aspx.designer.cs">
+      <DependentUpon>almacenamiento_producto_terminado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\asquisicion_maquinaria_equipos.aspx.cs">
+      <DependentUpon>asquisicion_maquinaria_equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\asquisicion_maquinaria_equipos.aspx.designer.cs">
+      <DependentUpon>asquisicion_maquinaria_equipos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\jugadas\compra_materia_prima.aspx.cs">
       <DependentUpon>compra_materia_prima.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -7396,6 +7421,13 @@
     </Compile>
     <Compile Include="Views\jugadas\liquidacion_impuestos_compra.aspx.designer.cs">
       <DependentUpon>liquidacion_impuestos_compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\venta_maquinaria_equipos.aspx.cs">
+      <DependentUpon>venta_maquinaria_equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\venta_maquinaria_equipos.aspx.designer.cs">
+      <DependentUpon>venta_maquinaria_equipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>

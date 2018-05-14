@@ -188,7 +188,14 @@
                            <li> <a href="../credito/credito.aspx"><i class="fa  fa-circle-o"></i> <span>Credito</span></a></li>
                            <li><a href="../jugadas/inversion_tecnologia.aspx"><i class="fa  fa-circle-o"></i> <span>Inversión en Tecnologia</span></a></li>
                            <li> <a href="../jugadas/gastos_publicidad.aspx"><i class="fa  fa-circle-o"></i> <span>Gastos de Públicidad</span></a></li>
-             </ul>
+                           <li><a href="../jugadas/asquisicion_maquinaria_equipos.aspx"><i class="fa  fa-circle-o"></i> <span>Adquisición de Maquinaria y Equipo</span></a></li>
+                           <li><a href="../jugadas/venta_maquinaria_equipos.aspx"><i class="fa  fa-circle-o"></i> <span>Venta de Maquinaria y Equipos</span></a></li>
+                           <li><a href="../jugadas/almacenamiento_materia_prima.aspx"><i class="fa  fa-circle-o"></i> <span>Costo de Almacenamiento de Materia Prima</span></a></li>
+                           <li><a href="../jugadas/almacenamiento_producto_terminado.aspx"><i class="fa  fa-circle-o"></i> <span>Gasto de Almacenamiento de Producto Terminado</span></a></li>
+              
+              
+               </ul>
+     
      
         </li>
       <!-- /.sidebar-menu -->
