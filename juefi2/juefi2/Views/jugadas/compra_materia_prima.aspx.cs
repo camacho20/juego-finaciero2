@@ -12,8 +12,8 @@ namespace juefi2.Views.jugadas
     public partial class compra_materia_prima : System.Web.UI.Page
     {
         ValorPucYReglaController cop =new ValorPucYReglaController();
-        Compra_materia_primaModel compra = new Compra_materia_primaModel();
-        CompraMateriaPrimaController compracon = new CompraMateriaPrimaController();
+        MovimientoModel movimiento = new MovimientoModel();
+        MovimientoController compracon = new MovimientoController();
 
         double iva;
         double ica;
@@ -45,7 +45,7 @@ namespace juefi2.Views.jugadas
 
             valor_total = (((monto + iva) - ica) - retefuente) - descuento;
 
-            txttotal.Text = Convert.ToString(valor_total);
+           
 
 
         }
@@ -70,30 +70,31 @@ namespace juefi2.Views.jugadas
             {
                 monto = Convert.ToDouble(txtMonto.Text)*630;
                 comprar(monto);
-                compra.nombre_movimineto = "Compra de contado";
-                compra.codigo_puc =  Convert.ToInt32 (cop.codigopuc(10));
-                compra.debito = monto;
-                compracon.debito(compra);
+                txttotal.Text = Convert.ToString(valor_total);
+                movimiento.nombre_movimineto = "Compra de contado";
+                movimiento.codigo_puc =  Convert.ToInt32 (cop.codigopuc(10));
+                movimiento.debito = monto;
+                compracon.debito(movimiento);
 
-                compra.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
-                compra.debito = iva;
-                compracon.debito(compra);
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+                movimiento.debito = iva;
+                compracon.debito(movimiento);
 
-                compra.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
-                compra.credito = descuento;
-                compracon.credito(compra);
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
+                movimiento.credito = descuento;
+                compracon.credito(movimiento);
 
-                compra.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
-                compra.credito = retefuente;
-                compracon.credito(compra);
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+                movimiento.credito = retefuente;
+                compracon.credito(movimiento);
 
-                compra.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
-                compra.credito =ica ;
-                compracon.credito(compra);
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+                movimiento.credito =ica ;
+                compracon.credito(movimiento);
 
-                compra.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
-                compra.credito = valor_total;
-                compracon.credito(compra);
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+                movimiento.credito = valor_total;
+                compracon.credito(movimiento);
 
 
                 txtMonto.Text = "";
@@ -105,8 +106,38 @@ namespace juefi2.Views.jugadas
 
             if (Dropforpago.SelectedIndex == 2)
             {
-                monto = Convert.ToDouble(txtMonto.Text);
+
+
+
+                monto = Convert.ToDouble(txtMonto.Text)*630 ;
                 comprar(monto);
+                txttotal.Text = Convert.ToString(valor_total);
+                movimiento.nombre_movimineto = "Compra a credito";
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
+                movimiento.debito = monto;
+                compracon.debito(movimiento);
+
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+                movimiento.debito = iva;
+                compracon.debito(movimiento);
+
+               
+
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+                movimiento.credito = retefuente;
+                compracon.credito(movimiento);
+
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+                movimiento.credito = ica;
+                compracon.credito(movimiento);
+
+                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(31));
+                movimiento.credito = valor_total+descuento;
+                compracon.credito(movimiento);
+
+
+                txtMonto.Text = "";
+                Dropforpago.SelectedIndex = 0;
 
                 Response.Write("<script> alert('Compra registrada'); </script>");
                 return;

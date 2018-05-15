@@ -11,8 +11,8 @@ namespace juefi2.Views.jugadas
 {
     public partial class inversion_tecnologia : System.Web.UI.Page
     {
-        CompraMateriaPrimaController cop = new CompraMateriaPrimaController();
-        Compra_materia_primaModel com = new Compra_materia_primaModel();
+        MovimientoController cop = new MovimientoController();
+        MovimientoModel com = new MovimientoModel();
         double reteica;
         double monto;
         double rtfuente;

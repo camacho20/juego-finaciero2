@@ -7,7 +7,7 @@ using System.Web;
 
 namespace juefi2.Models
 {
-    public class Compra_materia_primaModel
+    public class MovimientoModel
     {
 
         private conecMysql conn = new conecMysql();
@@ -17,7 +17,7 @@ namespace juefi2.Models
         public double debito { get; set; }
 
 
-        public bool registrarCompra_materia_prima_contado_debita(Compra_materia_primaModel obje)
+        public bool debita(MovimientoModel obje)
         {
 
             string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,debito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.debito + "')";
@@ -25,7 +25,7 @@ namespace juefi2.Models
         }
 
 
-        public bool registrarCompra_materia_prima_contado_credito(Compra_materia_primaModel obje)
+        public bool acredita(MovimientoModel obje)
         {
 
             string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,credito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.credito + "')";

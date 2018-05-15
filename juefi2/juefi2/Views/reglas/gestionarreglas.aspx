@@ -150,11 +150,11 @@
               <ItemTemplate>
                
                    <li >
-<<<<<<< HEAD
+
                        <a href="<%#Eval("url") %>"><i class="<%#Eval("iconos") %>"></i><%#Eval("item") %></a>
-=======
+
                        <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
->>>>>>> f86e14682b6952e25cf3d824194025db3be9d43d
+
 
                    </li>
                    

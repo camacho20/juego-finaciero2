@@ -7304,7 +7304,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActivosController.cs" />
-    <Compile Include="Controllers\CompraMateriaPrimaController.cs" />
+    <Compile Include="Controllers\MovimientoController.cs" />
     <Compile Include="Controllers\CreditosController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\PasivopatrimmonioController.cs" />
@@ -7317,7 +7317,7 @@
     </Compile>
     <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
-    <Compile Include="Models\Compra_materia_primaModel.cs" />
+    <Compile Include="Models\MovimientoModel.cs" />
     <Compile Include="Models\CreditoModel.cs" />
     <Compile Include="Models\Gastos_publicidadModel.cs" />
     <Compile Include="Models\Inversion_tecnologiaModel.cs" />
