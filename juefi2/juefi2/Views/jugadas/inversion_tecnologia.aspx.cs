@@ -32,15 +32,7 @@ namespace juefi2.Views.jugadas
 
         protected void calcular(double monto) {
 
-         reteica = monto * Convert.ToDouble(cop.variable(42));
-
-            if (monto > 895212)
-            {
-                rtfuente = monto * Convert.ToDouble(cop.variable(41));
-
-
-            }
-
+        
            
 
         }

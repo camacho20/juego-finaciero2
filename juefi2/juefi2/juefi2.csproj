@@ -6783,7 +6783,6 @@
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\Simulaciones\SimulacionCredito.aspx" />
     <Content Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx" />
-    <Content Include="Views\Simulaciones\SimularCompra.aspx" />
     <Content Include="Views\usuario\login.aspx" />
     <Content Include="Views\usuario\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
@@ -7312,6 +7311,7 @@
     <Compile Include="Controllers\PucController.cs" />
     <Compile Include="Controllers\ReglaController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Controllers\ValorPucYReglaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -7327,6 +7327,7 @@
     <Compile Include="Models\PucModel.cs" />
     <Compile Include="Models\ReglaModel.cs" />
     <Compile Include="Models\UsuarioModel.cs" />
+    <Compile Include="Models\ValorPucYReglaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -7468,13 +7469,6 @@
     </Compile>
     <Compile Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx.designer.cs">
       <DependentUpon>SimulacionCreditoLargoplazo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimularCompra.aspx.cs">
-      <DependentUpon>SimularCompra.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimularCompra.aspx.designer.cs">
-      <DependentUpon>SimularCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\usuario\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

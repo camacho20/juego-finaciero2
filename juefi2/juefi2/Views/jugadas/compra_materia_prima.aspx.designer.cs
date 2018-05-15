@@ -13,22 +13,31 @@ namespace juefi2.Views.jugadas {
     public partial class compra_materia_prima {
         
         /// <summary>
-        /// Control nombre.
+        /// Control txtMonto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.TextBox txtMonto;
         
         /// <summary>
-        /// Control capital.
+        /// Control Dropforpago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox capital;
+        protected global::System.Web.UI.WebControls.DropDownList Dropforpago;
+        
+        /// <summary>
+        /// Control txttotal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txttotal;
         
         /// <summary>
         /// Control Guardar.

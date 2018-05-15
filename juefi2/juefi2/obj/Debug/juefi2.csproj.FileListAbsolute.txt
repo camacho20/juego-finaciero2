@@ -324,3 +324,6 @@ C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\obj\Debug\juefi
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.dll
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.Entity.EF6.dll
 C:\Users\Jairo R\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Web.dll
+C:\Users\oweimar\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.dll
+C:\Users\oweimar\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Data.Entity.EF6.dll
+C:\Users\oweimar\Documents\GitHub\juego-finaciero2\juefi2\juefi2\bin\MySql.Web.dll
