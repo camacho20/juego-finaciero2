@@ -13,10 +13,19 @@ namespace juefi2.Controllers
     {
         Compra_materia_primaModel com = new Compra_materia_primaModel();
 
-        public string variable(int variable)
+        public bool debito(Compra_materia_primaModel mod)
         {
 
-            return com.variable(variable); ;
+            com.registrarCompra_materia_prima_contado_debita(mod);
+            return true;
         }
+
+        public bool credito(Compra_materia_primaModel mod)
+        {
+
+            com.registrarCompra_materia_prima_contado_credito(mod);
+            return true;
+        }
+
     }
 }

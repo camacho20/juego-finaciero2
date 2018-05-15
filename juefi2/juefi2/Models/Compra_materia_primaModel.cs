@@ -11,32 +11,34 @@ namespace juefi2.Models
     {
 
         private conecMysql conn = new conecMysql();
-        public int cantidad { get; set; }
-        public string Forma_Pago { get; set; }
-        public int Valor { get; set; }
+        public string nombre_movimineto { get; set; }
+        public double codigo_puc { get; set; }
+        public double credito { get; set; }
+        public double debito { get; set; }
 
 
-        public bool registrarCompra_materia_prima(Compra_materia_primaModel obje)
+        public bool registrarCompra_materia_prima_contado_debita(Compra_materia_primaModel obje)
         {
 
-            string sql = "INSERT INTO empresa (cantidad_compra, forma_pago,valor_compra) VALUES('" + obje.cantidad + "','" + obje.Forma_Pago + "','" + obje.Valor + "')";
+            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,debito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.debito + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
+
+
+        public bool registrarCompra_materia_prima_contado_credito(Compra_materia_primaModel obje)
+        {
+
+            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,credito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.credito + "')";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
 
         public DataTable ConsultarCompra_materia_prima()
         {
             string sql = "SELECT cantidad_compra, forma_pago,valor_compra FROM compra_materia_prima order by idcompra_materia_prima;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
-        public string variable(int id)
-        {
-            string sql = "SELECT valor FROM puc where(idpuc='" + id+ "');";
-
-            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
-            string variable = dt.Rows[0]["valor"].ToString() ;
-
-            return variable;
-        }
+        
 
     }
 }

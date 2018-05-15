@@ -13,52 +13,47 @@
             <div class="box-body">
                 <div class="row">
 
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Proveedor</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected">A  $122</option>
-                                <option>B  $3243</option>
-                                   <option>C  $2323</option>
-                               
-                            </select>
-                        </div>
-                    </div>
+                
 
                     <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
-                            <label>cantidad</label>
-                            <asp:TextBox ID="nombre" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <label>Cantidad de materia prima a comprar </label>
+                            <asp:TextBox ID="txtMonto" runat="server" CssClass=" form-control"></asp:TextBox>
+
+
+                            <p>NOTA: La materia prima tiene un costo de 630 unidad</p>
+
                         </div>
                     </div>
 
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
                             <label>Forma de Pago</label>
-                            <select class="form-control select2" style="width: 100%;">
-                                <option selected="selected"> </option>
-                                <option>Contado</option>
-                                   <option>Credito</option>
-                               
-                            </select>
+                            <asp:DropDownList ID="Dropforpago" CssClass=" form-control  select2" runat="server">
+                               <asp:ListItem Value="none">-------</asp:ListItem>
+                                <asp:ListItem Value="contado">Contado</asp:ListItem>
+                                <asp:ListItem Value="credito">Credito</asp:ListItem>
+                            </asp:DropDownList>
+
+
                         </div>
                     </div>
 
                     <div class="col-md-4 col-md-offset-1  ">
                         <div class="form-group">
                             <label>Valor Total</label>
-                            <asp:TextBox ID="capital" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="txttotal" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
 
-                    <a href="../Simulaciones/SimularCompra.aspx">Click para simular compra. </a>
+                 
 
 
                 </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <asp:Button ID="Guardar" runat="server" Text="Realizar Jugada" CssClass="btn btn-primary" />
+                    <asp:Button ID="Guardar" runat="server" Text="Realizar Jugada" CssClass="btn btn-primary" OnClick="Guardar_Click"  />
                 </div>
 
             </div>
