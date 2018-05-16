@@ -6778,6 +6778,7 @@
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\jugadas\Movimientos.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
+    <Content Include="Views\parametrizacion\paramtreiacion_variables.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
@@ -7435,6 +7436,13 @@
     </Compile>
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\parametrizacion\paramtreiacion_variables.aspx.cs">
+      <DependentUpon>paramtreiacion_variables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\parametrizacion\paramtreiacion_variables.aspx.designer.cs">
+      <DependentUpon>paramtreiacion_variables.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\EstuPuc.aspx.cs">
       <DependentUpon>EstuPuc.aspx</DependentUpon>

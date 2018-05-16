@@ -13,10 +13,12 @@
             <div class="box-body">
                 <div class="row">
 
-                
-
-                    <div class="col-md-4 col-md-offset-1">
+                       <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
+                            <label>Monto de la oferta</label>
+                            <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+                        </div>
+                               <div class="form-group">
                             <label>Cantidad de materia prima a comprar </label>
                             <asp:TextBox ID="txtMonto" runat="server" CssClass=" form-control"></asp:TextBox>
 
@@ -25,6 +27,21 @@
 
                         </div>
                     </div>
+
+                                    
+
+                        <div class="col-md-4  col-md-offset-1 ">
+                        <div class="form-group">
+                            <div class="box-footer">
+                                <asp:Button ID="Button1" runat="server" Text="Realizar Oferta" CssClass="btn btn-primary" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                
+
+                 
 
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">

@@ -151,7 +151,7 @@
                
                    <li >
 
-                       <a href="<%#Eval("url") %>"><i class="<%#Eval("iconos") %>"></i><%#Eval("item") %></a>
+                     
 
                        <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
 
