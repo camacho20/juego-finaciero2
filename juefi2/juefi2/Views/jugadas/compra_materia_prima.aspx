@@ -21,7 +21,7 @@
                             <asp:TextBox ID="txtMonto" runat="server" CssClass=" form-control"></asp:TextBox>
 
 
-                            <p>NOTA: La materia prima tiene un costo de 630 unidad</p>
+                            <p>NOTA: La materia prima tiene un costo de 630 * unidad</p>
 
                         </div>
                     </div>

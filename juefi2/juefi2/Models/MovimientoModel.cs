@@ -33,9 +33,9 @@ namespace juefi2.Models
         }
 
 
-        public DataTable ConsultarCompra_materia_prima()
+        public DataTable mostrarmovimiento()
         {
-            string sql = "SELECT cantidad_compra, forma_pago,valor_compra FROM compra_materia_prima order by idcompra_materia_prima;";
+            string sql = "SELECT idmovimiento, nombre_movimineto,codigo_puc,credito, debito FROM movimiento  order by idmovimiento;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
         

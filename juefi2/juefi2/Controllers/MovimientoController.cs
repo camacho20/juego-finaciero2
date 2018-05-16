@@ -27,5 +27,11 @@ namespace juefi2.Controllers
             return true;
         }
 
+        public DataTable consultarmovimiento()
+        {
+            return com.mostrarmovimiento();
+        }
+
+
     }
 }

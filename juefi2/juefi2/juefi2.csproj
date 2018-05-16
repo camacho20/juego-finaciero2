@@ -6776,6 +6776,7 @@
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
+    <Content Include="Views\jugadas\Movimientos.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
@@ -7413,6 +7414,13 @@
     </Compile>
     <Compile Include="Views\jugadas\liquidacion_impuestos_compra.aspx.designer.cs">
       <DependentUpon>liquidacion_impuestos_compra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\Movimientos.aspx.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\Movimientos.aspx.designer.cs">
+      <DependentUpon>Movimientos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\jugadas\venta_maquinaria_equipos.aspx.cs">
       <DependentUpon>venta_maquinaria_equipos.aspx</DependentUpon>

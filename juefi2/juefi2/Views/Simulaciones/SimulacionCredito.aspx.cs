@@ -13,19 +13,20 @@ namespace juefi2.Views.Simulaciones
     {
    CreditosController credito = new CreditosController();
        public  double monto;
-      public  double meses;
+      public  int meses;
 
         double cuota;
-        double amortizacion2;
-        double intereses;
-        double mvs = Math.Pow((1 + 0.3102), (1 / 12)) - 1;
+        double auxi1;
+        double auxi2;
+        double mvs ;
         double saldo;
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            
+            auxi1 = 1 + 0.3102;
+            auxi2 = 1 / 12;
+            mvs =( Math.Pow(auxi1, auxi2)) - 1;
 
         }
 
@@ -43,17 +44,17 @@ namespace juefi2.Views.Simulaciones
            
         }
 
-        protected void  llenata(double monto, double meses) {
-
-           
+        protected void  llenata(double monto, int meses) {
 
 
-            lblcuota.Text = Convert.ToString(cuota);
-               
+            cuota = (mvs*monto)/1-(Math.Pow(1+mvs,-meses));
 
-               
 
-            }
+            lblprueba.Text = Convert.ToString(cuota);
+            Label1.Text= Convert.ToString(mvs);
+
+
+        }
 
         }
 

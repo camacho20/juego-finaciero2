@@ -31,15 +31,6 @@ namespace juefi2.Views.Simulaciones {
         protected global::System.Web.UI.WebControls.DropDownList Droptiempodecredito;
         
         /// <summary>
-        /// Control DropTipodecredito.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropTipodecredito;
-        
-        /// <summary>
         /// Control guardar.
         /// </summary>
         /// <remarks>
@@ -49,12 +40,21 @@ namespace juefi2.Views.Simulaciones {
         protected global::System.Web.UI.WebControls.Button guardar;
         
         /// <summary>
-        /// Control lblcuota.
+        /// Control lblprueba.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcuota;
+        protected global::System.Web.UI.WebControls.Label lblprueba;
+        
+        /// <summary>
+        /// Control Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
