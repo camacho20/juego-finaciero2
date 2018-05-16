@@ -11,8 +11,10 @@ namespace juefi2.Views.jugadas
 {
     public partial class inversion_tecnologia : System.Web.UI.Page
     {
-        MovimientoController cop = new MovimientoController();
-        MovimientoModel com = new MovimientoModel();
+        ValorPucYReglaController cop = new ValorPucYReglaController();
+        MovimientoModel movimiento = new MovimientoModel();
+        MovimientoController inversion = new MovimientoController();
+
         double reteica;
         double monto;
         double rtfuente;
@@ -23,19 +25,63 @@ namespace juefi2.Views.jugadas
 
         }
 
+
+        protected void calcular(double monto)
+        {
+
+            monto = Convert.ToDouble(txtMonto.Text);
+            reteica = monto * Convert.ToDouble(cop.variable(42));
+
+            if (monto > 895212)
+            {
+                rtfuente = monto * Convert.ToDouble(cop.variable(41));
+
+
+            }
+
+            disponible = (monto - rtfuente) - reteica;
+
+
+
+        }
         protected void guardar_Click(object sender, EventArgs e)
         {
+            if (txtMonto.Text == "" || txtMonto.Text == "0")
+            {
+
+                Response.Write("<script> alert('Debe llenar los campos o invertir minimo 1 unidad '); </script>");
+                return;
+            }
+
+
             monto = Convert.ToDouble(txtMonto.Text);
             calcular(monto);
+            txtMonto.Text = Convert.ToString(monto);
+            movimiento.nombre_movimineto = "Inversiones en Tecnologia";
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(23));
+            movimiento.debito = monto;
+            inversion.debito(movimiento);
+        
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+            movimiento.credito = rtfuente;
+            inversion.credito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+            movimiento.credito = reteica;
+            inversion.credito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+            movimiento.credito =disponible;
+            inversion.credito(movimiento);
+
+
+            txtMonto.Text = "";
+             Response.Write("<script> alert('Inversion Realizada'); </script>");
+                return;
         }
 
-
-        protected void calcular(double monto) {
 
         
-           
-
-        }
 
         
     }
