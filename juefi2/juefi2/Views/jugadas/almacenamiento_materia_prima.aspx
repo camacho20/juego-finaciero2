@@ -15,7 +15,7 @@
                      <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
                             <label>Cantidad</label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="Textcantidad" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
 
