@@ -212,6 +212,8 @@
                
                    <li >
                        <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
+                   
+              
                    </li>
                    
                
@@ -309,6 +311,7 @@
 <script src="../../Content/stilos/estiloadmin/bower_components/moment/min/moment.min.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+
 <!-- DataTables -->
 <script src="../../Content/stilos/estiloadmin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../../Content/stilos/estiloadmin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -347,6 +350,7 @@
     $('#datepicker').datepicker({
       autoclose: true
     })
+   
     //Colorpicker
     $('.my-colorpicker1').colorpicker()
     //color picker with addon
@@ -358,6 +362,6 @@
     })
  </script>
 
-
+       
 </body>
 </html>

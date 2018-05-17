@@ -43,6 +43,7 @@
                         </div>
                     </div>
 
+<<<<<<< HEAD
                      <div class="col-md-9  col-md-offset-1 ">
                         <label>Politicas de la Empresa</label>
                         <textarea class="form-control" rows="2" placeholder="Enter ..." runat="server" id="politicas">
@@ -53,6 +54,18 @@
                     <div class="col-md-4 col-md-offset-8 ">
                         <br />
                             <asp:Button ID="btnguardar" runat="server" CssClass="btn btn-primary" OnClick="btnguardar_Click" Text="Guardar" />
+=======
+                    <div class="col-md-4 col-md-offset-1 ">
+                        <div class="form-group">
+                            <label>Fecha de Inicio</label>
+
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" runat="server" id="datepicker"/>
+                            </div>
+>>>>>>> c946d9d73374a4fc70bd41006e260de84bd1c82a
                             <!-- /.input group -->
                         
                     </div>
