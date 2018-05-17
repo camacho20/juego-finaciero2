@@ -23,6 +23,10 @@ namespace juefi2.Controllers
             return com.variablepuc(variable2);
         }
 
+        public bool actuallizarpuc(int id,double valor)
+        {
+            return com.actualizarvariable(id,valor);
+        }
 
     }
 }

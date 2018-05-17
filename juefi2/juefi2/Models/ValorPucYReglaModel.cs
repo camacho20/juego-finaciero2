@@ -30,6 +30,13 @@ namespace juefi2.Models
             return variable;
         }
 
+        public bool actualizarvariable(int id, double valor)
+        {
+
+            string sql = "UPDATE puc  SET  valor ='" + valor + "'   WHERE idpuc='" + id + "';";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
 
     }
 }

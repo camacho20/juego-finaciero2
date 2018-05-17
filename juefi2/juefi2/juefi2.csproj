@@ -7311,7 +7311,7 @@
     <Compile Include="Controllers\MovimientoController.cs" />
     <Compile Include="Controllers\CreditosController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
-    <Compile Include="Controllers\ParmetrizarVariableController.cs" />
+    <Compile Include="Controllers\ParametrizarVariableController.cs" />
     <Compile Include="Controllers\PasivopatrimmonioController.cs" />
     <Compile Include="Controllers\PucController.cs" />
     <Compile Include="Controllers\ReglaController.cs" />

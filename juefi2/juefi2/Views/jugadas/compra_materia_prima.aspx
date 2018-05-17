@@ -16,7 +16,7 @@
                        <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
                             <label>Monto de la oferta</label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                                <div class="form-group">
                             <label>Cantidad de materia prima a comprar </label>
