@@ -13,22 +13,22 @@ namespace juefi2.Views.empresa {
     public partial class empresa {
         
         /// <summary>
-        /// Control TextBox1.
+        /// Control txtnit.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox txtnit;
         
         /// <summary>
-        /// Control nombre.
+        /// Control txtnombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox nombre;
+        protected global::System.Web.UI.WebControls.TextBox txtnombre;
         
         /// <summary>
         /// Control DropIntegrantes.
@@ -40,13 +40,31 @@ namespace juefi2.Views.empresa {
         protected global::System.Web.UI.WebControls.DropDownList DropIntegrantes;
         
         /// <summary>
-        /// Control datepicker.
+        /// Control politicas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText datepicker;
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea politicas;
+        
+        /// <summary>
+        /// Control btnguardar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnguardar;
+        
+        /// <summary>
+        /// Control lblagre.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblagre;
         
         /// <summary>
         /// Control usuario1.
@@ -58,57 +76,30 @@ namespace juefi2.Views.empresa {
         protected global::System.Web.UI.WebControls.DropDownList usuario1;
         
         /// <summary>
-        /// Control usuario3.
+        /// Control btngregar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList usuario3;
+        protected global::System.Web.UI.WebControls.Button btngregar;
         
         /// <summary>
-        /// Control usuario5.
+        /// Control inter.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList usuario5;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl inter;
         
         /// <summary>
-        /// Control usuario2.
+        /// Control Mostrar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList usuario2;
-        
-        /// <summary>
-        /// Control Usuario4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Usuario4;
-        
-        /// <summary>
-        /// Control capital.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox capital;
-        
-        /// <summary>
-        /// Control guardar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button guardar;
+        protected global::System.Web.UI.WebControls.Repeater Mostrar;
     }
 }

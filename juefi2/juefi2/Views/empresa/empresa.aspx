@@ -16,20 +16,20 @@
             <div class="box-body">
                 <div class="row">
 
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-3 col-md-offset-1">
                         <div class="form-group">
                             <label>Nit de la Empresa</label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtnit" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1">
+                    <div class="col-md-3 col-md-offset-0">
                         <div class="form-group">
                             <label>Nombre de la Empresa</label>
-                            <asp:TextBox ID="nombre" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtnombre" runat="server"  onkeypress="return soloLetras(event)"  CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-md-offset-1 ">
+                    <div class="col-md-3 col-md-offset-0 ">
                         <div class="form-group">
                             <label>Numero de Integrantes</label>
 
@@ -43,64 +43,43 @@
                         </div>
                     </div>
 
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Fecha de Inicio</label>
-
-                            <div class="input-group date">
-                                <div class="input-group-addon">
-                                    <i class="fa fa-calendar"></i>
-                                </div>
-                                <input type="text" class="form-control pull-right" runat="server" id="datepicker">
-                            </div>
-                            <!-- /.input group -->
-                        </div>
+                     <div class="col-md-9  col-md-offset-1 ">
+                        <label>Politicas de la Empresa</label>
+                        <textarea class="form-control" rows="2" placeholder="Enter ..." runat="server" id="politicas">
+                  </textarea>
                     </div>
+                 
+
+                    <div class="col-md-4 col-md-offset-8 ">
+                        <br />
+                            <asp:Button ID="btnguardar" runat="server" CssClass="btn btn-primary" OnClick="btnguardar_Click" Text="Guardar" />
+                            <!-- /.input group -->
+                        
+                    </div>
+
                     <div class="col-md-4 col-md-offset-1 ">
                         <div class="form-group">
-                            <label>Usuario 1</label>
+                            <asp:Label ID="lblagre" runat="server" Text="Agregar usuario"></asp:Label>
+                            
                             <asp:DropDownList ID="usuario1"  CssClass="form-control select2" runat="server">
-                           <asp:ListItem Value="none">-------</asp:ListItem>
+                           
                             </asp:DropDownList>
   
+
                         </div>
 
-                        <div class="form-group">
-                            <label>Usuario 3</label>
-                             <asp:DropDownList ID="usuario3"  CssClass="form-control select2" runat="server">
-                           <asp:ListItem Value="none">-------</asp:ListItem>
-                            </asp:DropDownList>
-                        </div>
-                          <div class="form-group">
-                            <label>Uduario 5</label>
-                          <asp:DropDownList ID="usuario5"  CssClass="form-control select2" runat="server">
-                           <asp:ListItem Value="none">-------</asp:ListItem>
-                             </asp:DropDownList>
-                        </div>
+                        
 
                     </div>
+
+
+
 
                    
                     <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <label>Usuario 2</label>
-                            <asp:DropDownList ID="usuario2"  CssClass="form-control select2" runat="server">
-                           <asp:ListItem Value="none">-------</asp:ListItem>
-                            </asp:DropDownList>   
-                        </div>
-
-
-                         <div class="form-group">
-                            <label>Usuario 4</label>
-                           <asp:DropDownList ID="Usuario4"  CssClass="form-control select2" runat="server">
-                           <asp:ListItem Value="none">-------</asp:ListItem>
-                             </asp:DropDownList>
-                        </div>
-                      <div class="form-group">
-                            <label>Capital</label>
-                            <asp:TextBox ID="capital" runat="server" CssClass=" form-control"></asp:TextBox>
-                        </div>
-
+                      <br />
+                        <asp:Button ID="btngregar" runat="server" CssClass="btn btn-primary"  OnClick="btngregar_Click" Text="Agregar Usuario" />
+                           
                         </div>
                     </div>
 
@@ -108,23 +87,26 @@
 
                     
 
-                    <div class="col-md-4 col-md-offset-1  ">
-                        >
+                    <div class="col-md-12 col-md-offset-1  ">
+                        <h4 class=" box-title" id="inter" runat="server" >Integrantes Agregados</h4>
+
+                        <asp:Repeater ID="Mostrar" runat="server">
+                            <ItemTemplate>
+                                <asp:Label ID="lblmotrar" runat="server" Text="No hay Integrantes" CssClass=" primary"></asp:Label>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+
+
                     </div>
 
-                    <div class="col-md-9  col-md-offset-1 ">
-                        <label>Politicas de la Empresa</label>
-                        <textarea class="form-control" rows="3" placeholder="Enter ...">
-                  </textarea>
-                    </div>
+                   
 
 
                 </div>
                 <!-- /.box-body -->
 
-                <div class="box-footer">
-                    <asp:Button ID="guardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="guardar_Click" />
-                </div>
+                
 
             </div>
 

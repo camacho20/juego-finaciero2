@@ -77,6 +77,7 @@ namespace juefi2.Views.usuario
                 us.correo_electronico = email.Text;
                 us.user = usuario.Text;
                 us.rol = 3;
+                us.bandera = 'I';
 
                 if (!(validarNombre(nombre1.Text, true) && validarNombre(nombre2.Text, false) &&
                      validarNombre(apellido1.Text, true) && validarNombre(apellido2.Text, false)))
