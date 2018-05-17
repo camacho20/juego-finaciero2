@@ -7309,6 +7309,7 @@
     <Compile Include="Controllers\MovimientoController.cs" />
     <Compile Include="Controllers\CreditosController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ParmetrizarVariableController.cs" />
     <Compile Include="Controllers\PasivopatrimmonioController.cs" />
     <Compile Include="Controllers\PucController.cs" />
     <Compile Include="Controllers\ReglaController.cs" />
@@ -7324,6 +7325,7 @@
     <Compile Include="Models\Gastos_publicidadModel.cs" />
     <Compile Include="Models\Inversion_tecnologiaModel.cs" />
     <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\ParametrizarVariableModel.cs" />
     <Compile Include="Models\PasivopatrimonioModel.cs" />
     <Compile Include="Models\ProveedoresModel.cs" />
     <Compile Include="Models\PucModel.cs" />
