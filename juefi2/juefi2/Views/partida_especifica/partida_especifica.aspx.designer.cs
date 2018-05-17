@@ -31,24 +31,6 @@ namespace juefi2.Views.partida_especifica {
         protected global::System.Web.UI.WebControls.TextBox txtnombreempresa;
         
         /// <summary>
-        /// Control datepicker.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText datepicker;
-        
-        /// <summary>
-        /// Control ddatepicker.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText ddatepicker;
-        
-        /// <summary>
         /// Control guardar.
         /// </summary>
         /// <remarks>

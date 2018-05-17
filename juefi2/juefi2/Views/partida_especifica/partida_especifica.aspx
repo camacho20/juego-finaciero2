@@ -28,7 +28,7 @@
 
 
 
-                    <div class="col-md-4 col-md-offset-1 ">
+                     <div class="col-md-4  col-md-offset-1 ">
                         <div class="form-group">
                             <label>Fecha de Inicio</label>
 
@@ -36,25 +36,31 @@
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" runat="server" id="datepicker"/>
+                                <input type="text" class="form-control pull-right" id="atepicker"/>
                             </div>
                             <!-- /.input group -->
                         </div>
+                        <!-- /.form group -->
+
+                        <!-- Date range -->
                     </div>
 
                     
-                    <div class="col-md-4 col-md-offset-1 ">
+                     <div class="col-md-4  col-md-offset-1 ">
                         <div class="form-group">
-                            <label>Fecha de fin</label>
+                            <label>Fecha de Fin</label>
 
                             <div class="input-group date">
                                 <div class="input-group-addon">
                                     <i class="fa fa-calendar"></i>
                                 </div>
-                                <input type="text" class="form-control pull-right" runat="server" id="ddatepicker"/>
+                                <input type="text" class="form-control pull-right" id="ddatepicker"/>
                             </div>
                             <!-- /.input group -->
                         </div>
+                        <!-- /.form group -->
+
+                        <!-- Date range -->
                     </div>
                     
 
