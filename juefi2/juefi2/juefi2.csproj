@@ -6779,6 +6779,7 @@
     <Content Include="Views\jugadas\Movimientos.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\parametrizacion\paramtreiacion_variables.aspx" />
+    <Content Include="Views\partida_especifica\partida_especifica.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
     <Content Include="Views\reglas\gestionarpuc.aspx" />
@@ -7445,6 +7446,13 @@
     </Compile>
     <Compile Include="Views\parametrizacion\paramtreiacion_variables.aspx.designer.cs">
       <DependentUpon>paramtreiacion_variables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\partida_especifica\partida_especifica.aspx.cs">
+      <DependentUpon>partida_especifica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\partida_especifica\partida_especifica.aspx.designer.cs">
+      <DependentUpon>partida_especifica.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\EstuPuc.aspx.cs">
       <DependentUpon>EstuPuc.aspx</DependentUpon>
