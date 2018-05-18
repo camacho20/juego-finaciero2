@@ -32,6 +32,11 @@ namespace juefi2.Controllers
             return com.mostrarmovimiento();
         }
 
+        public bool oferta(MovimientoModel obje)
+        {
 
+            com.actulizaroferta(obje);
+            return true;
+        }
     }
 }

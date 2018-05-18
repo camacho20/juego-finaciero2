@@ -16,10 +16,11 @@ namespace juefi2.Views.empresa
         EmpresaModel emp = new EmpresaModel();
         public DataTable datanombre = new DataTable();
         public DataRow daronombre;
+        MovimientoController ofer = new MovimientoController();
         protected void Page_Load(object sender, EventArgs e)
         {
             lblagre.Visible = false;
-            //usuario1.Visible = false;
+            usuario1.Visible = false;
             btngregar.Visible = false;
             inter.Visible = false;
 
@@ -97,10 +98,10 @@ namespace juefi2.Views.empresa
         protected void llenar_combo(DropDownList lista)
         {
             lista.DataSource = empr.llamarinombre();
-           lista.DataTextField = "nombres";
+           lista.DataTextField = "nombre_1_usuario";
                    // FieldName of Table in DataBase
             
-            lista.DataValueField = "nombres";
+            lista.DataValueField = "nombre_1_usuario";
             lista.DataBind();
         }
 
@@ -108,7 +109,7 @@ namespace juefi2.Views.empresa
 
         protected void btngregar_Click(object sender, EventArgs e)
         {
-
+          
         }
     }
 }

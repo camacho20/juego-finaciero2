@@ -80,12 +80,12 @@
                     <asp:TextBox ID="txtiva"  CssClass=" form-control" runat="server"></asp:TextBox>
 
                 </div>
-                <p>Nota:Los valores en porcentaje ingredar los como decimales ejem: 10%  0.10  </p>
+                <p>Nota:Los valores en porcentaje ingresar los como decimales ejem: 10%  0.10  </p>
 
                 </div>
                  </div>
                    <div class=" box-footer with-border ">
-                  <asp:Button ID="btnguardar" runat="server"  OnClick="btnguardar_Click" CssClass="btn btn-primary" Text="Button" />
+                  <asp:Button ID="btnguardar" runat="server"  OnClick="btnguardar_Click" CssClass="btn btn-primary" Text="Guardar Parametros" />
                        </div>
 
           </div>

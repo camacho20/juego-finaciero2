@@ -15,6 +15,8 @@ namespace juefi2.Models
         public double codigo_puc { get; set; }
         public double credito { get; set; }
         public double debito { get; set; }
+        public string id { get; set; }
+        public double valor { get; set; }
 
 
         public bool debita(MovimientoModel obje)
@@ -38,7 +40,12 @@ namespace juefi2.Models
             string sql = "SELECT idmovimiento, nombre_movimineto,codigo_puc,credito, debito FROM movimiento  order by idmovimiento;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
-        
 
+        public bool actulizaroferta(MovimientoModel obje)
+        {
+
+            string sql = "INSERT INTO oferta_materia_prima (cantidad_oferta, empresa_id_empresa,oferto) VALUES('" + obje.valor + "','" + obje.id + "','SI')";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
     }
 }

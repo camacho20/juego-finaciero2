@@ -36,6 +36,21 @@ namespace juefi2.Views.parametrizacion
             cop.actuallizarpuc(42, Convert.ToDouble(txtrtica.Text));
 
 
+
+            TxtofertaEstimada.Text="";
+            txtfeo.Text="";
+            txtmulta.Text = "";
+            txtdemandaestimada.Text="";
+            txtfactor.Text = "";
+            txtuvt.Text = ""; ;
+            txtea.Text="";
+            txtdtf.Text="";
+            txtsalrio.Text="";
+            txtiva.Text="";
+            txtdecuento.Text="";
+            txtrtfuente.Text="";
+            txtrtica.Text="";
+
         }
     }
 }

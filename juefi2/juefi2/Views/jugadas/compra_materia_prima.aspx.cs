@@ -14,7 +14,7 @@ namespace juefi2.Views.jugadas
         ValorPucYReglaController cop =new ValorPucYReglaController();
         MovimientoModel movimiento = new MovimientoModel();
         MovimientoController compracon = new MovimientoController();
-
+        EmpresaController empr = new EmpresaController();
         double iva;
         double ica;
         double retefuente;
@@ -25,6 +25,15 @@ namespace juefi2.Views.jugadas
         protected void Page_Load(object sender, EventArgs e)
         {
             txttotal.Enabled = false;
+            lblmateriacomprar.Visible = false;
+            txtMonto.Visible = false;
+            txtformapago.Visible = false;
+            Dropforpago.Visible = false;
+            lblvalortotal.Visible = false;
+            txttotal.Visible = false;
+            btnGuardar.Visible = false;
+
+
         }
 
 
@@ -149,9 +158,19 @@ namespace juefi2.Views.jugadas
 
         }
 
+        protected void btnhaceroferta_Click(object sender, EventArgs e)
+        {
+            movimiento.id = empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()));
 
-       
+            movimiento.valor = Convert.ToDouble(txtoferta.Text);
 
-        
+            compracon.oferta(movimiento);
+           
+
+
+
+
+
+        }
     }
 }
