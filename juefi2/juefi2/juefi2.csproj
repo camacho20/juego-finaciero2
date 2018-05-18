@@ -6765,8 +6765,9 @@
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Views\empresa\balance\balanceinicial.aspx" />
+    <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\empresa\DocneteEmpresa.aspx" />
+    <Content Include="Views\empresa\Emepresa2.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\almacenamiento_materia_prima.aspx" />
     <Content Include="Views\jugadas\almacenamiento_producto_terminado.aspx" />
@@ -7344,11 +7345,11 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Views\empresa\balance\balanceinicial.aspx.cs">
+    <Compile Include="Views\balance\balanceinicial.aspx.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\empresa\balance\balanceinicial.aspx.designer.cs">
+    <Compile Include="Views\balance\balanceinicial.aspx.designer.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\empresa\DocneteEmpresa.aspx.cs">
@@ -7357,6 +7358,13 @@
     </Compile>
     <Compile Include="Views\empresa\DocneteEmpresa.aspx.designer.cs">
       <DependentUpon>DocneteEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\empresa\Emepresa2.aspx.cs">
+      <DependentUpon>Emepresa2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\empresa\Emepresa2.aspx.designer.cs">
+      <DependentUpon>Emepresa2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\empresa\empresa.aspx.cs">
       <DependentUpon>empresa.aspx</DependentUpon>

@@ -20,11 +20,11 @@ namespace juefi2.Views.empresa
         protected void Page_Load(object sender, EventArgs e)
         {
             lblagre.Visible = false;
-            usuario1.Visible = false;
+            //usuario1.Visible = false;
             btngregar.Visible = false;
             inter.Visible = false;
 
-            llenar_combo(usuario1);
+        
 
 
         }
@@ -63,7 +63,7 @@ namespace juefi2.Views.empresa
                 DropIntegrantes.SelectedIndex = 0;
                 btnguardar.Enabled = false;
                 lblagre.Visible = true;
-                usuario1.Visible = true;
+               
                 btngregar.Visible = true;
                 inter.Visible = true;
 
@@ -84,7 +84,7 @@ namespace juefi2.Views.empresa
                 DropIntegrantes.SelectedIndex = 0;
                 btnguardar.Enabled = false;
                 lblagre.Visible = true;
-                usuario1.Visible = true;
+               
                 btngregar.Visible = true;
                 inter.Visible = true;
                 Response.Write("<script> alert('Empresa registrada'); </script>");
@@ -97,12 +97,15 @@ namespace juefi2.Views.empresa
 
         protected void llenar_combo(DropDownList lista)
         {
-            lista.DataSource = empr.llamarinombre();
-           lista.DataTextField = "nombre_1_usuario";
-                   // FieldName of Table in DataBase
-            
+            datanombre = empr.llamarinombre();
+            lista.DataSource = datanombre;
+            lista.DataTextField = "nombre_1_usuario,apellido_1_usuario";
+            // FieldName of Table in DataBase
+
             lista.DataValueField = "nombre_1_usuario";
             lista.DataBind();
+            
+
         }
 
 

@@ -2,6 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Gestionar Empresa</title>
+    
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -60,9 +63,9 @@
                             <div class="form-group">
                                 <asp:Label ID="lblagre" runat="server" Text="Agregar usuario"></asp:Label>
 
-                                <asp:DropDownList ID="usuario1" CssClass="form-control select2" runat="server">
-                                </asp:DropDownList>
-
+                             
+                                
+                               
                             </div>
 
                         </div>
@@ -77,11 +80,7 @@
                     <div class="col-md-12 col-md-offset-1  ">
                         <h4 class=" box-title" id="inter" runat="server">Integrantes Agregados</h4>
 
-                        <asp:Repeater ID="Mostrar" runat="server">
-                            <ItemTemplate>
-                                <asp:Label ID="lblmotrar" runat="server" Text="No hay Integrantes" CssClass=" primary"></asp:Label>
-                            </ItemTemplate>
-                        </asp:Repeater>
+                        <asp:ListView ID="mostraragregados" runat="server"></asp:ListView>
                                                 
                     </div>
                     
