@@ -10,70 +10,7 @@
 namespace juefi2.Views.parametrizacion {
     
     
-    public partial class paramtreiacion_variables {
-        
-        /// <summary>
-        /// Control TxtofertaEstimada.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtofertaEstimada;
-        
-        /// <summary>
-        /// Control txtmulta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmulta;
-        
-        /// <summary>
-        /// Control txtdemandaestimada.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdemandaestimada;
-        
-        /// <summary>
-        /// Control txtfactor.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtfactor;
-        
-        /// <summary>
-        /// Control txtuvt.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtuvt;
-        
-        /// <summary>
-        /// Control txtea.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtea;
-        
-        /// <summary>
-        /// Control txtdecuento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdecuento;
+    public partial class Parametrizacion_periodo {
         
         /// <summary>
         /// Control txtfeo.
@@ -85,49 +22,67 @@ namespace juefi2.Views.parametrizacion {
         protected global::System.Web.UI.WebControls.TextBox txtfeo;
         
         /// <summary>
-        /// Control txtdtf.
+        /// Control txtdecuento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdtf;
+        protected global::System.Web.UI.WebControls.TextBox txtdecuento;
         
         /// <summary>
-        /// Control txtsalrio.
+        /// Control txtfactor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsalrio;
+        protected global::System.Web.UI.WebControls.TextBox txtfactor;
         
         /// <summary>
-        /// Control txtrtfuente.
+        /// Control txtdemandaestimada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtrtfuente;
+        protected global::System.Web.UI.WebControls.TextBox txtdemandaestimada;
         
         /// <summary>
-        /// Control txtrtica.
+        /// Control txtmulta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtrtica;
+        protected global::System.Web.UI.WebControls.TextBox txtmulta;
         
         /// <summary>
-        /// Control txtiva.
+        /// Control TxtofertaEstimada.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtiva;
+        protected global::System.Web.UI.WebControls.TextBox TxtofertaEstimada;
+        
+        /// <summary>
+        /// Control Txtventa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Txtventa;
+        
+        /// <summary>
+        /// Control Textusura.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Textusura;
         
         /// <summary>
         /// Control btnguardar.

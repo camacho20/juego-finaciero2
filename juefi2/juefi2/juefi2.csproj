@@ -6779,7 +6779,8 @@
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\jugadas\Movimientos.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
-    <Content Include="Views\parametrizacion\paramtreiacion_variables.aspx" />
+    <Content Include="Views\parametrizacion\Parametrizacion_periodo.aspx" />
+    <Content Include="Views\parametrizacion\paramtreiacion_año.aspx" />
     <Content Include="Views\partida_especifica\partida_especifica.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
@@ -7312,6 +7313,7 @@
     <Compile Include="Controllers\MovimientoController.cs" />
     <Compile Include="Controllers\CreditosController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\ParametrizarPeriodoControllers.cs" />
     <Compile Include="Controllers\ParametrizarVariableController.cs" />
     <Compile Include="Controllers\PasivopatrimmonioController.cs" />
     <Compile Include="Controllers\PucController.cs" />
@@ -7323,6 +7325,7 @@
     </Compile>
     <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
+    <Compile Include="Models\parametrizacionPeriodoModel.cs" />
     <Compile Include="Models\EmpresaModel.cs" />
     <Compile Include="Models\MovimientoModel.cs" />
     <Compile Include="Models\CreditoModel.cs" />
@@ -7450,12 +7453,19 @@
     <Compile Include="Views\pagina_maestra\paginamaestra.Master.designer.cs">
       <DependentUpon>paginamaestra.Master</DependentUpon>
     </Compile>
-    <Compile Include="Views\parametrizacion\paramtreiacion_variables.aspx.cs">
-      <DependentUpon>paramtreiacion_variables.aspx</DependentUpon>
+    <Compile Include="Views\parametrizacion\Parametrizacion_periodo.aspx.cs">
+      <DependentUpon>Parametrizacion_periodo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Views\parametrizacion\paramtreiacion_variables.aspx.designer.cs">
-      <DependentUpon>paramtreiacion_variables.aspx</DependentUpon>
+    <Compile Include="Views\parametrizacion\Parametrizacion_periodo.aspx.designer.cs">
+      <DependentUpon>Parametrizacion_periodo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\parametrizacion\paramtreiacion_año.aspx.cs">
+      <DependentUpon>paramtreiacion_año.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\parametrizacion\paramtreiacion_año.aspx.designer.cs">
+      <DependentUpon>paramtreiacion_año.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\partida_especifica\partida_especifica.aspx.cs">
       <DependentUpon>partida_especifica.aspx</DependentUpon>
