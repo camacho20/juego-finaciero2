@@ -63,7 +63,10 @@
                             <div class="form-group">
                                 <asp:Label ID="lblagre" runat="server" Text="Agregar usuario"></asp:Label>
 
-                             
+                                <asp:DropDownList ID="usuario1" runat="server" CssClass="form-control select2">
+                                    <asp:ListItem Value="none">-------</asp:ListItem>
+                                
+                                </asp:DropDownList>
                                 
                                
                             </div>
@@ -80,8 +83,18 @@
                     <div class="col-md-12 col-md-offset-1  ">
                         <h4 class=" box-title" id="inter" runat="server">Integrantes Agregados</h4>
 
-                        <asp:ListView ID="mostraragregados" runat="server"></asp:ListView>
-                                                
+                        <asp:Repeater ID="mostraragregados2" runat="server">
+                            <ItemTemplate>
+
+                                <asp:Label ID="label" runat="server" Text='<%# Eval("nombre_1_usuario")%>'></asp:Label>
+                                <asp:Label ID="Label2" runat="server" Text='<%# Eval("apellido_1_usuario")%>'></asp:Label>
+
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+
+
+
                     </div>
                     
             

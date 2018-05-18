@@ -42,6 +42,13 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable llamarusunombre(int id)
+
+        {
+
+            return emp.llamarempresa(id); ;
+
+        }
 
 
 

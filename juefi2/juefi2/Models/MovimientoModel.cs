@@ -44,7 +44,7 @@ namespace juefi2.Models
         public bool actulizaroferta(MovimientoModel obje)
         {
 
-            string sql = "INSERT INTO oferta_materia_prima (cantidad_oferta, empresa_id_empresa,oferto) VALUES('" + obje.valor + "','" + obje.id + "','SI')";
+            string sql = "INSERT INTO oferta_materia_prima (cantidad_oferta, empresa_id_empresa,oferto,Activarcompra) VALUES('" + obje.valor + "','" + obje.id + "','SI','Inactivo')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
     }

@@ -28,13 +28,13 @@ namespace juefi2.Views.empresa
             sb.Append(" var SourceFromDataBase= [");
 
             string item = "";
-            foreach (DataRow dr in datanombre.Tables[0].Rows)
-            {
-                if (item != "")
-                    item = ",";
-                sb.Append(item + "{label:\"" + dr["label"].ToString() + "\",value:\"" + dr["value"] + "\"}");
-                item = ",";
-            }
+            //foreach (DataRow dr in datanombre.Tables[0].Rows)
+            //{
+            //    if (item != "")
+            //        item = ",";
+            //    sb.Append(item + "{label:\"" + dr["label"].ToString() + "\",value:\"" + dr["value"] + "\"}");
+            //    item = ",";
+            //}
 
             sb.Append("];");
             sb.Append("</script>");

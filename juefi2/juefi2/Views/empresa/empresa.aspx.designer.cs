@@ -67,6 +67,15 @@ namespace juefi2.Views.empresa {
         protected global::System.Web.UI.WebControls.Label lblagre;
         
         /// <summary>
+        /// Control usuario1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList usuario1;
+        
+        /// <summary>
         /// Control btngregar.
         /// </summary>
         /// <remarks>
@@ -85,12 +94,12 @@ namespace juefi2.Views.empresa {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl inter;
         
         /// <summary>
-        /// Control mostraragregados.
+        /// Control mostraragregados2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView mostraragregados;
+        protected global::System.Web.UI.WebControls.Repeater mostraragregados2;
     }
 }

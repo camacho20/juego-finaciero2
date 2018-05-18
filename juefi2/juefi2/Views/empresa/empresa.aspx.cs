@@ -20,12 +20,13 @@ namespace juefi2.Views.empresa
         protected void Page_Load(object sender, EventArgs e)
         {
             lblagre.Visible = false;
-            //usuario1.Visible = false;
+            usuario1.Visible = false;
             btngregar.Visible = false;
             inter.Visible = false;
 
-        
-
+            llenarlista();
+            mostraragregados2.Visible = false;
+            llenar_combo(usuario1);
 
         }
 
@@ -63,10 +64,10 @@ namespace juefi2.Views.empresa
                 DropIntegrantes.SelectedIndex = 0;
                 btnguardar.Enabled = false;
                 lblagre.Visible = true;
-               
+                usuario1.Visible = true;
                 btngregar.Visible = true;
                 inter.Visible = true;
-
+                mostraragregados2.Visible = true;
                 Response.Write("<script> alert('Empresa registrada'); </script>");
                 return;
             }
@@ -84,9 +85,10 @@ namespace juefi2.Views.empresa
                 DropIntegrantes.SelectedIndex = 0;
                 btnguardar.Enabled = false;
                 lblagre.Visible = true;
-               
+                usuario1.Visible = true;
                 btngregar.Visible = true;
                 inter.Visible = true;
+                mostraragregados2.Visible = true;
                 Response.Write("<script> alert('Empresa registrada'); </script>");
                 return;
             }
@@ -97,17 +99,23 @@ namespace juefi2.Views.empresa
 
         protected void llenar_combo(DropDownList lista)
         {
-            datanombre = empr.llamarinombre();
-            lista.DataSource = datanombre;
-            lista.DataTextField = "nombre_1_usuario,apellido_1_usuario";
+            
+            lista.DataSource = empr.llamarinombre(); 
+           
             // FieldName of Table in DataBase
 
-            lista.DataValueField = "nombre_1_usuario";
+            lista.DataValueField = "apellido_1_usuario";
+            lista.DataTextField = "nombre_1_usuario";
             lista.DataBind();
             
 
         }
 
+        protected void llenarlista() {
+
+            mostraragregados2.DataSource = empr.llamarusunombre(int.Parse( empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))));
+            mostraragregados2.DataBind();
+        }
 
 
         protected void btngregar_Click(object sender, EventArgs e)

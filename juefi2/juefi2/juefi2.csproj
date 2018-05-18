@@ -6761,6 +6761,9 @@
     <Content Include="Content\fonts\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.metadata.js" />
     <Content Include="Scripts\jsinicio\bootstrap.min.js" />
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
@@ -6775,6 +6778,7 @@
     <Content Include="Views\jugadas\compra_materia_prima.aspx" />
     <Content Include="Views\jugadas\creditoaspx.aspx" />
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
+    <Content Include="Views\jugadas\HabilitarCompra.aspx" />
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\jugadas\Movimientos.aspx" />
@@ -7308,6 +7312,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ActivarCompraController.cs" />
     <Compile Include="Controllers\ActivosController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\MovimientoController.cs" />
@@ -7323,6 +7328,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActivarCompraModel.cs" />
     <Compile Include="Models\ActivosModel.cs" />
     <Compile Include="Models\BD\conecMysql.cs" />
     <Compile Include="Models\parametrizacionPeriodoModel.cs" />
@@ -7417,6 +7423,13 @@
     </Compile>
     <Compile Include="Views\jugadas\gastos_publicidad.aspx.designer.cs">
       <DependentUpon>gastos_publicidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\HabilitarCompra.aspx.cs">
+      <DependentUpon>HabilitarCompra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\HabilitarCompra.aspx.designer.cs">
+      <DependentUpon>HabilitarCompra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\jugadas\inversion_tecnologia.aspx.cs">
       <DependentUpon>inversion_tecnologia.aspx</DependentUpon>

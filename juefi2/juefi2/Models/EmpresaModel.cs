@@ -24,7 +24,7 @@ namespace juefi2.Models
         public DataTable Consultarnombreusu()
         {
 
-            string sql = "SELECT nombre_1_usuario , apellido_1_usuario   FROM usuario where(rol_id_rol=3 AND  bandera='I');";
+            string sql = "SELECT nombre_1_usuario , apellido_1_usuario  FROM usuario where(rol_id_rol=3 AND  bandera='I');";
            
            
             return conn.EjecutarConsulta(sql, CommandType.Text);
@@ -52,6 +52,15 @@ namespace juefi2.Models
             string idempresa = dt.Rows[0]["empresa_id_empresa"].ToString();
 
             return idempresa;
+
+        }
+        public DataTable llamarempresa(int id)
+        {
+            string sql = " SELECT nombre_1_usuario , apellido_1_usuario   FROM usuario where(empresa_id_empresa= '" + id + "' );";
+
+           
+
+            return conn.EjecutarConsulta(sql, CommandType.Text); ;
 
         }
 
