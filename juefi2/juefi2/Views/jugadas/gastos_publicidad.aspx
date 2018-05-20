@@ -14,7 +14,7 @@
                     <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
                             <label>Monto públicidad</label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass=" form-control"></asp:TextBox>
+                            <asp:TextBox ID="Txtmonto" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
 
@@ -41,7 +41,7 @@
                     <div class="col-md-4  col-md-offset-1 ">
                         <div class="form-group">
                             <div class="box-footer">
-                                <asp:Button ID="guardar" runat="server" Text="Realizar Inversión" CssClass="btn btn-primary" />
+                                <asp:Button ID="guardar" runat="server" Text="Realizar Inversión"  OnClick="guardar_Click" CssClass="btn btn-primary" />
                             </div>
 
                         </div>

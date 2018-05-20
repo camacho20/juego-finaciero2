@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace juefi2.Views.parametrizacion
 {
-    public partial class paramtreiacion_variables : System.Web.UI.Page
+    public partial class paramtreiacion_año : System.Web.UI.Page
     {
         ParametrizarVariableController vari = new ParametrizarVariableController();
 

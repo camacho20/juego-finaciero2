@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="paramtreiacion_año.aspx.cs" Inherits="juefi2.Views.parametrizacion.paramtreiacion_variables" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="paramtreiacion_año.aspx.cs" Inherits="juefi2.Views.parametrizacion.paramtreiacion_año" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Variables por año</title>
 </asp:Content>
@@ -6,7 +6,7 @@
     <div class="col-md-9 ">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Parametrizar variables Anuales</h3>
+                <h3 class="box-title">Parametrizar  variables Anuales</h3>
             </div>
             <div class="box-body">
                 <div class="row">

@@ -10,7 +10,7 @@
 namespace juefi2.Views.parametrizacion {
     
     
-    public partial class paramtreiacion_variables {
+    public partial class paramtreiacion_año {
         
         /// <summary>
         /// Control txtuvt.
