@@ -3,13 +3,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-       <div class="col-md-9 ">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Costo de Almacenamiento de Materia Prima</h3>
-            </div>
+    <header class="content__title">
+        <h1>xxx</h1>
 
-            <div class="box-body">
+
+    </header>
+
+
+       <div class="col-md-9 ">
+       <div class="card">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+
+             <div class="card-body">
+
+                  <h3 class=" card-title">Costo de Almacenamiento de Materia Prima</h3>
                 <div class="row">
                                                        
                      <div class="col-md-4 col-md-offset-1">

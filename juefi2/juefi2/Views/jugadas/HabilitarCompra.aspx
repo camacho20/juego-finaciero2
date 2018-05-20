@@ -3,14 +3,19 @@
     <title>Habilitar Compra</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+     <header class="content__title">
+        <h1>xxx</h1>
 
-     <div class="col-md-9 ">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Habilitar compra</h3>
-            </div>
 
-            <div class="box-body">
+    </header>
+
+    <div class="card">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+
+             <div class="card-body">">
+                 <h3 class="card-title">Habilitar compra</h3>
 
       <div class="table-responsive">
 

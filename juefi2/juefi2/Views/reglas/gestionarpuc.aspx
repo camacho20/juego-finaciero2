@@ -12,186 +12,218 @@
      </script>
 
     
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
    
-     <!-- Bootstrap 3.3.7 -->
-    <link href="../../Content/stilos/estiloadmin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+    <link href="../../Content/stilos/estilotab/estilos.css" rel="stylesheet" />
     
-  <!-- Font Awesome -->
-  
-<link href="../../Content/stilos/estiloadmin/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-  <!-- Ionicons -->
-  
-<link href="../../Content/stilos/estiloadmin/bower_components/Ionicons/css/ionicons.min.css" rel="stylesheet" />
-  <!-- Theme style -->
-  
-<link href="../../Content/stilos/estiloadmin/dist/css/AdminLTE.min.css" rel="stylesheet" />
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-  
-<link href="../../Content/stilos/estiloadmin/dist/css/skins/_all-skins.min.css" rel="stylesheet" />
-  <!-- Morris chart -->
-  
-<link href="../../Content/stilos/estiloadmin/bower_components/morris.js/morris.css" rel="stylesheet" />
-  <!-- jvectormap -->
+   <!-- Vendor styles -->
+        
+<link href="../../Content/stilos/estiloadmin/css/material-design-iconic-font.min.css" rel="stylesheet" />
+      
+<link href="../../Content/stilos/estiloadmin/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet" />
 
-<link href="../../Content/stilos/estiloadmin/bower_components/jvectormap/jquery-jvectormap.css" rel="stylesheet" />
-  <!-- Date Picker -->
-  
-<link href="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet" />
-  <!-- Daterange picker -->
-  
-<link href="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
-  <!-- bootstrap wysihtml5 - text editor -->
-  
-<link href="../../Content/stilos/estiloadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" />
+<link href="../../Content/stilos/estiloadmin/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet" />
 
-
-<link href="../../Content/stilos/modal.css" rel="stylesheet" />
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-
-
+        <!-- App styles -->
+       <link href="../../Content/stilos/estiloadmin/css/app.min.css" rel="stylesheet" />
+    <link href="../../Content/stilos/modal.css" rel="stylesheet" />
 
 </head>
-<body class="hold-transition skin-blue sidebar-mini" >
+<body data-sa-theme="7" >
     <form id="form1" runat="server">
-    <div class="wrapper">
+     <main class="main">
+           
 
-  <!-- Main Header -->
-  <header class="main-header">
+            <header class="header">
+                <div class="navigation-trigger hidden-xl-up" data-sa-action="aside-open" data-sa-target=".sidebar">
+                    <i class="zmdi zmdi-menu"></i>
+                </div>
 
-    <!-- Logo -->
-    <a href="index2.html" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>JS</b>F</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Bienvenido(a)</b></span>
-    </a>
+                <div class="logo hidden-sm-down">
+                    <h1><a href="../usuario/principal.aspx">Bienvenido(a) :</a></h1>
+                </div>
 
-    <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top" role="navigation">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-      </a>
-        <a class="navbar-brand text-center" href="principal.aspx" id="mensaje" runat="server"></a>
-      <!-- Navbar Right Menu -->
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
-          <!-- Messages: style can be found in dropdown.less-->
-          
-                <!-- inner menu: contains the messages -->
-                
-            
-          <!-- /.messages-menu -->
-
-          <!-- Notifications Menu -->
-           <!-- User Menu-->
-            
-                    <li>
-                        <asp:LinkButton ID="LinkButton1" runat="server"  OnClick="LinkButton1_Click"><i class="fa fa-sign-out fa-lg"></i> Cerrar Sesión</asp:LinkButton></li>
-              
-         
-        
-          
-          <!-- User Account Menu -->
-          
-              <!-- Menu Body -->
-              
-                <!-- /.row -->
-            
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="../../Content/imagenes/imagesinicio/usuario.png" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-         <br />
-          <!-- Status -->
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-
-     
-
-      <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-         <li class="active"><a href="../usuario/principal.aspx"><i class="fa fa-institution"></i> <span>Inicio</span></a></li>
-        
-      <asp:Repeater ID="menurepeter" runat="server">
-
-              <ItemTemplate>
                
-                   <li >
-                      <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
 
-                   </li>
+                <ul class="top-nav">
+                    <li class="hidden-xl-up"><a href="#" data-sa-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="top-nav__notify"><i class="zmdi zmdi-email"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
+                            <div class="dropdown-header">
+                                Messages
+
+                                <div class="actions">
+                                    <a href="messages.html" class="actions__item zmdi zmdi-plus"></a>
+                                </div>
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            David Belle <small>12:01 PM</small>
+                                        </div>
+                                        <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Jonathan Morris
+                                            <small>02:45 PM</small>
+                                        </div>
+                                        <p>Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Fredric Mitchell Jr.
+                                            <small>08:21 PM</small>
+                                        </div>
+                                        <p>Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Glenn Jecobs
+                                            <small>08:43 PM</small>
+                                        </div>
+                                        <p>Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="listview__item">
+                                    <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
+
+                                    <div class="listview__content">
+                                        <div class="listview__heading">
+                                            Bill Phillips
+                                            <small>11:32 PM</small>
+                                        </div>
+                                        <p>Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</p>
+                                    </div>
+                                </a>
+
+                                <a href="#" class="view-more">View all messages</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    
+
+                    
+
                    
-               
-           </ItemTemplate>
+
+                    <li class="dropdown hidden-xs-down">
+                        <a href="#" data-toggle="dropdown"><i class="zmdi zmdi-square-right zmdi-hc-fw"></i></a>
+
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <asp:LinkButton ID="LinkButtonsalir" CssClass="dropdown-item" OnClick="LinkButton1_Click" runat="server"><i class="zmdi zmdi-directions-run zmdi-hc-fw"></i>Salir</asp:LinkButton>
+                            
+                        </div>
+                    </li>
+
+                    
+                </ul>
+
+                <div class="clock hidden-md-down">
+                    <div class="time">
+                        <span class="time__hours"></span>
+                        <span class="time__min"></span>
+                        <span class="time__sec"></span>
+                    </div>
+                </div>
+            </header>
+
+  
+  <!-- Left side column. contains the logo and sidebar -->
+              <aside class="sidebar">
+                <div class="scrollbar-inner">
+
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                            <img class="user__img" src="../../Content/imagenes/imagesinicio/usuario.png" alt=""/>
+                    <div class="pull-left info">
+                        <asp:Label ID="lblbnombre" runat="server" Text=""></asp:Label>
+                        <br />
+                        <!-- Status -->
+                        <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
+                    </div>
+                </div>
+
+                       
+                    </div>
+
+               <ul class="navigation">
+                        <li class="@@indexactive"><a href="../usuario/principal.aspx"><i class="zmdi zmdi-home"></i>Inicio</a></li>
+                        <asp:Repeater ID="menurepeter" runat="server">
+
+                    <ItemTemplate>
+
+                        <li class="@@indexactive ">
+                            <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
+
+                        </li>
+
+
+                    </ItemTemplate>
 
 
 
 
           </asp:Repeater>
-        
-            </ul>
-      <!-- /.sidebar-menu -->
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+                      
+                        
+                          </ul>
+                </div>
+            </aside>
+
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-   
+  <section class="content">
+ <div class="content__inner">
 
-    <!-- Main content -->
-    <section class="content container-fluid">
+        <header class="content__title">
+        <h1>xxx</h1>
 
-       
-             <!-- Content Header (Page header) -->
-    <section class="content-header">
-            <h1>Gestionar PUC
-       
-                <small>(Consultar,Editar,Eliminar)</small>
-            </h1>
-        </section>
 
-          <br />
+    </header>
 
-         <!-- Default box -->
-    <div class="box box-info">
-        <div class="box-header with-border">
-           
-            <input type="checkbox" name="activarventana" id="activarventana" />
+         <!-- Default box --> 
+     <div class="card">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+
+             <div class="card-body">
+
+
+             <h1 class="card-title">Gestionar PUC </h1>
+
+             <input type="checkbox" name="activarventana" id="activarventana" />
                     <label for="activarventana" id="abremodal">
                         Registrar PUC
                        
                         <i class="fa fa-plus-square"></i>
                     </label>
-
-             <%-- modal agregar reglas--%>
+            <%-- modal agregar reglas--%>
             <div class="ventanamodal">
                 <div class="contenido">
                     <div class="modal-content">
@@ -229,9 +261,10 @@
         </div>
         <!-- /.modal -->
 
-                </div>
+                
 
-        <div class="box-body">
+
+
             <div class="table-responsive">
                 <asp:GridView ID="puces" runat="server"
                     CellPadding="4" AutoPostBack="true"
@@ -256,32 +289,22 @@
                 </asp:GridView>
             </div>
         </div>
-    </div>
-
+    
+             </div>
             
         <!-- /.box-body -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+    
+  <!-- /.content-1 -->
 
   <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="pull-right hidden-xs">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
-  </footer>
+  <footer class="footer hidden-xs-down">
+                    <p>© Universidad de la amazonia 2018. All rights reserved.</p>
 
-  <!-- Control Sidebar -->
- 
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-  immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
+                   
+                </footer>
+                </div>
+            </section>
+        </main>
        
         <script src="../../Scripts/jquery-1.4.2.min.js"></script>
         <script src="../../Scripts/jquery.dataTables.min.js"></script>
@@ -331,44 +354,20 @@
 
 
 
-        <!-- jQuery UI 1.11.4 -->
-<script src="../../Content/stilos/estiloadmin/bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Javascript -->
+        <!-- Vendors -->
+       
+<script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../Content/stilos/estiloadmin/vendors/bower_components/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../Content/stilos/estiloadmin/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
 
 
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../Content/stilos/estiloadmin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="../../Content/stilos/estiloadmin/bower_components/raphael/raphael.min.js"></script>
-<script src="../../Content/stilos/estiloadmin/bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="../../Content/stilos/estiloadmin/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-
-<script src="../../Content/stilos/estiloadmin/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="../../Content/stilos/estiloadmin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="../../Content/stilos/estiloadmin/bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="../../Content/stilos/estiloadmin/bower_components/moment/min/moment.min.js"></script>
-<script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="../../Content/stilos/estiloadmin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="../../Content/stilos/estiloadmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="../../Content/stilos/estiloadmin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../Content/stilos/estiloadmin/bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../Content/stilos/estiloadmin/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="../../Content/stilos/estiloadmin/dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../Content/stilos/estiloadmin/dist/js/demo.js"></script>
+    <!-- App functions and actions -->
+     
+        
+    <script src="../../Content/stilos/estiloadmin/js/app.min.js"></script>
 
 
     

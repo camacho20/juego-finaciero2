@@ -8,12 +8,11 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <section class="content-header">
-        <h1>Balance General
-       
-                <small>(Inicial del juego)</small>
-        </h1>
-    </section>
+      <header class="content__title">
+                        <h1>xxx</h1>
+
+                        
+                    </header>
 
     <br />
     <div class="col-md-12">

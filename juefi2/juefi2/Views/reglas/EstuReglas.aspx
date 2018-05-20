@@ -4,18 +4,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-     <!-- Default box -->
-    <div class="box box-info">
-        <div class="box-header with-border">
-          
-              <h3 class="box-title">Reglas del Juego</h3>
-              
-               
-            </div>
-        
 
-        
-        <div class="box-body">
+     <header class="content__title">
+        <h1>xxx</h1>
+
+
+    </header>
+
+
+     <!-- Default box -->
+     <div class="card">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+
+             <div class="card-body">
+
+              <h3 class="card-title">Reglas del Juego</h3>
       <div class="table-responsive">
 
            <table id="example1" class="table table-bordered table-striped">

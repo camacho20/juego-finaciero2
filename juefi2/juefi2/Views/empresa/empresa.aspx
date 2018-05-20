@@ -7,32 +7,37 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <header class="content__title">
+        <h1>xxx</h1>
 
-    <div class="col-md-9 ">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Gestionar Empresa</h3>
-            </div>
+
+    </header>
+
+    <div class="col-md-9  col-md-offset-0">
+        <div class="card">
+            
             <!-- /.box-header -->
             <!-- form start -->
 
-            <div class="box-body">
+             <div class="card-body">
+                <h3 class=" card-title"" >Gestionar Empresa</h3>
+           
                 <div class="row">
 
-                    <div class="col-md-3 col-md-offset-1">
+                    <div class="col-md-4 col-md-offset-1">
                         <div class="form-group">
                             <label>Nit de la Empresa</label>
                             <asp:TextBox ID="txtnit" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
-                    <div class="col-md-3 col-md-offset-0">
+                    <div class="col-md-4 col-md-offset-0">
                         <div class="form-group">
                             <label>Nombre de la Empresa</label>
                             <asp:TextBox ID="txtnombre" runat="server" onkeypress="return soloLetras(event)" CssClass=" form-control"></asp:TextBox>
                         </div>
                     </div>
 
-                    <div class="col-md-3 col-md-offset-0 ">
+                    <div class="col-md-4 col-md-offset-0 ">
                         <div class="form-group">
                             <label>Numero de Integrantes</label>
 
@@ -106,4 +111,5 @@
         </div>
 
     </div>
+    
 </asp:Content>
