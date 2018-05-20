@@ -44,7 +44,7 @@ namespace juefi2.Views.pagina_maestra
 
             MenuController userc = new MenuController();
             string saludo = userc.GetNombresUsuario(Int32.Parse(Session["id_usuario"].ToString())).ToUpper();
-            Session["NombreUsuario"] = saludo;
+            //Session["NombreUsuario"] = saludo;
 
             lblbnombre.Text = saludo;
         }

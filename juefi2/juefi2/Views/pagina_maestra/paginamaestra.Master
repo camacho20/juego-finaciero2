@@ -319,11 +319,23 @@
     <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.min.js"></script>
     <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery-scrollLock/jquery-scrollLock.min.js"></script>
 
+     <!-- Vendors: Data tables -->
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jszip/dist/jszip.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/datatables.net-buttons/js/buttons.html5.min.js"></script>
 
     <!-- App functions and actions -->
      
-        <
+        
     <script src="../../Content/stilos/estiloadmin/js/app.min.js"></script>
+
+
+
+
+
+
 
 </body>
 </html>
