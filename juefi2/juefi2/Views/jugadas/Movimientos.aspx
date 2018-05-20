@@ -4,13 +4,23 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-      <div class="col-md-12 ">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Movimientos</h3>
-            </div>
 
-            <div class="box-body">
+     <header class="content__title">
+        <h1>xxx</h1>
+
+
+    </header>
+
+      <div class="col-md-12 ">
+        <div class="card">
+            
+            <!-- /.box-header -->
+            <!-- form start -->
+
+             <div class="card-body">
+
+                 <h3 class="card-title">Movimientos</h3>
+
                   <div class="table-responsive">
 
            <table id="example1" class="table table-bordered table-striped">

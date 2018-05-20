@@ -60,7 +60,7 @@ namespace juefi2.Views.reglas
             string saludo = userc.GetNombresUsuario(Int32.Parse(Session["id_usuario"].ToString())).ToUpper();
             Session["NombreUsuario"] = saludo;
 
-            mensaje.InnerText = saludo;
+            lblbnombre.Text = saludo;
         }
 
     

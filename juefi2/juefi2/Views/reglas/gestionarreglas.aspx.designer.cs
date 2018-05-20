@@ -22,22 +22,22 @@ namespace juefi2.Views.reglas {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Control mensaje.
+        /// Control LinkButtonsalir.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor mensaje;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonsalir;
         
         /// <summary>
-        /// Control LinkButton1.
+        /// Control lblbnombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label lblbnombre;
         
         /// <summary>
         /// Control menurepeter.

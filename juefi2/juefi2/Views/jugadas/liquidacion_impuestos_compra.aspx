@@ -3,15 +3,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
+    <header class="content__title">
+        <h1>xxx</h1>
+
+
+    </header>
+
     <div class="col-md-9 ">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-                <h3 class="box-title">Liquidacion de Compra</h3>
-            </div>
+        <div class="card">
+            
             <!-- /.box-header -->
             <!-- form start -->
 
-            <div class="box-body">
+             <div class="card-body">
+                 <h3 class="card-title">Liquidacion de Compra</h3>
+
                 <div class="row">
 
                     <div class="col-md-4 col-md-offset-1">
