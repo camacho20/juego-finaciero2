@@ -113,8 +113,8 @@ namespace juefi2.Views.empresa
 
         protected void llenarlista() {
 
-            mostraragregados2.DataSource = empr.llamarusunombre(int.Parse( empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))));
-            mostraragregados2.DataBind();
+            //mostraragregados2.DataSource = empr.llamarusunombre(int.Parse( empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))));
+            //mostraragregados2.DataBind();
         }
 
 

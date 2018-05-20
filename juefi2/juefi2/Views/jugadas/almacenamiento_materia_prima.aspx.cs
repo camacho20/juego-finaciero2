@@ -27,7 +27,7 @@ namespace juefi2.Views.jugadas
         protected void calcular(double cantidad)
         {
 
-            cantidad = Convert.ToDouble(Textcantidad.Text)*1000;
+            cantidad = Convert.ToDouble(Textcantidad.Text)*500;
            disponible = cantidad;
 
          }
