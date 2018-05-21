@@ -24,7 +24,7 @@ namespace juefi2.Models
         public DataTable Consultarnombreusu()
         {
 
-            string sql = "SELECT nombre_1_usuario , apellido_1_usuario  FROM usuario where(rol_id_rol=3 AND  bandera='I');";
+            string sql = "SELECT nombre_1_usuario , apellido_1_usuario  FROM usuario where(rol_id_rol=3 AND tiene_empresa='I');";
            
            
             return conn.EjecutarConsulta(sql, CommandType.Text);
@@ -40,7 +40,7 @@ namespace juefi2.Models
         public bool registrarempresausuario(int id,int empresa)
         {
 
-            string sql = "UPDATE usuario SET  empresa_id_empresa ='" + empresa + "', bandera ='A' where id_usuario='" + id + "';";
+            string sql = "UPDATE usuario SET  empresa_id_empresa ='" + empresa + "', tiene_empresa ='A' where id_usuario='" + id + "';";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 

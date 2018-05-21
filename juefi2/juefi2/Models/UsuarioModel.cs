@@ -51,7 +51,7 @@ namespace juefi2.Models
         public bool registrarusuario(UsuarioModel obj)
         {
             
-            string sql = "INSERT INTO usuario (nombre_1_usuario, nombre_2_usuario, apellido_1_usuario, apellido_2_usuario,usuario,email, contrasena, rol_id_rol, bandera )  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "',Md5('" + obj.contrasena + "'),'" + obj.rol + "','" + obj.bandera + "')";
+            string sql = "INSERT INTO usuario (nombre_1_usuario, nombre_2_usuario, apellido_1_usuario, apellido_2_usuario,usuario,email, contrasena, rol_id_rol, tiene_empresa )  VALUES('" + obj.nombre1 + "','" + obj.nombre2 + "','" + obj.apellido1 + "','" + obj.apellido2 + "','" + obj.user + "','" + obj.correo_electronico + "',Md5('" + obj.contrasena + "'),'" + obj.rol + "','" + obj.bandera + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
