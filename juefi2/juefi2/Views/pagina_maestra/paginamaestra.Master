@@ -108,7 +108,18 @@
 
 <link href="../../Content/stilos/estiloadmin/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet" />
 
-        <!-- App styles -->
+      <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/select2/dist/css/select2.min.css"/>
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/dropzone/dist/dropzone.css"/>
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/flatpickr/dist/flatpickr.min.css" />
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/nouislider/distribute/nouislider.min.css"/>
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css"/>
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/trumbowyg/dist/ui/trumbowyg.min.css"/>
+        <link rel="stylesheet" href="../../Content/stilos/estiloadmin/vendors/bower_components/rateYo/min/jquery.rateyo.min.css"/>
+    
+    
+    
+    
+      <!-- App styles -->
        <link href="../../Content/stilos/estiloadmin/css/app.min.css" rel="stylesheet" />
 
 
@@ -267,8 +278,9 @@
 
                         <li class="@@indexactive ">
                             <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
-
+                            
                         </li>
+                     
 
 
                     </ItemTemplate>
@@ -330,6 +342,26 @@
      
         
     <script src="../../Content/stilos/estiloadmin/js/app.min.js"></script>
+
+    <!-- date picker -->
+
+     <script src="../../Content/stilos/estiloadmin/vendors/bower_components/flatpickr/dist/flatpickr.min.js"></script>
+
+     <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/select2/dist/js/select2.full.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/dropzone/dist/min/dropzone.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/moment/min/moment.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/flatpickr/dist/flatpickr.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/nouislider/distribute/nouislider.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/trumbowyg/dist/trumbowyg.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/rateYo/min/jquery.rateyo.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/jquery-text-counter/textcounter.min.js"></script>
+        <script src="../../Content/stilos/estiloadmin/vendors/bower_components/autosize/dist/autosize.min.js"></script>
+
+
+
+
 
 
 

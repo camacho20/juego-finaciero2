@@ -305,6 +305,7 @@
                 </div>
             </section>
         </main>
+    </form>
        
         <script src="../../Scripts/jquery-1.4.2.min.js"></script>
         <script src="../../Scripts/jquery.dataTables.min.js"></script>
@@ -372,7 +373,6 @@
 
     
 
-    </form>
 
     
 </body>
