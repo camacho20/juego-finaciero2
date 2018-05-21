@@ -324,6 +324,7 @@
     <Content Include="Scripts\jsinicio\main.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
+    <Content Include="Views\balance_final\balance_final.aspx" />
     <Content Include="Views\empresa\DocneteEmpresa.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\almacenamiento_materia_prima.aspx" />
@@ -499,6 +500,13 @@
     </Compile>
     <Compile Include="Views\balance\balanceinicial.aspx.designer.cs">
       <DependentUpon>balanceinicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\balance_final\balance_final.aspx.cs">
+      <DependentUpon>balance_final.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\balance_final\balance_final.aspx.designer.cs">
+      <DependentUpon>balance_final.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\empresa\DocneteEmpresa.aspx.cs">
       <DependentUpon>DocneteEmpresa.aspx</DependentUpon>
