@@ -5,9 +5,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
     <header class="content__title">
-        <h1>xxx</h1>
+               <div class="toolbar">
+              <div class="col-md-9 ">
+                  <div class="toolbar__nav">
+                      <a href="../usuario/principal.aspx">
+                          <h5><i class="zmdi zmdi-home"></i>Inicio</h5>
+                      </a>
+                      <span>>> </span>
 
+                      <a href='#'>
+                          <h5><i class="zmdi zmdi-settings-square zmdi-hc-fw"></i>Partida</h5>
+                      </a>
+                  </div>
+              </div>
 
+          </div>
     </header>
 
     <div class="col-md-12 ">

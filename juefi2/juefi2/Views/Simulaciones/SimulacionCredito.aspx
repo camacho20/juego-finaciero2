@@ -4,7 +4,33 @@
     <title>Simulador de Creditos</title>
 
 </asp:Content>
+
+
+
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+        <header class="content__title">
+    <div class="toolbar">
+        <div class="col-md-9 ">
+            <div class="toolbar__nav">
+                <a href="../usuario/principal.aspx">
+                    <h5><i class="zmdi zmdi-home"></i>Inicio</h5>
+                </a>
+                <span>>> </span>
+
+                <a href='#'>
+                    <h5><i class="zmdi zmdi-card zmdi-hc-fw"></i>credito</h5>
+                </a>
+                <span>>> </span>
+
+                <a href='#'>
+                    <h5><i class="zmdi zmdi-card zmdi-hc-fw"></i>Simular credito</h5>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</header>
 
     <div class="col-md-9 ">
         <div class="box box-primary">

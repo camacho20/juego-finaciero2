@@ -11,9 +11,21 @@
 
 
      <header class="content__title">
-        <h1>xxx</h1>
+           <div class="toolbar">
+              <div class="col-md-9 ">
+                  <div class="toolbar__nav">
+                      <a href="../usuario/principal.aspx">
+                          <h5><i class="zmdi zmdi-home"></i>Inicio</h5>
+                      </a>
+                      <span>>> </span>
 
+                      <a href='#'>
+                          <h5><i class="zmdi zmdi-money-box zmdi-hc-fw"></i>Balance general-puc</h5>
+                      </a>
+                  </div>
+              </div>
 
+          </div>
     </header>
 
          <!-- Default box --> 
