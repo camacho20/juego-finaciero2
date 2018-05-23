@@ -11,15 +11,17 @@ namespace juefi2.Models
     {
         private conecMysql conn = new conecMysql();
 
-   public   int  id_partida_general { get; set; }
+   public string nombre_partida { get; set; }
         public string numero_empresas { get; set; }
         public  DateTime fecha_inicial { get; set; }
         public DateTime fecha_final { get; set; }
 
         public bool registrarpartida(PartidaModel obj)
         {
+            string inicial = obj.fecha_inicial.Year + "-" + obj.fecha_inicial.Month + "-" + obj.fecha_inicial.Day;
+            string final= obj.fecha_final.Year + "-" + obj.fecha_final.Month + "-" + obj.fecha_final.Day;
 
-            string sql = "INSERT INTO partida_especifica (id_partida_general, numero_empresas, fecha_inicial, fecha_final )  VALUES('" + obj.id_partida_general + "','" + obj.numero_empresas + "','" + obj.fecha_inicial + "','" + obj.fecha_final + "')";
+            string sql = "INSERT INTO partida_especifica (nombre_partida, numero_empresas, fecha_inicial, fecha_fin )  VALUES('" + obj.nombre_partida + "','" + obj.numero_empresas + "','" + inicial + "','" + final + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 

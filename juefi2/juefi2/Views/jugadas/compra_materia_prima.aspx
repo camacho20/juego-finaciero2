@@ -3,11 +3,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-     <header class="content__title">
-        <h1>xxx</h1>
+    <header class="content__title">
+        
 
 
-    </header>
+
+        <div class="toolbar">
+             <div class="col-md-9 ">
+            <div class="toolbar__nav">
+                <a href="../usuario/principal.aspx"><h5> Inicio</h5></a>
+              <span> >> </span>
+                <a href="#"><h5>  Compra de Materia Prima   </h5></a>
+                </div>
+            </div>
+
+        </div>
+</header>
 
      <div class="col-md-9 ">
          <div class="card">

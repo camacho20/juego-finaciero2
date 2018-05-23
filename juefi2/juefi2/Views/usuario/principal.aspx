@@ -7,11 +7,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!-- Content Header (Page header) -->
 
-                    <header class="content__title">
-                        <h1>xxx</h1>
+    <header class="content__title">
 
-                        
-                    </header>
+
+
+
+        <div class="toolbar">
+            <div class="col-md-9 ">
+                <div class="toolbar__nav">
+                    <a href="../usuario/principal.aspx">
+                        <h5>Inicio</h5>
+                    </a>
+                    <span>>> </span>
+                   
+                </div>
+            </div>
+
+        </div>
+    </header>
 
 
 

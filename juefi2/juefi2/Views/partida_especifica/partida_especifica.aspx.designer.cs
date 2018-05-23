@@ -13,31 +13,40 @@ namespace juefi2.Views.partida_especifica {
     public partial class partida_especifica {
         
         /// <summary>
-        /// Control Textnombrepartida.
+        /// Control txtnombrepartida.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textnombrepartida;
+        protected global::System.Web.UI.WebControls.TextBox txtnombrepartida;
         
         /// <summary>
-        /// Control txtnombreempresa.
+        /// Control txtnumeroempresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnombreempresa;
+        protected global::System.Web.UI.WebControls.TextBox txtnumeroempresa;
         
         /// <summary>
-        /// Control txtnumero.
+        /// Control fechaInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtnumero;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fechaInicio;
+        
+        /// <summary>
+        /// Control fechaFin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputText fechaFin;
         
         /// <summary>
         /// Control guardar.
