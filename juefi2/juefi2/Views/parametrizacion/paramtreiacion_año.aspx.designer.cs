@@ -22,15 +22,6 @@ namespace juefi2.Views.parametrizacion {
         protected global::System.Web.UI.WebControls.TextBox txtuvt;
         
         /// <summary>
-        /// Control txtea.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtea;
-        
-        /// <summary>
         /// Control txtdtf.
         /// </summary>
         /// <remarks>
@@ -74,6 +65,15 @@ namespace juefi2.Views.parametrizacion {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtiva;
+        
+        /// <summary>
+        /// Control Textiva22.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Textiva22;
         
         /// <summary>
         /// Control btnguardar.

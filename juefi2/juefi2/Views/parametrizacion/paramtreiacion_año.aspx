@@ -48,12 +48,7 @@
                             <asp:TextBox ID="txtuvt" CssClass=" form-control" runat="server"></asp:TextBox>
 
                         </div>
-                        <div class="form-group">
-                            <label>Efectivo anual (EA)</label>
-                            <asp:TextBox ID="txtea" CssClass=" form-control" runat="server"></asp:TextBox>
-
-                        </div>
-
+                      
                         <div class="form-group">
                             <label>DTF</label>
                             <asp:TextBox ID="txtdtf" runat="server" CssClass=" form-control"></asp:TextBox>
@@ -75,6 +70,13 @@
                         <div class="form-group">
                             <label>Iva </label>
                             <asp:TextBox ID="txtiva" CssClass=" form-control" runat="server"></asp:TextBox>
+
+                        </div>
+
+
+                         <div class="form-group">
+                            <label>Iva 22 </label>
+                            <asp:TextBox ID="Textiva22" CssClass=" form-control" runat="server"></asp:TextBox>
 
                         </div>
                         <p>Nota:Los valores en porcentaje  ingresarlos como decimales ejem: 10%  0.10  </p>

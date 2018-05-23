@@ -47,13 +47,17 @@ namespace juefi2.Views.jugadas
             Textcantidad.Text = Convert.ToString(cantidad);
             movimiento.nombre_movimineto = "Almacenamiento de materia prima";
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(63));
+            movimiento.nombre_cuenta = "Costos Indirectos de Fabricación - Almacenamiento de M.Primas";
             movimiento.debito = cantidad;
             inversion.debito(movimiento);
 
         
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+            movimiento.nombre_cuenta = "Disponible";
             movimiento.credito = disponible;
             inversion.credito(movimiento);
+
+           
 
 
             Textcantidad.Text = "";

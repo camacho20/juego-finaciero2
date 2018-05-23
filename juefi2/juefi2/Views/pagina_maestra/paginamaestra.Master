@@ -103,7 +103,9 @@
    <!-- Vendor styles -->
         
 
-      <link href="../../Content/stilos/estiloadmin/css/material-design-iconic-font.min.css" rel="stylesheet" />
+      
+    <link href="../../Content/stilos/estiloadmin/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    
 <link href="../../Content/stilos/estiloadmin/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet" />
 
 <link href="../../Content/stilos/estiloadmin/vendors/bower_components/jquery.scrollbar/jquery.scrollbar.css" rel="stylesheet" />

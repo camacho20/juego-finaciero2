@@ -41,7 +41,7 @@
                     <div class="col-md-4  col-md-offset-1 ">
                         <div class="form-group">
                             <div class="box-footer">
-                                <asp:Button ID="guardar" runat="server" Text="Realizar Almacenamiento" CssClass="btn btn-primary" />
+                                <asp:Button ID="guardar" runat="server" Text="Realizar Almacenamiento" OnClick="guardar_Click" CssClass="btn btn-primary" />
                             </div>
 
                         </div>

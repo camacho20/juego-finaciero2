@@ -39,6 +39,7 @@
                   <th>Nº Id</th>
                   <th>Nombre del Movimiento</th>
                   <th>Codigo puc</th>
+                    <th>cuenta</th>
                   <th>Credito</th>
                   <th>Debito</th>
                 </tr>
@@ -53,6 +54,7 @@
                            <td><%#Eval("idmovimiento")%></td>
                            <td><%#Eval("nombre_movimineto") %></td>
                            <td><%#Eval("codigo_puc") %></td>
+                            <td><%#Eval("nombre_cuenta") %></td>
                            <td><%#Eval("credito") %></td>
                            <td><%#Eval("debito") %></td>
 

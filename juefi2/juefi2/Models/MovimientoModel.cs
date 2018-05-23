@@ -17,12 +17,13 @@ namespace juefi2.Models
         public double debito { get; set; }
         public string id { get; set; }
         public double valor { get; set; }
+        public string nombre_cuenta { get; set; }
 
 
         public bool debita(MovimientoModel obje)
         {
 
-            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,debito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.debito + "')";
+            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,nombre_cuenta,debito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.nombre_cuenta + "','" + obje.debito + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
@@ -30,14 +31,14 @@ namespace juefi2.Models
         public bool acredita(MovimientoModel obje)
         {
 
-            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc,credito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.credito + "')";
+            string sql = "INSERT INTO movimiento (nombre_movimineto, codigo_puc, nombre_cuenta,credito) VALUES('" + obje.nombre_movimineto + "','" + obje.codigo_puc + "','" + obje.nombre_cuenta + "','" + obje.credito + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
 
         public DataTable mostrarmovimiento()
         {
-            string sql = "SELECT idmovimiento, nombre_movimineto,codigo_puc,credito, debito FROM movimiento  order by idmovimiento;";
+            string sql = "SELECT idmovimiento, nombre_movimineto,codigo_puc,nombre_cuenta,credito, debito FROM movimiento  order by idmovimiento;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 

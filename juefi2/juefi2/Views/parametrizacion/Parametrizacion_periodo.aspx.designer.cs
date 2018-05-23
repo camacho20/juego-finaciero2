@@ -22,15 +22,6 @@ namespace juefi2.Views.parametrizacion {
         protected global::System.Web.UI.WebControls.TextBox txtfeo;
         
         /// <summary>
-        /// Control txtdecuento.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdecuento;
-        
-        /// <summary>
         /// Control txtfactor.
         /// </summary>
         /// <remarks>
@@ -67,22 +58,40 @@ namespace juefi2.Views.parametrizacion {
         protected global::System.Web.UI.WebControls.TextBox TxtofertaEstimada;
         
         /// <summary>
-        /// Control Txtventa.
+        /// Control txtusura.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtventa;
+        protected global::System.Web.UI.WebControls.TextBox txtusura;
         
         /// <summary>
-        /// Control Textusura.
+        /// Control txtelasti11.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textusura;
+        protected global::System.Web.UI.WebControls.TextBox txtelasti11;
+        
+        /// <summary>
+        /// Control txtelasti22.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtelasti22;
+        
+        /// <summary>
+        /// Control txtelasti333.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtelasti333;
         
         /// <summary>
         /// Control btnguardar.

@@ -27,21 +27,19 @@ namespace juefi2.Views.parametrizacion
            
             
             vari.actualizar(1, Convert.ToDouble(txtuvt.Text));
-            vari.actualizar(2, Convert.ToDouble(txtea.Text));
-            vari.actualizar(3, Convert.ToDouble(txtdtf.Text));
-            vari.actualizar(4, Convert.ToDouble(txtsalrio.Text));
-            vari.actualizar(7, Convert.ToDouble(txtiva.Text));
-            vari.actualizar(5, Convert.ToDouble(txtrtfuente.Text));
-            vari.actualizar(6, Convert.ToDouble(txtrtica.Text));
-            cop.actuallizarpuc(40, Convert.ToDouble(txtiva.Text));
-            cop.actuallizarpuc(41, Convert.ToDouble(txtrtfuente.Text));
-            cop.actuallizarpuc(42, Convert.ToDouble(txtrtica.Text));
+            vari.actualizar(2, Convert.ToDouble(txtdtf.Text));
+            vari.actualizar(3, Convert.ToDouble(txtsalrio.Text));
+            vari.actualizar(4, Convert.ToDouble(txtrtfuente.Text));
+            vari.actualizar(5, Convert.ToDouble(txtrtica.Text));
+            vari.actualizar(6, Convert.ToDouble(txtiva.Text));
+            vari.actualizar(7, Convert.ToDouble(Textiva22.Text));
 
 
 
-          
-            txtuvt.Text = ""; ;
-            txtea.Text="";
+
+
+            txtuvt.Text = "";
+            Textiva22.Text = "";
             txtdtf.Text="";
             txtsalrio.Text="";
             txtiva.Text="";

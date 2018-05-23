@@ -82,26 +82,32 @@ namespace juefi2.Views.jugadas
                 txttotal.Text = Convert.ToString(valor_total);
                 movimiento.nombre_movimineto = "Compra de contado";
                 movimiento.codigo_puc =  Convert.ToInt32 (cop.codigopuc(10));
+                movimiento.nombre_cuenta = "Inventario de Materias Primas";
                 movimiento.debito = monto;
                 compracon.debito(movimiento);
 
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+                movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
                 movimiento.debito = iva;
                 compracon.debito(movimiento);
 
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
+                movimiento.nombre_cuenta = "Descuento por Compra de Materias Primas";
                 movimiento.credito = descuento;
                 compracon.credito(movimiento);
 
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
                 movimiento.credito = retefuente;
                 compracon.credito(movimiento);
 
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
                 movimiento.credito =ica ;
                 compracon.credito(movimiento);
 
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+                movimiento.nombre_cuenta = "Disponible";
                 movimiento.credito = valor_total;
                 compracon.credito(movimiento);
 

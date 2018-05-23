@@ -42,12 +42,7 @@
                             <label>Factor Estacional de la Oferta</label>
                             <asp:TextBox ID="txtfeo" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
-
-                        <div class="form-group">
-                            <label>Descuento por compra a contado </label>
-                            <asp:TextBox ID="txtdecuento" CssClass=" form-control" runat="server"></asp:TextBox>
-
-                        </div>
+                                               
 
                         <div class="form-group">
                             <label>Factor estacional de la demanda</label>
@@ -73,14 +68,25 @@
 
                         </div>
 
-                        <div class="form-group">
-                            <label>Precio de Venta</label>
-                            <asp:TextBox ID="Txtventa" CssClass=" form-control" runat="server"></asp:TextBox>
-
-                        </div>
+                      
                           <div class="form-group">
                             <label>Interés de usura </label>
-                            <asp:TextBox ID="Textusura" CssClass=" form-control" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="txtusura" CssClass=" form-control" runat="server"></asp:TextBox>
+
+                        </div>
+                         <div class="form-group">
+                            <label>Elasticidad Precio de Venta  </label>
+                            <asp:TextBox ID="txtelasti11" CssClass=" form-control" runat="server"></asp:TextBox>
+
+                        </div>
+                         <div class="form-group">
+                            <label>Elasticidad Calidad de Producción  </label>
+                            <asp:TextBox ID="txtelasti22" CssClass=" form-control" runat="server"></asp:TextBox>
+
+                        </div>
+                         <div class="form-group">
+                            <label>Elasticidad Gastos de Publicidad   </label>
+                            <asp:TextBox ID="txtelasti333" CssClass=" form-control" runat="server"></asp:TextBox>
 
                         </div>
                         <p>Nota:Los valores en porcentaje  ingresarlos como decimales ejem: 10%  0.10  </p>
