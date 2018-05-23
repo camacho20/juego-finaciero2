@@ -2,6 +2,7 @@
 using juefi2.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
@@ -14,6 +15,13 @@ namespace juefi2.Views.partida_especifica
     {
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
+        private DataTable dtProyectos, dtVariables, dtIntegrantes;
+        public string msj = "";
+        private Dictionary<string, int> mapa = new Dictionary<string, int>();//Para variables, nombre e indice en el dtVariables
+        private List<KeyValuePair<string, bool>> listDis = new List<KeyValuePair<string, bool>>();//disponibles
+        private List<KeyValuePair<string, bool>> listAsig = new List<KeyValuePair<string, bool>>();//a asignar
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -81,5 +89,111 @@ namespace juefi2.Views.partida_especifica
 
 
         }
+
+        //Asignacion de empresa
+
+        protected void moverUser1_Click(object sender, EventArgs e)
+        {
+            listDis = (List<KeyValuePair<string, bool>>)Session["listDis"];
+            listAsig = (List<KeyValuePair<string, bool>>)Session["listAsig"];
+            while (ListUsuariosDisponibles.GetSelectedIndices().Length > 0)
+            {
+                listAsig.Add(listDis[ListUsuariosDisponibles.SelectedIndex]);
+                listDis.RemoveAt(ListUsuariosDisponibles.SelectedIndex);
+                ListUsuariosAsignados.Items.Add(ListUsuariosDisponibles.SelectedItem);
+                ListUsuariosDisponibles.Items.Remove(ListUsuariosDisponibles.SelectedItem);
+            }
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "panelAsignarUsuarios();", true);
+        }
+
+        protected void moverUser2_Click(object sender, EventArgs e)
+        {
+            listDis = (List<KeyValuePair<string, bool>>)Session["listDis"];
+            listAsig = (List<KeyValuePair<string, bool>>)Session["listAsig"];
+            while (ListUsuariosAsignados.GetSelectedIndices().Length > 0)
+            {
+                listDis.Add(listAsig[ListUsuariosAsignados.SelectedIndex]);
+                listAsig.RemoveAt(ListUsuariosAsignados.SelectedIndex);
+                ListUsuariosDisponibles.Items.Add(ListUsuariosAsignados.SelectedItem);
+                ListUsuariosAsignados.Items.Remove(ListUsuariosAsignados.SelectedItem);
+            }
+            ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "panelAsignarUsuarios();", true);
+            Session["listDis"] = listDis;
+            Session["listAsig"] = listAsig;
+        }
+
+        public void llenarUsuarios(string pk_pro)
+        {
+            ListUsuariosDisponibles.Items.Clear();
+            ListUsuariosAsignados.Items.Clear();
+            listDis.Clear();
+            listAsig = new List<KeyValuePair<string, bool>>();
+            //CuentaController cc = new CuentaController();
+            //dtIntegrantes = cc.consultarUsuariosProyecto(pk_pro);
+            Session["dtIntegrantes"] = dtIntegrantes;
+            string str;
+            foreach (DataRow dr in dtIntegrantes.Rows)
+            {
+                str = dr["NOMBRE_1"].ToString() + "  " + dr["APELLIDO_1"].ToString();
+                if (dr["EXISTE"].ToString().Equals("Si"))
+                {
+                    ListUsuariosAsignados.Items.Add(str);
+                    listAsig.Add(new KeyValuePair<string, bool>(dr["PK_CUENTA"].ToString(), true));
+                }
+                else
+                {
+                    ListUsuariosDisponibles.Items.Add(str);
+                    listDis.Add(new KeyValuePair<string, bool>(dr["PK_CUENTA"].ToString(), false));
+                }
+            }
+            Session["listDis"] = listDis;
+            Session["listAsig"] = listAsig;
+        }
+
+        protected void AsignarUsuraios_Click(object sender, EventArgs e)
+        {
+            //listAsig = (List<KeyValuePair<string, bool>>)Session["listAsig"];
+            //listDis = (List<KeyValuePair<string, bool>>)Session["listDis"];
+            ////ProyectoController pc = new ProyectoController();
+            //int con = 0, activos = 0;
+
+            //for (int i = 0; i < listAsig.Count; i++)
+            //{
+            //    if (!listAsig[i].Value)
+            //    {
+            //        activos++;
+            //        if (!pc.agregarIntegrante(listAsig[i].Key, Session["pk_pro"].ToString())) con++;
+            //    }
+            //}
+
+            //for (int i = 0; i < listDis.Count; i++)
+            //{
+            //    if (listDis[i].Value)
+            //    {
+            //        activos++;
+            //        if (!pc.eliminarIntegrante(listDis[i].Key, Session["pk_pro"].ToString())) con++;
+            //    }
+            //}
+
+            //if (activos == 0)
+            //{
+            //    msj = "Sin cambios " + listDis.Count;
+            //    ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Confirm();", true);
+            //    return;
+            //}
+            //if (con == 0)
+            //{
+            //    msj = "Exitoso";
+            //}
+            //else
+            //{
+            //    msj = "Error al cambiar alguno(s)\nrevise que no tengas muestras registradas";
+            //}
+            //ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "Confirm();", true);
+            //llenarUsuarios(Session["pk_pro"].ToString());
+        }
+
+
+
     }
 }
