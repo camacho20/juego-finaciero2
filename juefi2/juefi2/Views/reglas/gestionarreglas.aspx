@@ -17,8 +17,8 @@
     <link href="../../Content/stilos/estilotab/estilos.css" rel="stylesheet" />
     
    <!-- Vendor styles -->
-        
-<link href="../../Content/stilos/estiloadmin/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="../../Content/stilos/estiloadmin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" />
+
       
 <link href="../../Content/stilos/estiloadmin/vendors/bower_components/animate.css/animate.min.css" rel="stylesheet" />
 

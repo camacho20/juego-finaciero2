@@ -14,7 +14,7 @@ namespace juefi2.Models
         public DataTable ofertasdecompra()
         {
 
-            string sql = "SELECT empresa_id_empresa , cantidad_oferta  FROM usuario where(  oferto='SI');";
+            string sql = "SELECT empresa_id_empresa, cantidad_oferta  FROM  oferta_materia_prima  where(  oferto='SI');";
 
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
