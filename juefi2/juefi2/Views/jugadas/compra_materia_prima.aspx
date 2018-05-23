@@ -11,9 +11,9 @@
         <div class="toolbar">
              <div class="col-md-9 ">
             <div class="toolbar__nav">
-                <a href="../usuario/principal.aspx"><h5> Inicio</h5></a>
+                <a href="../usuario/principal.aspx"><h5><i class="zmdi zmdi-home"></i> Inicio</h5></a>
               <span> >> </span>
-                <a href="#"><h5>  Compra de Materia Prima   </h5></a>
+                <a href="#"><h5><i class="zmdi zmdi-shopping-cart zmdi-hc-fw"></i>  Compra de Materia Prima   </h5></a>
                 </div>
             </div>
 
