@@ -24,7 +24,7 @@ namespace juefi2.Models
         public DataTable Consultarnombreusu()
         {
 
-            string sql = "SELECT nombre_1_usuario , apellido_1_usuario  FROM usuario where(rol_id_rol=3 AND tiene_empresa='I');";
+            string sql = "SELECT id_usuario, nombre_1_usuario , apellido_1_usuario , tiene_empresa FROM usuario where(rol_id_rol=3 AND tiene_empresa='I');";
            
            
             return conn.EjecutarConsulta(sql, CommandType.Text);
