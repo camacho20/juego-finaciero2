@@ -134,7 +134,7 @@
                                            
                                             <div class="form-group">
                                                 
-                                                <asp:DropDownList ID="selctpartida" CssClass="form-control" runat="server">
+                                                <asp:DropDownList ID="selctpartida" CssClass="form-control select2" runat="server">
 
                                               <asp:ListItem Value="none">-------</asp:ListItem>
 
