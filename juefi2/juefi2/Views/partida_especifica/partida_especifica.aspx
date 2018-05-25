@@ -153,8 +153,10 @@
                                                         <div class="col-md-4 control-labe   col-md-offset-1 ">
                                                             <br />
                                                             <h4>Empresas disponibles</h4>
-                                                            <asp:ListBox ID="ListUsuariosDisponibles" CssClass=" form-control" runat="server" SelectionMode="Multiple"
-                                                                Height="200" Width="200"></asp:ListBox>
+                                                            <asp:ListBox ID="ListadeEmpresas" CssClass=" form-control" runat="server" SelectionMode="Multiple"
+                                                                Height="200" Width="200">
+                                                               
+                                                            </asp:ListBox>
                                                             <br />
                                                             <br />
                                                         </div>

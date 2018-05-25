@@ -12,7 +12,7 @@
         };
 
         function ModalBalance() {//modalBalance
-            $('#modal-default').modal('show');
+            $('#modaldefault').modal('show');
             return true;
         };
        
@@ -52,7 +52,7 @@
 
     <!-- Default actulizar puc -->
 
-    <div class="modal fade" id="modal-default" tabindex="-1">
+    <div class="modal fade" id="modaldefault" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -130,10 +130,20 @@
                            <td><%#Eval("codigo") %></td>
                            <td><%#Eval("descripcion") %></td>
                            <td><%#Eval("valor") %></td>
-                           <td>  <asp:LinkButton ID="linkbotonBalance"
+                           <td>  <%--<asp:LinkButton ID="linkbotonBalance"
                                    runat="server"
-                                   CommandArgument='<%# (Eval("idpuc")) %>'
-                                   OnCommand="linkbotonBalance_Command"   CssClass="btn btn-success"><i class="zmdi zmdi-edit zmdi-hc-fw"></i></asp:LinkButton></td>
+                                   CommandArgument='<%# Eval("idpuc") %>'
+                                   OnCommand="linkbotonBalance_Command"   >editar</asp:LinkButton>--%>
+
+                               <asp:Button  ID="linkbotonBalance"
+                                   runat="server"
+                                   CommandArgument='<%# Eval("idpuc") %>'
+                                   OnCommand="linkbotonBalance_Command"  Text="Button"   />
+
+                           </td>
+
+
+
 
 
                        </tr>

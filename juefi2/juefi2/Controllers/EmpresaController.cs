@@ -50,7 +50,13 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable empre()
 
+        {
+
+            return emp.empresa();
+
+        }
 
     }
 }

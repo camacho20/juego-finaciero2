@@ -37,20 +37,20 @@ namespace juefi2.Views.reglas
 
 
 
-            Session["filaTablaBalance"] = filaTablaBalance;
+            //Session["filaTablaBalance"] = filaTablaBalance;
 
-            datablaConsulta= pu.Consultapuc();
+            //datablaConsulta= pu.Consultapuc();
 
-            darowConsulta = datablaConsulta.Rows[filaTablaBalance];
+            //darowConsulta = datablaConsulta.Rows[filaTablaBalance];
 
             codigo.Text = Convert.ToString(filaTablaBalance);
 
-            txtValor.Text= Convert.ToDecimal(darowConsulta["valor"]).ToString("N1");
-            descrip1.Value = darowConsulta["descripcion"].ToString();
+            //txtValor.Text= Convert.ToDecimal(darowConsulta["valor"]).ToString("N1");
+            //descrip1.Value = darowConsulta["descripcion"].ToString();
 
             ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "ModalBalance();", true);
 
-            return;
+            
 
 
         }

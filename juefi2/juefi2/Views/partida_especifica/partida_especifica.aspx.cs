@@ -15,7 +15,8 @@ namespace juefi2.Views.partida_especifica
     {
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
-        private DataTable dtProyectos, dtVariables, dtIntegrantes;
+        EmpresaController empre = new EmpresaController();
+        private DataTable llamarempresa;
         public string msj = "";
         private Dictionary<string, int> mapa = new Dictionary<string, int>();//Para variables, nombre e indice en el dtVariables
         private List<KeyValuePair<string, bool>> listDis = new List<KeyValuePair<string, bool>>();//disponibles
@@ -24,7 +25,7 @@ namespace juefi2.Views.partida_especifica
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            llenarUsuario();
         }
 
         public bool validarLetrasYNumeros(String h)
@@ -96,13 +97,7 @@ namespace juefi2.Views.partida_especifica
         {
             listDis = (List<KeyValuePair<string, bool>>)Session["listDis"];
             listAsig = (List<KeyValuePair<string, bool>>)Session["listAsig"];
-            while (ListUsuariosDisponibles.GetSelectedIndices().Length > 0)
-            {
-                listAsig.Add(listDis[ListUsuariosDisponibles.SelectedIndex]);
-                listDis.RemoveAt(ListUsuariosDisponibles.SelectedIndex);
-                ListUsuariosAsignados.Items.Add(ListUsuariosDisponibles.SelectedItem);
-                ListUsuariosDisponibles.Items.Remove(ListUsuariosDisponibles.SelectedItem);
-            }
+            
             ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "panelAsignarUsuarios();", true);
         }
 
@@ -114,7 +109,7 @@ namespace juefi2.Views.partida_especifica
             {
                 listDis.Add(listAsig[ListUsuariosAsignados.SelectedIndex]);
                 listAsig.RemoveAt(ListUsuariosAsignados.SelectedIndex);
-                ListUsuariosDisponibles.Items.Add(ListUsuariosAsignados.SelectedItem);
+             
                 ListUsuariosAsignados.Items.Remove(ListUsuariosAsignados.SelectedItem);
             }
             ScriptManager.RegisterStartupScript(this.Page, this.GetType(), "script", "panelAsignarUsuarios();", true);
@@ -122,32 +117,16 @@ namespace juefi2.Views.partida_especifica
             Session["listAsig"] = listAsig;
         }
 
-        public void llenarUsuarios(string pk_pro)
+        public void llenarUsuario()
         {
-            ListUsuariosDisponibles.Items.Clear();
-            ListUsuariosAsignados.Items.Clear();
-            listDis.Clear();
-            listAsig = new List<KeyValuePair<string, bool>>();
-            //CuentaController cc = new CuentaController();
-            //dtIntegrantes = cc.consultarUsuariosProyecto(pk_pro);
-            Session["dtIntegrantes"] = dtIntegrantes;
-            string str;
-            foreach (DataRow dr in dtIntegrantes.Rows)
-            {
-                str = dr["NOMBRE_1"].ToString() + "  " + dr["APELLIDO_1"].ToString();
-                if (dr["EXISTE"].ToString().Equals("Si"))
-                {
-                    ListUsuariosAsignados.Items.Add(str);
-                    listAsig.Add(new KeyValuePair<string, bool>(dr["PK_CUENTA"].ToString(), true));
-                }
-                else
-                {
-                    ListUsuariosDisponibles.Items.Add(str);
-                    listDis.Add(new KeyValuePair<string, bool>(dr["PK_CUENTA"].ToString(), false));
-                }
+          llamarempresa=  empre.empre();
+
+            for (int i=0;i< llamarempresa.Rows.Count;i++) {
+
+                ListadeEmpresas.Items.Add(llamarempresa.Rows[i]["nombre_empresa"].ToString());
+
+
             }
-            Session["listDis"] = listDis;
-            Session["listAsig"] = listAsig;
         }
 
         protected void AsignarUsuraios_Click(object sender, EventArgs e)

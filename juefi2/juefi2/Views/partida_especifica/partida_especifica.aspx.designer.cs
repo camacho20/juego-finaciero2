@@ -67,13 +67,13 @@ namespace juefi2.Views.partida_especifica {
         protected global::System.Web.UI.WebControls.DropDownList selctpartida;
         
         /// <summary>
-        /// Control ListUsuariosDisponibles.
+        /// Control ListadeEmpresas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListUsuariosDisponibles;
+        protected global::System.Web.UI.WebControls.ListBox ListadeEmpresas;
         
         /// <summary>
         /// Control moverUser1.

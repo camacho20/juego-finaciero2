@@ -64,5 +64,15 @@ namespace juefi2.Models
 
         }
 
+        public DataTable empresa()
+        {
+            string sql = " SELECT *   FROM empresa ;";
+
+
+
+            return conn.EjecutarConsulta(sql, CommandType.Text); ;
+
+        }
+
     }
 }
