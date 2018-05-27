@@ -15,12 +15,17 @@ namespace juefi2.Views.jugadas
         MovimientoModel movimiento = new MovimientoModel();
         MovimientoController compracon = new MovimientoController();
         EmpresaController empr = new EmpresaController();
+        ActivarCompraController acti = new ActivarCompraController();
+        ActivarCompraModel modelproe = new ActivarCompraModel();
         double iva;
         double ica;
         double retefuente;
         double descuento;
         double valor_total;
         double monto;
+        double promedio;
+        double op;
+        double preciomp;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -39,22 +44,35 @@ namespace juefi2.Views.jugadas
 
         protected void comprar(double monto)
         {
-            iva = monto * Convert.ToDouble(cop.variable(40));
-            ica = monto * Convert.ToDouble(cop.variable(42));
+
+            preciomp=(((Convert.ToDouble(txtMonto)-promedio)/promedio)*100);
+            
+
+           promedio= Convert.ToDouble(acti.promedio());
+
+            op = (Convert.ToDouble(acti.pametros_periodo(5))* Convert.ToDouble(acti.pametros_periodo(1)))*(1+preciomp);
+
+
+
+
+
+            iva = monto * Convert.ToDouble(acti.pametros_año(6));
+            ica = monto * Convert.ToDouble(acti.pametros_año(5));
 
             if (monto > 895212)
             {
-                retefuente = monto * Convert.ToDouble(cop.variable(41));
+                retefuente = monto * Convert.ToDouble(acti.pametros_año(4));
 
 
             }
 
 
-            descuento = monto * Convert.ToDouble(cop.variable(60));
+            //descuento = monto * Convert.ToDouble(cop.variable(60));
 
             valor_total = (((monto + iva) - ica) - retefuente) - descuento;
 
            
+
 
 
         }
@@ -172,11 +190,9 @@ namespace juefi2.Views.jugadas
 
             compracon.oferta(movimiento);
            
-
-
-
-
-
         }
+
+
+        
     }
 }

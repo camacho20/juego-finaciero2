@@ -16,5 +16,21 @@ namespace juefi2.Controllers
         {
             return acti.ofertasdecompra();
         }
+
+        public DataTable promedio()
+        {
+          return acti.promedio_oferta();
+        }
+
+        public string pametros_año (int variable)
+        {
+
+            return acti.valor_año(variable); ;
+        }
+        public string pametros_periodo(int variable)
+        {
+
+            return acti.valor_periodo(variable); ;
+        }
     }
 }
