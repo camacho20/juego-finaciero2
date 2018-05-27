@@ -50,7 +50,12 @@ namespace juefi2.Models
 
             return conn.EjecutarConsulta(sql, CommandType.Text).Rows.Count > 0;
         }
+        public DataTable buscarregla(string item)
+        {
+            string sql = " SELECT id_regla,descripcion_regla,valor_minimo,valor_maximo,tipo_regla FROM reglas WHERE CONCAT(id_regla,descripcion_regla,valor_minimo,valor_maximo,tipo_regla) LIKE '%" + item + "%';";
 
-       
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
     }
 }

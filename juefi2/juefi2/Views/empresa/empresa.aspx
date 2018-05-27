@@ -2,13 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Gestionar Empresa</title>
-     <script>
-       
-        function panelAsignarUsuarios() {
-            $('#hrefAsignarIntegrantes').trigger('click');
-            return true;
-        };
-    </script>
+    
 
 
 </asp:Content>
@@ -33,11 +27,7 @@
     </header>
 
  <div class="col-md-12 ">
-
-
-
-
-                <div class="card">
+   <div class="card">
                     <div class="card-body">
                         <h4 class=" card-title"" >Gestionar Empresa</h4>
 
@@ -46,9 +36,7 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Crear Empresa</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Agregar usuarios a empresa</a>
-                                </li>
+                               
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#detalleempresa" role="tab">Detalle de mi empresa</a>
                                 </li>
@@ -101,82 +89,15 @@
                         <asp:Button ID="btnguardar" runat="server" CssClass="btn btn-primary" OnClick="btnguardar_Click" Text="Guardar" />
                         
                         </div>
-
-                      
+                    
+                  
                     </div>
 
                               
 
                                   </div>
 
-                               <%-- //agregar usuario a empresa--%>
-                                <div class="tab-pane fade" id="profile" role="tabpanel">
-                                    <div class="row">
-                                         <div class="col-md-2" >
-                                             <br />
-                                            <label>Selccionar usuario :</label>
-                                           
-                                           </div>
-                                        <div class="col-md-3 ">
-                                           
-                                            <div class="form-group">
-                                                
-                                                <asp:DropDownList ID="selecteempresa" CssClass="form-control select2" runat="server">
-
-                                              <asp:ListItem Value="none">-------</asp:ListItem>
-
-                                                </asp:DropDownList> 
-                                            </div>
-                                        </div>
-                              </div>
-
-
-                                        <div class="col-md-12   ">
-                                            
-                                           <div class="row">
-                                         
-                                               
-
-                                                        <div class="col-md-4 control-labe   col-md-offset-1 ">
-                                                            <br />
-                                                            <h5>Usuario disponibles</h5>
-                                                            <asp:ListBox ID="ListUsuariosDisponibles" CssClass=" form-control" runat="server" SelectionMode="Multiple"
-                                                                Height="200" Width="200"></asp:ListBox>
-                                                            <br />
-                                                            <br />
-                                                        </div>
-                                                        <div class="col-md-2 control-labe ">
-                                                                <br />
-                                                                <br />
-                                                                <br />
-                                                                <br />
-                                                                <br />
-                                                                <br />
-                                                            <asp:Button ID="moverUser1" runat="server" Text=">"  OnClick="moverUser1_Click" />
-                                                            <br />
-                                                            <asp:Button ID="moverUser2" runat="server" Text="<"  OnClick="moverUser2_Click" />
-                                                        </div>
-                                                        <div class="col-md-4 control-label">
-                                                            <br />
-                                                            <h5>Usuario a asignar</h5>
-                                                            <asp:ListBox ID="ListUsuariosAsignados" runat="server"  CssClass=" form-control" SelectionMode="Multiple"
-                                                                Height="200" Width="200"></asp:ListBox>
-                                                            <br />
-                                                            <br />
-                                                        </div>
-                                                    
-                                                       
-
-                                                    </div>
-  
-
-                                        </div>
-
-
-                                    
-
-                                    </div>
-
+                             
 
 
                                     

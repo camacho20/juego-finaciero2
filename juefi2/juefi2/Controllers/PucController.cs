@@ -29,15 +29,22 @@ namespace juefi2.Controllers
             return puc.eliminapuc(eliregla);
         }
 
-        public bool pucExiste(string obj)
+        public bool pucExiste(string obj,int id)
         {
-            return puc.Validarpuc(obj);
+            return puc.Validarpuc(obj,id);
         }
 
         public bool editapuc(PucModel reglaedi)
         {
             return puc.editarpuc(reglaedi);
         }
+
+        public DataTable buscar(string item)
+        {
+            return puc.buscar(item);
+        }
+
+
 
     }
 }

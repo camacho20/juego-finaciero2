@@ -194,7 +194,7 @@ namespace juefi2.Views.reglas
             reg.valorminimo = Int32.Parse(valormin.Text);
             reg.valormaximo = Int32.Parse(valormax.Text);
             reg.tiporegla = tiporegla2.SelectedItem.Text;
-            reg.idusuario = 1;
+            reg.idusuario = int.Parse(Session["id_usuario"].ToString());
 
             if (re.Registraregla(reg) == true)
             {
@@ -221,10 +221,18 @@ namespace juefi2.Views.reglas
             }
 
 
+        }
 
+        protected void regla_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            regla.PageIndex = e.NewPageIndex;
+            Bindata();
+        }
 
-
-
+        protected void btnbucas_Click(object sender, EventArgs e)
+        {
+           regla.DataSource = re.buscar(txtBuscar.Text);
+            regla.DataBind();
         }
     }
 }

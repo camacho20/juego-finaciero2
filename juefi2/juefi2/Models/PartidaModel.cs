@@ -25,8 +25,25 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+        public DataTable Consultarpartida()
+        {
+
+            string sql = "SELECT * FROM partida_especifica ;";
 
 
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+
+        public int idpartida( string nombre)
+        {
+            string sql = "SELECT id_partida_general FROM partida_especifica where(nombre_partida = '" + nombre + "'); ";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            int idpartidas = int.Parse(dt.Rows[0]["id_partida_general"].ToString());
+
+            return idpartidas;
+
+        }
 
     }
 }

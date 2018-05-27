@@ -46,7 +46,7 @@ namespace juefi2.Controllers
 
         {
 
-            return emp.llamarempresa(id); ;
+            return emp.llamarempresausuario(id); 
 
         }
 
@@ -56,6 +56,30 @@ namespace juefi2.Controllers
 
             return emp.empresa();
 
+        }
+
+
+        public string llamarnombreempresa(int idempresa)
+
+        {
+
+            return emp.llamarnombreempresa(idempresa);
+
+        }
+
+        public int agregarusuarios(string nombre,string apellido )
+
+        {
+
+            return emp.nuevosusuarios(nombre,apellido);
+
+        }
+
+        public bool registrarparti(int id, string empresa)
+        {
+
+            emp.registraridpartida(id,empresa);
+            return true;
         }
 
     }

@@ -40,7 +40,10 @@ namespace juefi2.Controllers
             return re.editarregla(reglaedi);
         }
 
-       
+        public DataTable buscar(string item)
+        {
+            return re.buscarregla(item);
+        }
 
     }
 }
