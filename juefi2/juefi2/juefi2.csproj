@@ -46,6 +46,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AspNet.ScriptManager.bootstrap, Version=4.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.4.1.1\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=3.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.3.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -87,12 +95,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.bootstrap">
-      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
-    </Reference>
-    <Reference Include="AspNet.ScriptManager.jQuery">
-      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ScriptManager.MSAjax">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
@@ -207,6 +209,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\imagenes\bg\1.jpg" />
     <Content Include="Content\imagenes\bg\10.jpg" />
     <Content Include="Content\imagenes\bg\2.jpg" />
@@ -426,6 +434,8 @@
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\jquery\di\jquery.min.51.delaye" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\jquery\di\jquery.min.51.js" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\jquery\jquery-scrollLock.min.js" />
+    <Content Include="Content\stilos\estiloadmin\vendors\bower_components\jqvmap\dist\jquery.vmap.min.js" />
+    <Content Include="Content\stilos\estiloadmin\vendors\bower_components\jqvmap\dist\maps\jquery.vmap.world.js" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\material-design-iconic-font\dist\css\material-design-iconic-font.min.css" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\nouislider\distribute\nouislider.min.css" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\nouislider\distribute\nouislider.min.js" />
@@ -441,6 +451,30 @@
     <Content Include="Content\stilos\estilotab\main.js" />
     <Content Include="Content\stilos\griview.css" />
     <Content Include="Content\stilos\modal.css" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery-1.10.1.min.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery-1.7.1.min.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery-1.9.0.min.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery.min.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery.mousewheel-3.0.6.pack.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery.nivo.slider.js" />
+    <Content Include="Content\stilos\nuevo_modal\lib\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\stilos\nuevo_modal\modal.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\blank.gif" />
+    <Content Include="Content\stilos\nuevo_modal\source\fancybox_loading%402x.gif" />
+    <Content Include="Content\stilos\nuevo_modal\source\fancybox_loading.gif" />
+    <Content Include="Content\stilos\nuevo_modal\source\fancybox_overlay.png" />
+    <Content Include="Content\stilos\nuevo_modal\source\fancybox_sprite%402x.png" />
+    <Content Include="Content\stilos\nuevo_modal\source\fancybox_sprite.png" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\fancybox_buttons.png" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\jquery.fancybox-media.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\jquery.fancybox.css" />
+    <Content Include="Content\stilos\nuevo_modal\source\jquery.fancybox.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\jquery.fancybox.pack.js" />
+    <Content Include="Content\stilos\nuevo_modal\source\jquery.fancybox2.js" />
     <Content Include="Content\video\videoinicio\fondo.mp4" />
     <Content Include="Content\video\videoinicio\fondo.webm" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -458,15 +492,51 @@
     <Content Include="Content\fonts\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="Scripts\jquery.metadata.js" />
     <Content Include="Scripts\jsinicio\bootstrap.min.js" />
     <Content Include="Scripts\jsinicio\jquery-1.10.2.js" />
     <Content Include="Scripts\jsinicio\main.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Views\balance\balanceinicial.aspx" />
     <Content Include="Views\balance_final\balance_final.aspx" />
+    <Content Include="Views\empresa\AgrgarUsuriosEmpresa.aspx" />
     <Content Include="Views\empresa\DocneteEmpresa.aspx" />
     <Content Include="Views\empresa\empresa.aspx" />
     <Content Include="Views\jugadas\almacenamiento_materia_prima.aspx" />
@@ -482,12 +552,13 @@
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\parametrizacion\Parametrizacion_periodo.aspx" />
     <Content Include="Views\parametrizacion\paramtreiacion_año.aspx" />
+    <Content Include="Views\partida_especifica\AgregarEmpresaPartida.aspx" />
     <Content Include="Views\partida_especifica\partida_especifica.aspx" />
     <Content Include="Views\reglas\BalacePuc.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
-    <Content Include="Views\reglas\gestionarpuc.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
+    <Content Include="Views\reglas\Reglas.aspx" />
     <Content Include="Views\Simulaciones\SimulacionCredito.aspx" />
     <Content Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx" />
     <Content Include="Views\usuario\login.aspx" />
@@ -579,10 +650,23 @@
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Fontd1f1.ttf" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Fontd1f1.woff" />
     <Content Include="Content\stilos\estiloadmin\vendors\bower_components\material-design-iconic-font\dist\fonts\Material-Design-Iconic-Fontd1f1.woff2" />
+    <Content Include="Content\stilos\nuevo_modal\source\helpers\Thumbs.db" />
+    <Content Include="Content\stilos\nuevo_modal\source\Thumbs.db" />
     <None Include="inicio.html" />
     <Content Include="Views\web.config" />
     <Content Include="Views\pagina_maestra\paginamaestra.Master" />
     <None Include="Properties\PublishProfiles\ocm.pubxml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -652,6 +736,13 @@
     </Compile>
     <Compile Include="Views\balance_final\balance_final.aspx.designer.cs">
       <DependentUpon>balance_final.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\empresa\AgrgarUsuriosEmpresa.aspx.cs">
+      <DependentUpon>AgrgarUsuriosEmpresa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\empresa\AgrgarUsuriosEmpresa.aspx.designer.cs">
+      <DependentUpon>AgrgarUsuriosEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\empresa\DocneteEmpresa.aspx.cs">
       <DependentUpon>DocneteEmpresa.aspx</DependentUpon>
@@ -765,6 +856,13 @@
     <Compile Include="Views\parametrizacion\paramtreiacion_año.aspx.designer.cs">
       <DependentUpon>paramtreiacion_año.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\partida_especifica\AgregarEmpresaPartida.aspx.cs">
+      <DependentUpon>AgregarEmpresaPartida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\partida_especifica\AgregarEmpresaPartida.aspx.designer.cs">
+      <DependentUpon>AgregarEmpresaPartida.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\partida_especifica\partida_especifica.aspx.cs">
       <DependentUpon>partida_especifica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -793,19 +891,19 @@
     <Compile Include="Views\reglas\EstuReglas.aspx.designer.cs">
       <DependentUpon>EstuReglas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\reglas\gestionarpuc.aspx.cs">
-      <DependentUpon>gestionarpuc.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\reglas\gestionarpuc.aspx.designer.cs">
-      <DependentUpon>gestionarpuc.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Views\reglas\gestionarreglas.aspx.cs">
       <DependentUpon>gestionarreglas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\reglas\gestionarreglas.aspx.designer.cs">
       <DependentUpon>gestionarreglas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\reglas\Reglas.aspx.cs">
+      <DependentUpon>Reglas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\reglas\Reglas.aspx.designer.cs">
+      <DependentUpon>Reglas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Simulaciones\SimulacionCredito.aspx.cs">
       <DependentUpon>SimulacionCredito.aspx</DependentUpon>
@@ -849,6 +947,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

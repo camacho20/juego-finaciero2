@@ -19,35 +19,14 @@
     
     <title><%: Page.Title %></title>
 
-    <script language="javascript" type="text/javascript"/>
+    <script  type="text/javascript">
      javascript:window.history.forward(1);
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    </script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
 
 
-     <script type="text/javascript">  
-        $(document).ready(function() {  
-            SearchText();  
-        });  
-        function SearchText() {  
-            $("#txtEmpName").autocomplete({  
-                source: function(request, response) {  
-                    $.ajax({  
-                        type: "POST",  
-                        contentType: "application/json; charset=utf-8",  
-                        url: "Default.aspx/GetEmployeeName",  
-                        data: "{'empName':'" + document.getElementById('txtEmpName').value + "'}",  
-                        dataType: "json",  
-                        success: function(data) {  
-                            response(data.d);  
-                        },  
-                        error: function(result) {  
-                            alert("No Match");  
-                        }  
-                    });  
-                }  
-            });  
-        }  
-    </script>  
+   
 
 
    <%-- solo letras--%>
@@ -72,7 +51,10 @@
         }
     </script>
 
-
+ 
+      <link href="../../Content/stilos/griview.css" rel="stylesheet" />
+     
+    
 
 
     <%--//validar numeros--%>
@@ -92,13 +74,16 @@
         }  
     </script>
 
-
+     
 
 
     
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
     <link href="../../Content/stilos/estilotab/estilos.css" rel="stylesheet" />
+
+ 
+
     
    <!-- Vendor styles -->
     <link href="../../Content/stilos/estiloadmin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet" />
@@ -279,7 +264,7 @@
 
                         <li class="@@indexactive ">
                             <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
-                            
+                           
                         </li>
                      
 
@@ -362,8 +347,9 @@
 
 
 
+    
 
-
+  
 
 
 

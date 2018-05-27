@@ -35,7 +35,7 @@
               <h3 class="card-title">Reglas del Juego</h3>
       <div class="table-responsive">
 
-           <table id="data-table" class="table table-bordered table-striped">
+           <table id="data-table" class="table table-bordered table-striped grid">
                 <thead>
                 <tr>
                   <th>Nº Regla</th>

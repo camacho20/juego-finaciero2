@@ -222,7 +222,7 @@
                 </a>
             </div>
         </div>
-
+</div>
 
         </header>
 
@@ -239,34 +239,56 @@
             <!-- form start -->
 
              <div class="card-body">
-            <h3 class="card-title">
-        Gestionar reglas
-      
-      </h3>
-            <input type="checkbox" name="activarventana" id="activarventana" />
-            <label for="activarventana" id="abremodal">
-                Registrar nueva regla
-                       
-                        <i class="fa fa-plus-square"></i>
-            </label>
+            
+                       <div class="row">
 
-              <%-- modal agregar reglas--%>
-                    <div class="ventanamodal" >
-                        <div class="contenido">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    
-                                    <h4 class="modal-title">Registrar Nueva Regla</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
+                <div class="col-md-3 col-md-offset-1">
+                    <br />
+                    <h1 class="card-title">Gestionar Reglas </h1>
+
+                </div>
+                <div class="col-md-4 ">
+                    <asp:LinkButton ID="modal" CssClass="btn btn-primary" data-toggle="modal" data-target="#modal-default" runat="server">Agregar nueva Regla <i class="zmdi zmdi-hospital zmdi-hc-fw"></i></asp:LinkButton>
+                     
+                    </div>
+
+                <div class="col-md-5 ">
+                     <div class="row">
+                         <div class="col-md-6 col-md-offset-1 ">
+                     <div class=" form-group">
+                    <asp:TextBox ID="txtBuscar"  CssClass="form-control" runat="server"></asp:TextBox></div>
+                   
+                         </div>
+                         <div class="col-md-6 ">
+                          <asp:LinkButton ID="btnbucas" CssClass="btn  btn-info "  OnClick="btnbucas_Click" runat="server">Buscar <i class=" zmdi zmdi-search"  ></i></asp:LinkButton>
+                </div>
+                         </div>
+                         
+                          </div>
+
+
+
+            </div>
+          
+             
+                
+                  <%-- modal agregar reglas--%>
+
+                            <div class="modal fade" id="modal-default" tabindex="-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title pull-left">Registrar Nueva Regla</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                             <div class="row">
                                   <div class="col-md-7 col-md-offset-1">
 
                                       <div class="form-group">
                                           <label>Descripción de la regla</label>
                                           <textarea id="descrip1" cols="2" rows="2" class="form-control" runat="server"></textarea>
                                           <label>Tipo de regla</label>
-                                          <asp:DropDownList ID="tiporegla2" runat="server" CssClass="form-control">
+                                          <asp:DropDownList ID="tiporegla2" CssClass="form-control select2"  runat="server">
                                               <asp:ListItem Value="none">-------</asp:ListItem>
                                               <asp:ListItem Value="General">General</asp:ListItem>
                                               <asp:ListItem Value="compra">Compra</asp:ListItem>
@@ -293,18 +315,25 @@
                                       </div>
                                   </div>
                                         </div>
-                                <div class="modal-footer">
 
-                                   <label for="activarventana" id="cerrarventana">Cerrar</label>
-                                  <asp:Button ID="Button2" runat="server" Text="Guardar"  CssClass="btn btn-primary" OnClick="guardar"  />
+
+
+                                            
+                                        </div>
+                                        <div class="modal-footer">
+                                           
+                                            <button type="button" class="btn btn-link" data-dismiss="modal">Cerrar</button>
+                                             
+                                            
+                                            
+                                             <asp:LinkButton ID="Button3" runat="server"  CssClass="btn btn-primary" OnClick="guardar" > Guardar</asp:LinkButton>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                                    </div>
-                              
-            <!-- /.modal-content -->
-          </div>
-          <!-- /.modal-dialog -->
-        </div>
+
+
+                
         <!-- /.modal -->
 
 
@@ -315,9 +344,9 @@
         OnRowEditing="TaskGridView_RowEditing"
         OnRowCancelingEdit="TaskGridView_RowCancelingEdit"
         OnRowDeleting="OnRowDeleting" 
-       CssClass="grid sortable {disableSortCols: [5]}"
+       CssClass="grid table table-bordered table-striped "
       
-        
+         AllowPaging="true" OnPageIndexChanging="regla_PageIndexChanging"
         
         >
          <EditRowStyle BackColor="#ffffcc" />
@@ -362,48 +391,7 @@
         
    
 
-        <script src="../../Scripts/jquery-1.4.2.min.js"></script>
-        <script src="../../Scripts/jquery.dataTables.min.js"></script>
-        <script src="../../Scripts/jquery.metadata.js"></script>
-    
-
-    <script type="text/javascript">
-
-        $(document).ready(function () {
-
-            // Setup Metadata plugin
-            $.metadata.setType("class");
-
-            // Setup GridView
-            $("table.grid").each(function () {
-                var jTbl = $(this);
-
-                if (jTbl.find("tbody>tr>th").length > 0) {
-                    jTbl.find("tbody").before("<thead><tr></tr></thead>");
-                    jTbl.find("thead:first tr").append(jTbl.find("th"));
-                    jTbl.find("tbody tr:first").remove();
-                }
-
-                // If GridView has the 'sortable' class and has more than 10 rows
-                if (jTbl.hasClass("sortable") && jTbl.find("tbody:first > tr").length > 10) {
-
-                    // Run DataTable on the GridView
-                    jTbl.dataTable({
-                        sPaginationType: "full_numbers",
-                        sDom: '<"top"lf>rt<"bottom"ip>',
-                        oLanguage: {
-                            sInfoFiltered: "(from _MAX_ entries)",
-                            sSearch: ""
-                        },
-                        aoColumnDefs: [
-                            { bSortable: false, aTargets: jTbl.metadata().disableSortCols }
-                        ]
-                    });
-                }
-            });
-        });
-
-    </script>
+      
 
     <!-- jQuery 3 -->
       

@@ -39,13 +39,18 @@ namespace juefi2.Models
             string sql = "UPDATE puc SET  codigo ='" + edita.codigo + "',descripcion ='" + edita.descrip + "' ,valor ='" + edita.valor + "'   WHERE  idpuc='" + edita.idpuc + "';"; 
             return conn.EjecutarSql(sql, CommandType.Text);
         }
-        public bool Validarpuc(string descripi)
+        public bool Validarpuc(string descripi,int id)
         {
-            string sql = "SELECT pu.idpuc FROM puc pu where pu.descripcion='" + descripi + "';";
+            string sql = "SELECT pu.idpuc FROM puc pu where pu.descripcion='" + descripi + "' OR pu.codigo='" + id + "' ;";
 
             return conn.EjecutarConsulta(sql, CommandType.Text).Rows.Count > 0;
         }
 
+        public DataTable buscar(string item)
+        {
+            string sql = " SELECT idpuc, codigo , descripcion, valor  FROM puc WHERE CONCAT(idpuc,codigo,descripcion,valor) LIKE '%" + item + "%';";
 
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
     }
 }

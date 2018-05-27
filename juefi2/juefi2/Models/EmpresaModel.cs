@@ -54,7 +54,7 @@ namespace juefi2.Models
             return idempresa;
 
         }
-        public DataTable llamarempresa(int id)
+        public DataTable llamarempresausuario(int id)
         {
             string sql = " SELECT nombre_1_usuario , apellido_1_usuario   FROM usuario where(empresa_id_empresa= '" + id + "' );";
 
@@ -74,5 +74,33 @@ namespace juefi2.Models
 
         }
 
+        public string llamarnombreempresa(int idempresa)
+        {
+            string sql = "SELECT nombre_empresa FROM empresa where(id_empresa = '" + idempresa + "'); ";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string nombreempresa = dt.Rows[0]["nombre_empresa"].ToString();
+
+            return nombreempresa;
+
+        }
+
+        public int nuevosusuarios(string nombre, string apellido)
+        {
+            string sql = "SELECT id_usuario FROM usuario where(nombre_1_usuario = '" + nombre + "' AND apellido_1_usuario = '" + apellido + "'   ); ";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            int idusuario =int.Parse( dt.Rows[0]["id_usuario"].ToString());
+
+            return idusuario;
+
+        }
+
+        public bool registraridpartida(int id,string  nomempresa)
+        {
+
+            string sql = "UPDATE empresa SET partida_especifica_id_partida_general='" + id + "' where  nombre_empresa='" + nomempresa + "';";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
     }
 }

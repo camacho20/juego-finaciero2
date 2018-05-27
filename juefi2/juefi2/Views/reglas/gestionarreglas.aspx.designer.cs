@@ -49,6 +49,33 @@ namespace juefi2.Views.reglas {
         protected global::System.Web.UI.WebControls.Repeater menurepeter;
         
         /// <summary>
+        /// Control modal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton modal;
+        
+        /// <summary>
+        /// Control txtBuscar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtBuscar;
+        
+        /// <summary>
+        /// Control btnbucas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton btnbucas;
+        
+        /// <summary>
         /// Control descrip1.
         /// </summary>
         /// <remarks>
@@ -58,13 +85,13 @@ namespace juefi2.Views.reglas {
         protected global::System.Web.UI.HtmlControls.HtmlTextArea descrip1;
         
         /// <summary>
-        /// Control tiporegla2.
+        /// Control tiporegla2 .
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList tiporegla2;
+        protected global::System.Web.UI.WebControls.DropDownList tiporegla2 ;
         
         /// <summary>
         /// Control valormin.
@@ -85,13 +112,13 @@ namespace juefi2.Views.reglas {
         protected global::System.Web.UI.WebControls.TextBox valormax;
         
         /// <summary>
-        /// Control Button2.
+        /// Control Button3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.LinkButton Button3;
         
         /// <summary>
         /// Control regla.
