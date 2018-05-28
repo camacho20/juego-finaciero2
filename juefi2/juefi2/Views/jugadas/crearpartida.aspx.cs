@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace juefi2.Views.Simulaciones
+namespace juefi2.Views.jugadas
 {
-    public partial class SimulacionCreditoLargoplazo : System.Web.UI.Page
+    public partial class crearpartida : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

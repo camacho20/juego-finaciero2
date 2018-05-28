@@ -12,12 +12,10 @@ namespace juefi2.Views.partida_especifica
     public partial class AgregarEmpresaPartida : System.Web.UI.Page
     {
         private DataTable datanombre;
-        private DataTable datanombre2;
-        string nombreappeli;
+      
+       
         string nombres;
-        string apellido;
-        string tempo;
-        string[] arre;
+       
         public DataRow daronombre;
         PartidaController par = new PartidaController();
         EmpresaController empr = new EmpresaController();

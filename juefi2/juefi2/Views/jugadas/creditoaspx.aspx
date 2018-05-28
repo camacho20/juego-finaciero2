@@ -22,102 +22,60 @@
     <div class="col-md-8 ">
        <div class="card">
             
-            <!-- /.box-header -->
-            <!-- form start -->
+           <div class="card-body">
+               <h3 class="card-title">Simular Creditos</h3>
 
-             <div class="card-body">
-                 <h3 class="card-title">Creditos</h3>
-                <div class="row">
+               <div class="row">
 
-                      <div class="col-md-6 col-md-offset-0">
-                          <button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#modal-corto">
-                              Credito a corto plazo
-             
-                          </button>
-                       <p>Son creditos menores a 1 años.</p>
-                         
-             <a href="../Simulaciones/SimulacionCredito.aspx">Click aqui para Simular credito a Corto Plazo</a>
+                   <div class="col-md-4 col-md-offset-0">
+                       <div class="form-group">
+                           <label>Monto credito</label>
+                           <asp:TextBox ID="txtMonto"  runat="server" onkeydown="return validNumericos(event)" CssClass=" form-control"></asp:TextBox>
 
-                    </div>
-                 
-                    <div class="col-md-6  ">
 
-                          <button type="button" class="btn  btn-primary" data-toggle="modal" data-target="#modal-largo1">
-                              Credito a largo plazo
-                             
+                       </div>
+                   </div>
 
-                          </button>
-                         <p>Son creditos mayores a 1 año</p>
-                        
-        <a href="../Simulaciones/SimulacionCreditoLargoplazo.aspx">Click aqui para Simular credito a largo plazo</a>
-             
-                       
-                    </div>
+                   <div class="col-md-6  ">
+                       <div class="form-group">
+                           <label>Tiempo del Credito en Meses</label>
+                           <asp:TextBox ID="txtMeses" CssClass=" form-control" onkeydown="return validNumericos(event)" runat="server"></asp:TextBox>
+                       </div>
+                   </div>
+
+
                    
-                   <%-- modal credito a corto plazo--%>
-                    <div class="modal fade" id="modal-corto">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">Default Modal</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>One fine body&hellip;</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                            
-                            <!-- /.modal-content -->
 
-                           
-                        </div>
-                        <!-- /.modal-dialog -->
+                  </div>
+
+
+
+               <div class="row">
+
+                <div class="col-md-6  ">
+                    <label>Mes | Cuota | Interes | Amortizacion | Saldo</label>
+                    <asp:ListBox ID="Listmostrar" CssClass=" form-control" runat="server"
+                        Height="200" Width="210" ></asp:ListBox>
+
+
                     </div>
-                    <!-- /.modal -->
+                   <div class="col-md-4 ">
+                       <div class="form-group">
+                           <label>Porcentaje</label>
+                           <asp:TextBox ID="txtporcetaje" CssClass=" form-control" runat="server"></asp:TextBox>
+                       </div>
 
+                       <div class="form-group">
+                           <asp:Button ID="btncalcular" CssClass=" btn btn-primary" OnClick="btncalcular_Click" runat="server" Text="Calcular" />   
+                       </div>
 
+                   </div>
 
+                  
 
+               </div>
 
-                               <%-- modal credito a largo plazo--%>
-                    <div class="modal fade" id="modal-largo1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">Default Modal</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>One fine body&hellip;</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div>
-                            <!-- /.modal-content -->
-                        </div>
-                        <!-- /.modal-dialog -->
-                    </div>
-                    <!-- /.modal -->
-
-
-
-                
-            <!-- /.box-body -->
-
-            
-
-        </div>
-          
-        <!-- nav-tabs-custom -->
+           </div>
+       </div>
     </div>
-            </div>
-        </div>
 </asp:Content>
