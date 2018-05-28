@@ -10,16 +10,16 @@
 namespace juefi2.Views.jugadas {
     
     
-    public partial class asquisicion_maquinaria_equipos {
+    public partial class PagocompraMaquinariaEquipo {
         
         /// <summary>
-        /// Control txtmontoadqui.
+        /// Control txtmontopago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmontoadqui;
+        protected global::System.Web.UI.WebControls.TextBox txtmontopago;
         
         /// <summary>
         /// Control guardar.

@@ -68,6 +68,7 @@ namespace juefi2.Views.jugadas
 
 
 
+           
 
         }
 
@@ -80,15 +81,14 @@ namespace juefi2.Views.jugadas
         protected void comprar(double monto)
         {
 
-
-            preciomp =(((Convert.ToDouble(txtMonto)-promedio)/promedio)*100);
-            
-
-           promedio= Convert.ToDouble(acti.promedio());
-
-            op = (Convert.ToDouble(acti.pametros_periodo(5))* Convert.ToDouble(acti.pametros_periodo(1)))*(1+preciomp);
+            preciomp = (((Convert.ToDouble(txtMonto.Text) - promedio) / promedio) * 100);
 
 
+            promedio = Convert.ToDouble(acti.promedio());
+
+            op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
+
+          
 
 
             iva = monto * Convert.ToDouble(acti.pametros_año(6));
@@ -129,7 +129,9 @@ namespace juefi2.Views.jugadas
             movimiento.valor = Convert.ToDouble(txtoferta.Text);
 
             compracon.oferta(movimiento);
-          
+
+            lblmateriacomprar.Text = Convert.ToString(op);
+
 
         }
 

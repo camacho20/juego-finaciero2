@@ -16,6 +16,12 @@ namespace juefi2.Controllers
             return true;
         }
 
+        public string variable(int variable)
+        {
+
+            return paraperi.variableperiodo(variable); ;
+        }
+
 
 
     }
