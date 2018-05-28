@@ -35,6 +35,8 @@
                             <label>Monto de la oferta</label>
                             <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
+<<<<<<< HEAD
+=======
 
                           
 
@@ -48,6 +50,7 @@
                             
 
                         </div>
+>>>>>>> bf44b6df010571f125a2694b04cb1b2e89ffbd3d
                     </div>
 
                                     
@@ -65,25 +68,9 @@
 
                  
 
-                    <div class="col-md-4 col-md-offset-1 ">
-                        <div class="form-group">
-                            <asp:Label ID="txtformapago" runat="server" Text="Forma de Pago"></asp:Label>
-                            <asp:DropDownList ID="Dropforpago" CssClass=" form-control  select2" runat="server">
-                               <asp:ListItem Value="none">-------</asp:ListItem>
-                                <asp:ListItem Value="contado">Contado</asp:ListItem>
-                                <asp:ListItem Value="credito">Credito</asp:ListItem>
-                            </asp:DropDownList>
+                   
 
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-md-offset-1  ">
-                        <div class="form-group">
-                            <asp:Label ID="lblvalortotal" runat="server" Text="Valor Total"></asp:Label>
-                            <asp:TextBox ID="txttotal" runat="server" CssClass=" form-control"></asp:TextBox>
-                        </div>
-                    </div>
+                
 
                  
 
@@ -91,10 +78,6 @@
                 </div>
                 <!-- /.box-body -->
 
-                <div class="box-footer">
-                    <asp:Button ID="btnGuardar" runat="server" Text="Realizar Jugada" CssClass="btn btn-primary" OnClick="Guardar_Click"  />
-
-                </div>
 
             </div>
 

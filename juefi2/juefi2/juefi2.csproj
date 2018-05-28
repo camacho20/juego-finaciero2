@@ -543,6 +543,7 @@
     <Content Include="Views\jugadas\almacenamiento_producto_terminado.aspx" />
     <Content Include="Views\jugadas\asquisicion_maquinaria_equipos.aspx" />
     <Content Include="Views\jugadas\compra_materia_prima.aspx" />
+    <Content Include="Views\jugadas\crearpartida.aspx" />
     <Content Include="Views\jugadas\creditoaspx.aspx" />
     <Content Include="Views\jugadas\gastos_publicidad.aspx" />
     <Content Include="Views\jugadas\HabilitarCompra.aspx" />
@@ -560,8 +561,6 @@
     <Content Include="Views\reglas\EstuReglas.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
     <Content Include="Views\reglas\Reglas.aspx" />
-    <Content Include="Views\Simulaciones\SimulacionCredito.aspx" />
-    <Content Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx" />
     <Content Include="Views\usuario\login.aspx" />
     <Content Include="Views\usuario\principal.aspx" />
     <Content Include="Views\usuario\registro.aspx" />
@@ -789,6 +788,13 @@
     <Compile Include="Views\jugadas\compra_materia_prima.aspx.designer.cs">
       <DependentUpon>compra_materia_prima.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\jugadas\crearpartida.aspx.cs">
+      <DependentUpon>crearpartida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\crearpartida.aspx.designer.cs">
+      <DependentUpon>crearpartida.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\jugadas\creditoaspx.aspx.cs">
       <DependentUpon>creditoaspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -914,20 +920,6 @@
     </Compile>
     <Compile Include="Views\reglas\Reglas.aspx.designer.cs">
       <DependentUpon>Reglas.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimulacionCredito.aspx.cs">
-      <DependentUpon>SimulacionCredito.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimulacionCredito.aspx.designer.cs">
-      <DependentUpon>SimulacionCredito.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx.cs">
-      <DependentUpon>SimulacionCreditoLargoplazo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Simulaciones\SimulacionCreditoLargoplazo.aspx.designer.cs">
-      <DependentUpon>SimulacionCreditoLargoplazo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\usuario\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

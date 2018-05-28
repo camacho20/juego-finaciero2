@@ -29,6 +29,9 @@ namespace juefi2.Views.jugadas
 
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+           
+=======
             txttotal.Enabled = false;
             lblmateriacomprar.Enabled = false;
             txtMonto.Visible = false;
@@ -37,6 +40,7 @@ namespace juefi2.Views.jugadas
             lblvalortotal.Visible = false;
             txttotal.Visible = false;
             btnGuardar.Visible = false;
+>>>>>>> bf44b6df010571f125a2694b04cb1b2e89ffbd3d
 
 
 
@@ -81,102 +85,7 @@ namespace juefi2.Views.jugadas
 
         protected void Guardar_Click(object sender, EventArgs e)
         {
-            if (txtMonto.Text=="" || txtMonto.Text == "0") {
-
-                Response.Write("<script> alert('Debe llenar los campos o compra minimo 1 unidad '); </script>");
-                return;
-
-
-            }
-            if (Dropforpago.SelectedIndex==0) {
-
-
-                Response.Write("<script> alert('Debe escojer un tipo de credito'); </script>");
-                return;
-            }
-
-            if (Dropforpago.SelectedIndex == 1)
-            {
-                monto = Convert.ToDouble(txtMonto.Text)*630;
-                comprar(monto);
-                txttotal.Text = Convert.ToString(valor_total);
-                movimiento.nombre_movimineto = "Compra de contado";
-                movimiento.codigo_puc =  Convert.ToInt32 (cop.codigopuc(10));
-                movimiento.nombre_cuenta = "Inventario de Materias Primas";
-                movimiento.debito = monto;
-                compracon.debito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
-                movimiento.debito = iva;
-                compracon.debito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
-                movimiento.nombre_cuenta = "Descuento por Compra de Materias Primas";
-                movimiento.credito = descuento;
-                compracon.credito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
-                movimiento.credito = retefuente;
-                compracon.credito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
-                movimiento.credito =ica ;
-                compracon.credito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
-                movimiento.nombre_cuenta = "Disponible";
-                movimiento.credito = valor_total;
-                compracon.credito(movimiento);
-
-
-                txtMonto.Text = "";
-                Dropforpago.SelectedIndex = 0;
-
-                Response.Write("<script> alert('Compra registrada'); </script>");
-                return;
-            }
-
-            if (Dropforpago.SelectedIndex == 2)
-            {
-
-
-
-                monto = Convert.ToDouble(txtMonto.Text)*630 ;
-                comprar(monto);
-                txttotal.Text = Convert.ToString(valor_total);
-                movimiento.nombre_movimineto = "Compra a credito";
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
-                movimiento.debito = monto;
-                compracon.debito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
-                movimiento.debito = iva;
-                compracon.debito(movimiento);
-
-               
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
-                movimiento.credito = retefuente;
-                compracon.credito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
-                movimiento.credito = ica;
-                compracon.credito(movimiento);
-
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(31));
-                movimiento.credito = valor_total+descuento;
-                compracon.credito(movimiento);
-
-
-                txtMonto.Text = "";
-                Dropforpago.SelectedIndex = 0;
-
-                Response.Write("<script> alert('Compra registrada'); </script>");
-                return;
-            }
+            
 
 
 
