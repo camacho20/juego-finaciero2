@@ -38,5 +38,10 @@ namespace juefi2.Controllers
             com.actulizaroferta(obje);
             return true;
         }
+        public string activarcompra()
+        {
+
+            return com.vercompra();
+        }
     }
 }

@@ -26,27 +26,55 @@ namespace juefi2.Views.jugadas
         double promedio;
         double op;
         double preciomp;
-
+      
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
            
-=======
-            txttotal.Enabled = false;
+            
             lblmateriacomprar.Enabled = false;
             txtMonto.Visible = false;
-            txtformapago.Visible = false;
-            Dropforpago.Visible = false;
-            lblvalortotal.Visible = false;
-            txttotal.Visible = false;
-            btnGuardar.Visible = false;
->>>>>>> bf44b6df010571f125a2694b04cb1b2e89ffbd3d
+           
 
 
-            lblmateriacomprar.Text = Convert.ToString(op);
+
+           
 
 
         }
+
+        protected void mostrar()
+        {
+
+
+            if (compracon.activarcompra()=="Activa") {
+                promedio = Convert.ToDouble(acti.promedio());
+                preciomp = (((Convert.ToDouble(630) - promedio) / promedio) * 100);
+
+
+              
+
+                op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
+
+
+                Label1.Text =Convert.ToString( op);
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+
 
 
         protected void comprar(double monto)
