@@ -15,16 +15,35 @@ namespace juefi2.Views.jugadas
         MovimientoModel movimiento = new MovimientoModel();
         MovimientoController compracon = new MovimientoController();
         EmpresaController empr = new EmpresaController();
+        ActivarCompraController acti = new ActivarCompraController();
+        ActivarCompraModel modelproe = new ActivarCompraModel();
         double iva;
         double ica;
         double retefuente;
         double descuento;
         double valor_total;
         double monto;
+        double promedio;
+        double op;
+        double preciomp;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
            
+=======
+            txttotal.Enabled = false;
+            lblmateriacomprar.Enabled = false;
+            txtMonto.Visible = false;
+            txtformapago.Visible = false;
+            Dropforpago.Visible = false;
+            lblvalortotal.Visible = false;
+            txttotal.Visible = false;
+            btnGuardar.Visible = false;
+>>>>>>> bf44b6df010571f125a2694b04cb1b2e89ffbd3d
+
+
+            lblmateriacomprar.Text = Convert.ToString(op);
 
 
         }
@@ -32,12 +51,24 @@ namespace juefi2.Views.jugadas
 
         protected void comprar(double monto)
         {
-            iva = monto * Convert.ToDouble(cop.variable(40));
-            ica = monto * Convert.ToDouble(cop.variable(42));
+
+
+            preciomp =(((Convert.ToDouble(txtMonto)-promedio)/promedio)*100);
+            
+
+           promedio= Convert.ToDouble(acti.promedio());
+
+            op = (Convert.ToDouble(acti.pametros_periodo(5))* Convert.ToDouble(acti.pametros_periodo(1)))*(1+preciomp);
+
+
+
+
+            iva = monto * Convert.ToDouble(acti.pametros_año(6));
+            ica = monto * Convert.ToDouble(acti.pametros_año(5));
 
             if (monto > 895212)
             {
-                retefuente = monto * Convert.ToDouble(cop.variable(41));
+                retefuente = monto * Convert.ToDouble(acti.pametros_año(4));
 
 
             }
@@ -46,8 +77,9 @@ namespace juefi2.Views.jugadas
             descuento = monto * Convert.ToDouble(cop.variable(60));
 
             valor_total = (((monto + iva) - ica) - retefuente) - descuento;
+            //valor_total = (((monto + iva) - ica) - retefuente) ;
 
-           
+
 
 
         }
@@ -69,12 +101,11 @@ namespace juefi2.Views.jugadas
             movimiento.valor = Convert.ToDouble(txtoferta.Text);
 
             compracon.oferta(movimiento);
-           
-
-
-
-
+          
 
         }
+
+
+        
     }
 }

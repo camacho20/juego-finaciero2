@@ -35,6 +35,22 @@
                             <label>Monto de la oferta</label>
                             <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
+<<<<<<< HEAD
+=======
+
+                          
+
+
+                               <div class="form-group">
+                              <asp:Label ID="lblmateriacomprar" runat="server" Text="Cantidad de materia prima a comprar"></asp:Label>
+                            
+                            <asp:TextBox ID="txtMonto" runat="server" CssClass=" form-control"></asp:TextBox>
+
+
+                            
+
+                        </div>
+>>>>>>> bf44b6df010571f125a2694b04cb1b2e89ffbd3d
                     </div>
 
                                     
