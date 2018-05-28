@@ -549,6 +549,7 @@
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\jugadas\Movimientos.aspx" />
+    <Content Include="Views\jugadas\PagocompraMaquinariaEquipo.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\parametrizacion\Parametrizacion_periodo.aspx" />
     <Content Include="Views\parametrizacion\paramtreiacion_año.aspx" />
@@ -681,6 +682,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ActivarCompraController.cs" />
     <Compile Include="Controllers\ActivosController.cs" />
+    <Compile Include="Controllers\ParametrizacionAñoController.cs" />
     <Compile Include="Controllers\EmpresaController.cs" />
     <Compile Include="Controllers\MovimientoController.cs" />
     <Compile Include="Controllers\CreditosController.cs" />
@@ -707,6 +709,7 @@
     <Compile Include="Models\Inversion_tecnologiaModel.cs" />
     <Compile Include="Models\MenuModel.cs" />
     <Compile Include="Models\ParametrizarVariableModel.cs" />
+    <Compile Include="Models\paramtrizacionañoModel.cs" />
     <Compile Include="Models\PartidaModel.cs" />
     <Compile Include="Models\PasivopatrimonioModel.cs" />
     <Compile Include="Models\ProveedoresModel.cs" />
@@ -827,6 +830,13 @@
     </Compile>
     <Compile Include="Views\jugadas\Movimientos.aspx.designer.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\PagocompraMaquinariaEquipo.aspx.cs">
+      <DependentUpon>PagocompraMaquinariaEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\PagocompraMaquinariaEquipo.aspx.designer.cs">
+      <DependentUpon>PagocompraMaquinariaEquipo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\jugadas\venta_maquinaria_equipos.aspx.cs">
       <DependentUpon>venta_maquinaria_equipos.aspx</DependentUpon>

@@ -27,5 +27,14 @@ namespace juefi2.Models.BD
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+        public string variableperiodo(int id)
+        {
+            string sql = "SELECT valor_parametro FROM parametrizacion_periodo where(idparametrizacion='" + id + "');";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string variable = dt.Rows[0]["valor_parametro"].ToString();
+
+            return variable;
+        }
     }
 }
