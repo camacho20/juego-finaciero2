@@ -3,7 +3,9 @@
     <title>Habilitar Compra</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-     <header class="content__title">
+     
+    
+    <header class="content__title">
          <div class="toolbar">
              <div class="col-md-9 ">
             <div class="toolbar__nav">
@@ -24,15 +26,31 @@
             <!-- /.box-header -->
             <!-- form start -->
 
-             <div class="card-body">">
-                 <h3 class="card-title">Habilitar compra</h3>
+             <div class="card-body">
+                
+                
+                 <div class="row"><div class="col-md-3 col-md-offset-1">
+                    <br />
+                     <h3 class="card-title">Habilitar compra</h3>
+
+                </div>
+                <div class="col-md-4 ">
+                     <label>Activar venta de materia prima</label>
+              
+                <asp:Button ID="Guardar" CssClass="btn btn-danger" OnClick="Guardar_Click" runat="server" Text="Activar" />
+                     
+                    </div></div>
+
+                  
+
 
       <div class="table-responsive">
 
-           <table id="example1" class="table table-bordered table-striped">
+           <table id="data-table" class="table table-bordered table-striped grid">
                 <thead>
                 <tr>
                   <th>NIT Empresa</th>
+                    
                   <th>Valor de la oferta</th>
                   
                 </tr>
@@ -45,6 +63,7 @@
 
                        <tr>
                            <td><%#Eval("empresa_id_empresa")%></td>
+                          
                            <td><%#Eval("cantidad_oferta") %></td>
                           
 
@@ -67,14 +86,12 @@
 
 
 
-                <label>Activar venta de materia prima</label>
-                <asp:CheckBox ID="activar" runat="server" />
-                <asp:Button ID="Guardar" runat="server" Text="Button" />
+                
 
                 </div>
 
             </div>
-         </div>
+         
 
 
 </asp:Content>

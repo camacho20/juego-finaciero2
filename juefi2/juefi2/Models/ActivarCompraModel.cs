@@ -47,6 +47,16 @@ namespace juefi2.Models
 
             return variable;
         }
+        public bool activarcompra()
+        {
+
+            string sql = "UPDATE oferta_materia_prima SET Activarcompra='Activa' where  oferto ='SI';";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
+
+
+
 
     }
 }

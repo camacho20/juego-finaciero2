@@ -32,5 +32,14 @@ namespace juefi2.Controllers
 
             return acti.valor_periodo(variable); ;
         }
+
+        public bool activarcompra()
+        {
+
+
+            return acti.activarcompra();
+        }
+
+
     }
 }

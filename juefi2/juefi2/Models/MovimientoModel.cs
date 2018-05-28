@@ -48,5 +48,16 @@ namespace juefi2.Models
             string sql = "INSERT INTO oferta_materia_prima (cantidad_oferta, empresa_id_empresa,oferto,Activarcompra) VALUES('" + obje.valor + "','" + obje.id + "','SI','Inactivo')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
+
+        public string vercompra()
+        {
+            string sql = "SELECT Activarcompra FROM oferta_materia_prima where(oferto='SI');";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string compra = dt.Rows[0]["Activarcompra"].ToString();
+
+            return compra;
+        }
+
     }
 }
