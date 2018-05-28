@@ -30,7 +30,7 @@ namespace juefi2.Views.jugadas
         protected void Page_Load(object sender, EventArgs e)
         {
             txttotal.Enabled = false;
-            lblmateriacomprar.Visible = false;
+            lblmateriacomprar.Enabled = false;
             txtMonto.Visible = false;
             txtformapago.Visible = false;
             Dropforpago.Visible = false;
@@ -39,19 +39,22 @@ namespace juefi2.Views.jugadas
             btnGuardar.Visible = false;
 
 
+            lblmateriacomprar.Text = Convert.ToString(op);
+
+
         }
 
 
         protected void comprar(double monto)
         {
 
-            preciomp=(((Convert.ToDouble(txtMonto)-promedio)/promedio)*100);
+
+            preciomp =(((Convert.ToDouble(txtMonto)-promedio)/promedio)*100);
             
 
            promedio= Convert.ToDouble(acti.promedio());
 
             op = (Convert.ToDouble(acti.pametros_periodo(5))* Convert.ToDouble(acti.pametros_periodo(1)))*(1+preciomp);
-
 
 
 
@@ -67,11 +70,11 @@ namespace juefi2.Views.jugadas
             }
 
 
-            //descuento = monto * Convert.ToDouble(cop.variable(60));
+            descuento = monto * Convert.ToDouble(cop.variable(60));
 
             valor_total = (((monto + iva) - ica) - retefuente) - descuento;
+            //valor_total = (((monto + iva) - ica) - retefuente) ;
 
-           
 
 
 
@@ -189,7 +192,8 @@ namespace juefi2.Views.jugadas
             movimiento.valor = Convert.ToDouble(txtoferta.Text);
 
             compracon.oferta(movimiento);
-           
+          
+
         }
 
 

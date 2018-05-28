@@ -36,6 +36,7 @@
                             <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
 
+                          
 
 
                                <div class="form-group">
