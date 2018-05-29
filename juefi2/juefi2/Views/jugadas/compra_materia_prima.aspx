@@ -35,10 +35,6 @@
                             <label>Monto de la oferta</label>
                             <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
                         </div>
-<<<<<<< HEAD
-
-=======
->>>>>>> a2b7760dfa67c1dd0e0857fc9c6d80699442300a
 
 
 
@@ -53,13 +49,10 @@
                            </div>
 
                        </div>
-
-<<<<<<< HEAD
-                    
+      
 
                     </div>
-=======
->>>>>>> a2b7760dfa67c1dd0e0857fc9c6d80699442300a
+
 
 
                     <div class="col-md-4  col-md-offset-1 ">

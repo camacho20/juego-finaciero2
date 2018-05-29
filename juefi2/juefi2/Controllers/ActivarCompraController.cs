@@ -17,7 +17,7 @@ namespace juefi2.Controllers
             return acti.ofertasdecompra();
         }
 
-        public DataTable promedio()
+        public string promedio()
         {
           return acti.promedio_oferta();
         }
