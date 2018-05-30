@@ -2,50 +2,43 @@
 using juefi2.Models;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace juefi2.Views.partida_especifica
 {
-    public partial class partida_especifica : System.Web.UI.Page
+    public partial class PerioodoPartida : System.Web.UI.Page
     {
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
-        EmpresaController empre = new EmpresaController();
-        private DataTable llamarempresa;
-      
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            llenarpartida(partida1);
         }
 
-        public bool validarLetrasYNumeros(String h)
+        protected void llenarpartida(DropDownList partida)
         {
-            Regex reg = new Regex("[^A-Z ^a-z ^0-9 ^. ^:]");
-            return !reg.IsMatch(h);
+            partida.DataSource = par.Consultarpartida();
+            partida.DataValueField = "id_partida_general";
+            partida.DataValueField = "nombre_partida";
+            partida.DataBind();
+
+
+
         }
+
+
 
         protected void guardar_Click(object sender, EventArgs e)
         {
-            if ( txtnumeroempresa.Text == "")
-            {
-                Response.Write("<script> alert('Debe llenar los campos'); </script>");
-                return;
-            }
+            
 
-            if (txtnombrepartida.Text=="" || txtnombrepartida.Text.Length < 3)
+            if (fechaInicio.Value == "" || fechaFin.Value == "")
             {
-                Response.Write("<script> alert('Nombre de la partida no valida, debe ser mayor a 3 caracteres'); </script>");
-                return;
-            }
-
-            if (fechaInicio.Value=="" || fechaFin.Value=="") {
 
 
                 Response.Write("<script> alert('Debe escojer las fechas'); </script>");
@@ -68,19 +61,19 @@ namespace juefi2.Views.partida_especifica
                 return;
             }
 
-            par.numero_empresas = txtnumeroempresa.Text;
-            par.nombre_partida = txtnombrepartida.Text;
-            par.fecha_inicial = Convert.ToDateTime (fechaInicio.Value);
-            par.fecha_final= Convert.ToDateTime(fechaFin.Value);
+          
+            par.fecha_inicial = Convert.ToDateTime(fechaInicio.Value);
+            par.fecha_final = Convert.ToDateTime(fechaFin.Value);
 
-            partida.registrarpartida(par);
+            partida.insertarperido(par, partida.consulidpartida(partida1.SelectedIndex.ToString()));
 
-
-            Response.Write("<script> alert('Partida registrada'); </script>");
           
 
-            txtnumeroempresa.Text = "";
-            txtnombrepartida.Text = "";
+
+            Response.Write("<script> alert('Perido agregado'); </script>");
+
+
+           
             fechaInicio.Value = "";
             fechaFin.Value = "";
             return;
@@ -88,13 +81,10 @@ namespace juefi2.Views.partida_especifica
 
         }
 
-        //Asignacion de empresa
 
-       
 
-       
 
-        
+
 
     }
 }

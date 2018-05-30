@@ -264,7 +264,7 @@
 
                         <li class="@@indexactive ">
                             <a href="<%#Eval("url") %>"><i class="<%#Eval("icono") %>"></i><%#Eval("item") %></a>
-                           
+                            <a href="../partida_especifica/PerioodoPartida.aspx">../partida_especifica/PerioodoPartida.aspx</a>
                         </li>
                      
 

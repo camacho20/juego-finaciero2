@@ -556,6 +556,7 @@
     <Content Include="Views\parametrizacion\paramtreiacion_año.aspx" />
     <Content Include="Views\partida_especifica\AgregarEmpresaPartida.aspx" />
     <Content Include="Views\partida_especifica\partida_especifica.aspx" />
+    <Content Include="Views\partida_especifica\PerioodoPartida.aspx" />
     <Content Include="Views\reglas\BalacePuc.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
@@ -885,6 +886,13 @@
     </Compile>
     <Compile Include="Views\partida_especifica\partida_especifica.aspx.designer.cs">
       <DependentUpon>partida_especifica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\partida_especifica\PerioodoPartida.aspx.cs">
+      <DependentUpon>PerioodoPartida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\partida_especifica\PerioodoPartida.aspx.designer.cs">
+      <DependentUpon>PerioodoPartida.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\BalacePuc.aspx.cs">
       <DependentUpon>BalacePuc.aspx</DependentUpon>

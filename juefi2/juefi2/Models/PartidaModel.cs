@@ -45,5 +45,14 @@ namespace juefi2.Models
 
         }
 
+        public bool registrarperido(PartidaModel obj,int idpartida)
+        {
+            string inicial = obj.fecha_inicial.Year + "-" + obj.fecha_inicial.Month + "-" + obj.fecha_inicial.Day;
+            string final = obj.fecha_final.Year + "-" + obj.fecha_final.Month + "-" + obj.fecha_final.Day;
+
+            string sql = "INSERT INTO periodos ( fecha_inicial, fecha_fin,partida_especifica_id_partida_general )  VALUES('" + inicial + "','" + final + "','" + idpartida + "')";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
     }
 }
