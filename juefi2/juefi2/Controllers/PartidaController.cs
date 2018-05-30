@@ -33,6 +33,10 @@ namespace juefi2.Controllers
 
         }
 
-
+        public bool insertarperido(PartidaModel mod,int idempreda)
+        {
+            parti.registrarperido(mod,idempreda);
+            return true;
+        }
     }
 }
