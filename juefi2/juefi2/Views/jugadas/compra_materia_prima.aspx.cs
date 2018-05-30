@@ -32,25 +32,15 @@ namespace juefi2.Views.jugadas
 
 
             //txttotal.Enabled = false;
-            //lblmateriacomprar.Enabled = false;
-            //txtMonto.Visible = false;
             //txtformapago.Visible = false;
             //Dropforpago.Visible = false;
             //lblvalortotal.Visible = false;
             //txttotal.Visible = false;
             //btnGuardar.Visible = false;
 
-           
-            
+
             lblmateriacomprar.Enabled = false;
-            txtMonto.Visible = false;
-
-
             mostrar();
-
-
-
-
 
         }
 
@@ -59,48 +49,30 @@ namespace juefi2.Views.jugadas
 
 
             if (compracon.activarcompra()=="Activa") {
-                promedio =3500;
-                //promedio = Convert.ToDouble(acti.promedio());
-                preciomp = (((Convert.ToDouble(3500) - promedio) / promedio) * 100);
 
 
-              
-
+                promedio =Convert.ToDouble( modelproe.promedio_oferta());
+                preciomp = (((Convert.ToDouble(acti.valoroferta(int.Parse( empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
                 op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
 
 
-                Label1.Text =Convert.ToString( op);
-
+                Label1.Text =Convert.ToString(op);
+                Label1.Enabled = false;
+                txtoferta.Visible = false;
+                btnhaceroferta.Visible = false;
+                labelmonto.Visible = false;
             }
-
-
-
-
-
-
-
-           
-
-        }
-
-
-
-
-
-
+                              
+                     
+                  }
 
         protected void comprar(double monto)
         {
 
-            //preciomp = (((Convert.ToDouble(txtMonto.Text) - promedio) / promedio) * 100);
-
-
-            promedio = Convert.ToDouble(acti.promedio());
-
+            preciomp = (((Convert.ToDouble(acti.valoroferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
+            promedio = Convert.ToDouble(modelproe.promedio_oferta());
             op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
-
-          
-
+            
 
             iva = monto * Convert.ToDouble(acti.pametros_año(6));
             ica = monto * Convert.ToDouble(acti.pametros_año(5));
@@ -108,20 +80,14 @@ namespace juefi2.Views.jugadas
             if (monto > 895212)
             {
                 retefuente = monto * Convert.ToDouble(acti.pametros_año(4));
-
-
             }
 
 
             descuento = monto * Convert.ToDouble(cop.variable(60));
-
             valor_total = (((monto + iva) - ica) - retefuente) - descuento;
             //valor_total = (((monto + iva) - ica) - retefuente) ;
 
-
-
-
-        }
+         }
 
         protected void Guardar_Click(object sender, EventArgs e)
         {
@@ -140,13 +106,8 @@ namespace juefi2.Views.jugadas
             movimiento.valor = Convert.ToDouble(txtoferta.Text);
 
             compracon.oferta(movimiento);
-
-            //lblmateriacomprar.Text = Convert.ToString(op);
-
-
+                       
         }
-
-
-        
+                       
     }
 }

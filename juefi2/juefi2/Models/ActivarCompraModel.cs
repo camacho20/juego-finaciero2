@@ -10,7 +10,8 @@ namespace juefi2.Models
     public class ActivarCompraModel
     {
         private conecMysql conn = new conecMysql();
-
+        public double pro=55;
+        
         public DataTable ofertasdecompra()
         {
 
@@ -20,14 +21,14 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
-        public string promedio_oferta() {
+        public string promedio_oferta ()
+        {
            
-            string sql = "SELECT avg(cantidad_oferta) as prome FROM oferta_materia_prima;";
-            
+            string sql = "SELECT avg(cantidad_oferta) as prome FROM oferta_materia_prima where Activarcompra = 'Activa';";
             DataTable dtt = conn.EjecutarConsulta(sql, CommandType.Text);
-            string ofert = dtt.Rows[0]["prome"].ToString();
-            return ofert;
-
+           pro = Convert.ToDouble(dtt.Rows[0]["prome"].ToString());
+            return pro.ToString();
+            
         }
 
         public string valor_año(int id)
@@ -56,9 +57,17 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+       
 
 
+             public double llamarvaloroferta(int id)
+        {
 
+            string sql = "select cantidad_oferta from oferta_materia_prima where (empresa_id_empresa = ' " + id + "');";
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            double valoroferta = Convert.ToDouble( dt.Rows[0]["cantidad_oferta"].ToString());
 
+            return valoroferta;
+        }
     }
 }
