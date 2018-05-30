@@ -20,7 +20,7 @@
         </div>
 </header>
 
-     <div class="col-md-9 ">
+     <div class="col-md-7 ">
          <div class="card">
             
             <!-- /.box-header -->
@@ -49,6 +49,9 @@
                            </div>
 
                        </div>
+      
+
+                    </div>
 
 
 

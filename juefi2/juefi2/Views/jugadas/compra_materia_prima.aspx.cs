@@ -30,15 +30,26 @@ namespace juefi2.Views.jugadas
         protected void Page_Load(object sender, EventArgs e)
         {
 
+
+            //txttotal.Enabled = false;
+            //lblmateriacomprar.Enabled = false;
+            //txtMonto.Visible = false;
+            //txtformapago.Visible = false;
+            //Dropforpago.Visible = false;
+            //lblvalortotal.Visible = false;
+            //txttotal.Visible = false;
+            //btnGuardar.Visible = false;
+
            
             
             lblmateriacomprar.Enabled = false;
             txtMonto.Visible = false;
-           
+
+
+            mostrar();
 
 
 
-           
 
 
         }
@@ -48,8 +59,9 @@ namespace juefi2.Views.jugadas
 
 
             if (compracon.activarcompra()=="Activa") {
-                promedio = Convert.ToDouble(acti.promedio());
-                preciomp = (((Convert.ToDouble(630) - promedio) / promedio) * 100);
+                promedio =3500;
+                //promedio = Convert.ToDouble(acti.promedio());
+                preciomp = (((Convert.ToDouble(3500) - promedio) / promedio) * 100);
 
 
               
@@ -60,7 +72,6 @@ namespace juefi2.Views.jugadas
                 Label1.Text =Convert.ToString( op);
 
             }
-
 
 
 
@@ -81,7 +92,7 @@ namespace juefi2.Views.jugadas
         protected void comprar(double monto)
         {
 
-            preciomp = (((Convert.ToDouble(txtMonto.Text) - promedio) / promedio) * 100);
+            //preciomp = (((Convert.ToDouble(txtMonto.Text) - promedio) / promedio) * 100);
 
 
             promedio = Convert.ToDouble(acti.promedio());
@@ -130,7 +141,7 @@ namespace juefi2.Views.jugadas
 
             compracon.oferta(movimiento);
 
-            lblmateriacomprar.Text = Convert.ToString(op);
+            //lblmateriacomprar.Text = Convert.ToString(op);
 
 
         }

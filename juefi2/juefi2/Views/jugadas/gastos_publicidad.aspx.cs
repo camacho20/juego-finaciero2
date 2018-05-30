@@ -19,6 +19,7 @@ namespace juefi2.Views.jugadas
         double monto;
         double rtfuente;
         double disponible;
+      
 
 
 
@@ -42,7 +43,8 @@ namespace juefi2.Views.jugadas
             }
 
             disponible = (monto - rtfuente) - reteica;
-            
+           
+
 
         }
 
@@ -79,8 +81,7 @@ namespace juefi2.Views.jugadas
             movimiento.nombre_cuenta = "Disponible";
             movimiento.credito = disponible;
             inversion.credito(movimiento);
-
-
+                    
             Txtmonto.Text = "";
             Response.Write("<script> alert('Realizada Gasto'); </script>");
             return;

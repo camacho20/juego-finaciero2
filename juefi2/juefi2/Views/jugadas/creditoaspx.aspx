@@ -55,7 +55,7 @@
                 <div class="col-md-6  ">
                     <label>Mes | Cuota | Interes | Amortizacion | Saldo</label>
                     <asp:ListBox ID="Listmostrar" CssClass=" form-control" runat="server"
-                        Height="200" Width="210" ></asp:ListBox>
+                        Height="270" Width="270" ></asp:ListBox>
 
 
                     </div>
