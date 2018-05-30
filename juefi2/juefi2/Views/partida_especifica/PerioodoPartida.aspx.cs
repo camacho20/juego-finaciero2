@@ -13,7 +13,7 @@ namespace juefi2.Views.partida_especifica
     {
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
-
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -65,7 +65,7 @@ namespace juefi2.Views.partida_especifica
             par.fecha_inicial = Convert.ToDateTime(fechaInicio.Value);
             par.fecha_final = Convert.ToDateTime(fechaFin.Value);
 
-            partida.insertarperido(par, partida.consulidpartida(partida1.SelectedIndex.ToString()));
+            partida.insertarperido(par,int.Parse( partida.consulidpartida(partida1.SelectedIndex.ToString())));
 
           
 
@@ -81,10 +81,9 @@ namespace juefi2.Views.partida_especifica
 
         }
 
-
-
-
-
-
+        protected void Finalizar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../partida_especifica/partida_especifica.aspx");
+        }
     }
 }

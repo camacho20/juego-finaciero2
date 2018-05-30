@@ -14,28 +14,45 @@ namespace juefi2.Views.empresa
     {
         EmpresaController empr = new EmpresaController();
         EmpresaModel emp = new EmpresaModel();
-       
+      
         public DataRow daronombre;
         MovimientoController ofer = new MovimientoController();
 
-       
+        PartidaController partida = new PartidaController();
+        PartidaModel par = new PartidaModel();
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
 
+            llenarpartida(partida1);
 
-            
 
 
 
         }
 
+
+        protected void llenarpartida(DropDownList partida)
+        {
+            partida.DataSource = par.Consultarpartida();
+            partida.DataValueField = "id_partida_general";
+            partida.DataValueField = "nombre_partida";
+            partida.DataBind();
+
+
+
+        }
+
+
+
+
+
         protected void btnguardar_Click(object sender, EventArgs e)
         {
 
-            if (empr.llamaridempresa(int.Parse (Session["id_usuario"].ToString())) =="") {
+            
                 if (txtnit.Text == "" || txtnombre.Text == "")
                 {
                     Response.Write("<script> alert('Debe llenar los campos'); </script>");
@@ -63,7 +80,8 @@ namespace juefi2.Views.empresa
                     emp.politicas_empresa = politicas.Value;
                     empr.registro_empresa(emp);
                     empr.reusuario_empresa(int.Parse(Session["id_usuario"].ToString()), int.Parse(txtnit.Text));
-                    txtnit.Text = "";
+                empr.registrarparti(int.Parse(partida.consulidpartida(partida1.SelectedIndex.ToString())), partida1.SelectedIndex.ToString());
+                txtnit.Text = "";
                     txtnombre.Text = "";
                     DropIntegrantes.SelectedIndex = 0;
                     politicas.Value = "";
@@ -95,15 +113,7 @@ namespace juefi2.Views.empresa
                 }
 
 
-            }else
-            {
-
-                Response.Write("<script> alert('Usted ya tiene una mepresa creada'); </script>");
-                txtnit.Text = "";
-                txtnombre.Text = "";
-                DropIntegrantes.SelectedIndex = 0;
-                politicas.Value = "";
-            }
+           
         }
 
 

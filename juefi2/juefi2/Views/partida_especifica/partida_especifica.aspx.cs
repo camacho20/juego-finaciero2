@@ -17,7 +17,8 @@ namespace juefi2.Views.partida_especifica
         PartidaModel par = new PartidaModel();
         EmpresaController empre = new EmpresaController();
         private DataTable llamarempresa;
-      
+        PucController pu = new PucController();
+        PucModel puce = new PucModel();
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -74,8 +75,8 @@ namespace juefi2.Views.partida_especifica
             par.fecha_final= Convert.ToDateTime(fechaFin.Value);
 
             partida.registrarpartida(par);
-
-
+            //pu.copiarpuc();
+            Response.Redirect("../partida_especifica/PerioodoPartida.aspx");
             Response.Write("<script> alert('Partida registrada'); </script>");
           
 

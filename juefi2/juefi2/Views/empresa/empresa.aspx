@@ -77,12 +77,19 @@
                         </div>
                     </div>
 
-                     <div class="col-md-9  col-md-offset-1 ">
+                     <div class="col-md-5  col-md-offset-1 ">
                          <label>Politicas de la Empresa</label>
                          <textarea class="form-control" rows="2" placeholder="Enter ..." runat="server" id="politicas">
                   </textarea>
                      </div>
-
+                     <div class="col-md-5  col-md-offset-1 ">
+                         <label>Seleccionar partida :</label>
+                         <asp:DropDownList ID="partida1" runat="server">
+                             <asp:ListItem Value="none">-------</asp:ListItem>
+                         </asp:DropDownList>
+                     </div>
+                        
+                     </div>
 
                     <div class="col-md-4 col-md-offset-8 ">
                         <br />

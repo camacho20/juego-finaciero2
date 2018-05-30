@@ -90,7 +90,7 @@
                                             </div>
                                         </div>
 
-                        <asp:LinkButton ID="Finalizar" CssClass="btn btn-info" runat="server">Finalizar</asp:LinkButton>
+                        <asp:LinkButton ID="Finalizar" CssClass="btn btn-info" runat="server" OnClick="Finalizar_Click">Finalizar</asp:LinkButton>
 
                                        </div>
 

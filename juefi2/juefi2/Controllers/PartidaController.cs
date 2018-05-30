@@ -25,7 +25,7 @@ namespace juefi2.Controllers
             return parti.Consultarpartida();
         }
 
-        public int consulidpartida( string nomempresa)
+        public string consulidpartida( string nomempresa)
 
         {
 

@@ -63,7 +63,7 @@ namespace juefi2.Views.partida_especifica
                 {
                     nombres = ListadeEmpresas.SelectedItem.ToString();
 
-                    empr.registrarparti(par.consulidpartida(selctpartida.SelectedIndex.ToString()), nombres);
+                    empr.registrarparti(int.Parse(par.consulidpartida(selctpartida.SelectedIndex.ToString())), nombres);
                     ListadeEmpresas.Items.Remove(ListadeEmpresas.SelectedItem);
                 }
 

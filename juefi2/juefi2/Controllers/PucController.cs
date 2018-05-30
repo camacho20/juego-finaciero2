@@ -43,7 +43,10 @@ namespace juefi2.Controllers
         {
             return puc.buscar(item);
         }
-
+        public bool copiarpuc()
+        {
+            return puc.copiarpuc();
+        }
 
 
     }

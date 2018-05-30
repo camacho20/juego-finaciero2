@@ -125,31 +125,20 @@
                                 <div class="tab-pane fade" id="Liatadepartidas" role="tabpanel">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Basic example</h4>
-                                            <h6 class="card-subtitle">Click the buttons below to show and hide another element via class changes:</h6>
+                                            <h4 class="card-title">Balance de la Partida</h4>
+                                            
+                                            <asp:GridView ID="balance" runat="server">
 
-                                            <div class="btn-demo">
-                                                <a class="btn btn-light" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href
-                                </a>
-                                                <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                                    Button with data-target
-                               
-                                                </button>
-                                            </div>
 
-                                            <div class="collapse" id="collapseExample">
-                                                <hr>
 
-                                                <div class="card card-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                               
-                                                </div>
-                                            </div>
+
+
+
+                                            </asp:GridView>
+                                           
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
                         </div>
                     </div>
                 </div>

@@ -34,12 +34,12 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
-        public int idpartida( string nombre)
+        public string idpartida( string nombre)
         {
-            string sql = "SELECT id_partida_general FROM partida_especifica where(nombre_partida = '" + nombre + "'); ";
+            string sql = "SELECT id_partida_general FROM partida_especifica where nombre_partida = '" + nombre + "'; ";
 
             DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
-            int idpartidas = int.Parse(dt.Rows[0]["id_partida_general"].ToString());
+            string idpartidas = dt.Rows[0]["id_partida_general"].ToString();
 
             return idpartidas;
 

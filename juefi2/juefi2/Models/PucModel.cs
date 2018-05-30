@@ -52,5 +52,15 @@ namespace juefi2.Models
 
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
+
+        public bool copiarpuc()
+        {
+
+            string sql = "INSERT INTO pucpuc_copia (codigo, descripcion,valor,puc_idpuc )  SELECT codigo,descripcion,valor,idpuc   FROM  puc;";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
+
+
     }
 }
