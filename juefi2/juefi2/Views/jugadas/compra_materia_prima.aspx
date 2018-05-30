@@ -66,7 +66,7 @@
                 <div class="col-md-6 col-md-offset-0">
                     <div class="form-group">
                         <div class="form-group">
-                            <asp:Label ID="label3" runat="server" Text="forma de pago"></asp:Label>
+                            <asp:Label ID="labelformadepago" runat="server" Text="forma de pago"></asp:Label>
                             <asp:DropDownList ID="formadepago" CssClass=" form-control" runat="server">
                                 <asp:ListItem Value=""></asp:ListItem>
                                 <asp:ListItem Value="1">Credito </asp:ListItem>

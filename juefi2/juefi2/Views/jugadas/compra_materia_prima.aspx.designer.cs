@@ -67,13 +67,13 @@ namespace juefi2.Views.jugadas {
         protected global::System.Web.UI.WebControls.TextBox Txtcantidad;
         
         /// <summary>
-        /// Control label3.
+        /// Control labelformadepago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label label3;
+        protected global::System.Web.UI.WebControls.Label labelformadepago;
         
         /// <summary>
         /// Control formadepago.
