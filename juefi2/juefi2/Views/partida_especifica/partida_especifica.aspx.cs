@@ -16,14 +16,12 @@ namespace juefi2.Views.partida_especifica
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
         EmpresaController empre = new EmpresaController();
-        private DataTable llamarempresa;
-        PucController pu = new PucController();
-        PucModel puce = new PucModel();
+     
 
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+           
         }
 
         public bool validarLetrasYNumeros(String h)
@@ -75,7 +73,7 @@ namespace juefi2.Views.partida_especifica
             par.fecha_final= Convert.ToDateTime(fechaFin.Value);
 
             partida.registrarpartida(par);
-            //pu.copiarpuc();
+      
             Response.Redirect("../partida_especifica/PerioodoPartida.aspx");
             Response.Write("<script> alert('Partida registrada'); </script>");
           
@@ -89,7 +87,7 @@ namespace juefi2.Views.partida_especifica
 
         }
 
-        //Asignacion de empresa
+       
 
        
 
