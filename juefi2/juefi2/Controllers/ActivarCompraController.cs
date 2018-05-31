@@ -17,10 +17,10 @@ namespace juefi2.Controllers
             return acti.ofertasdecompra();
         }
 
-        //public string promedio(string prooo)
-        //{
-        //    return acti.promedio_oferta(prooo);
-        //}
+        public string valordeoferta(int prooo)
+        {
+            return acti.llamardeoferta(prooo);
+        }
 
         public string pametros_año (int variable)
         {

@@ -80,7 +80,7 @@ namespace juefi2.Views.empresa
                     emp.politicas_empresa = politicas.Value;
                     empr.registro_empresa(emp);
                     empr.reusuario_empresa(int.Parse(Session["id_usuario"].ToString()), int.Parse(txtnit.Text));
-                empr.registrarparti(int.Parse(partida.consulidpartida(partida1.SelectedIndex.ToString())), partida1.SelectedIndex.ToString());
+                empr.registrarparti(int.Parse(partida.consulidpartida(partida1.Text)), partida1.Text);
                 txtnit.Text = "";
                     txtnombre.Text = "";
                     DropIntegrantes.SelectedIndex = 0;
@@ -101,7 +101,8 @@ namespace juefi2.Views.empresa
                     emp.politicas_empresa = politicas.Value;
                     empr.registro_empresa(emp);
                     empr.reusuario_empresa(int.Parse(Session["id_usuario"].ToString()), int.Parse(txtnit.Text));
-                    txtnit.Text ="";
+                empr.registrarparti(int.Parse(partida.consulidpartida(partida1.SelectedItem.Text)), partida1.SelectedItem.Text);
+                txtnit.Text ="";
                     txtnombre.Text ="";
                     DropIntegrantes.SelectedIndex = 0;
                     politicas.Value = "";

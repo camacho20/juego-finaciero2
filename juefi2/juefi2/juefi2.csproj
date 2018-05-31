@@ -550,6 +550,7 @@
     <Content Include="Views\jugadas\inversion_tecnologia.aspx" />
     <Content Include="Views\jugadas\liquidacion_impuestos_compra.aspx" />
     <Content Include="Views\jugadas\Movimientos.aspx" />
+    <Content Include="Views\jugadas\oferta.aspx" />
     <Content Include="Views\jugadas\PagocompraMaquinariaEquipo.aspx" />
     <Content Include="Views\jugadas\venta_maquinaria_equipos.aspx" />
     <Content Include="Views\parametrizacion\Parametrizacion_periodo.aspx" />
@@ -837,6 +838,13 @@
     </Compile>
     <Compile Include="Views\jugadas\Movimientos.aspx.designer.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\jugadas\oferta.aspx.cs">
+      <DependentUpon>oferta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\jugadas\oferta.aspx.designer.cs">
+      <DependentUpon>oferta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\jugadas\PagocompraMaquinariaEquipo.aspx.cs">
       <DependentUpon>PagocompraMaquinariaEquipo.aspx</DependentUpon>

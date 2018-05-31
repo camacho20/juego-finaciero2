@@ -13,24 +13,6 @@ namespace juefi2.Views.jugadas {
     public partial class compra_materia_prima {
         
         /// <summary>
-        /// Control labelmonto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelmonto;
-        
-        /// <summary>
-        /// Control txtoferta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtoferta;
-        
-        /// <summary>
         /// Control lblmateriacomprar.
         /// </summary>
         /// <remarks>
@@ -58,13 +40,13 @@ namespace juefi2.Views.jugadas {
         protected global::System.Web.UI.WebControls.Label labelcanti;
         
         /// <summary>
-        /// Control Txtcantidad.
+        /// Control Txtcantidad2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Txtcantidad;
+        protected global::System.Web.UI.WebControls.TextBox Txtcantidad2;
         
         /// <summary>
         /// Control labelformadepago.
@@ -110,14 +92,5 @@ namespace juefi2.Views.jugadas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button guardar;
-        
-        /// <summary>
-        /// Control btnhaceroferta.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnhaceroferta;
     }
 }

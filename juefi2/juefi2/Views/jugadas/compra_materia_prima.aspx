@@ -34,12 +34,7 @@
                 <h3 class="card-title">Compra de Materia Prima</h3>
                 <div class="row">
 
-                    <div class="col-md-6 col-md-offset-1">
-                        <div class="form-group">
-                            <asp:Label ID="labelmonto" runat="server" Text="Monto de la oferta"></asp:Label>
-                            <asp:TextBox ID="txtoferta" runat="server" CssClass=" form-control"></asp:TextBox>
-                        </div>
-
+                 
 
                         <div class="form-group">
                             <asp:Label ID="lblmateriacomprar" runat="server" Text="Cantidad maxima de materia prima que puede  comprar es :"></asp:Label>
@@ -55,7 +50,7 @@
                 <div class="col-md-6 col-md-offset-1">
                     <div class="form-group">
                         <asp:Label ID="labelcanti" runat="server" Text="cantidad a comprar"></asp:Label>
-                        <asp:TextBox ID="Txtcantidad" runat="server" CssClass=" form-control"></asp:TextBox>
+                        <asp:TextBox ID="Txtcantidad2" runat="server" CssClass=" form-control"></asp:TextBox>
 
                     </div>
 
@@ -99,15 +94,7 @@
 
 
 
-        <div class="col-md-4  col-md-offset-1 ">
-            <div class="form-group">
 
-                <asp:Button ID="btnhaceroferta" runat="server" Text="Realizar Oferta" OnClick="btnhaceroferta_Click" CssClass="btn btn-primary" />
-
-
-            </div>
-        </div>
-
-    </div>
+    
          
 </asp:Content>

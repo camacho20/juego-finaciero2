@@ -42,8 +42,8 @@
                                         <div class="col-md-4  col-md-offset-1 " >
                                             
                                             <label>Seleccionar partida :</label>
-                                             <asp:DropDownList ID="partida1" runat="server">
-                                             <asp:ListItem Value="none">-------</asp:ListItem>
+                                             <asp:DropDownList ID="partida1" CssClass=" form-control select2" runat="server">
+                                          
                                            </asp:DropDownList>
                                            </div>
 

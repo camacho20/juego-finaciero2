@@ -32,16 +32,8 @@ namespace juefi2.Views.jugadas
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            Label1.Visible = false;
-            lblmateriacomprar.Visible = false;
-            labelcanti.Visible = false;
-            Txtcantidad.Visible = false;
-            labelformadepago.Visible = false;
-            formadepago.Visible = false;
-            labevalorcompra.Visible = false;
-            Txtvalorcompra.Visible = false;
-            guardar.Visible = false;
-                        
+         
+            
             mostrar();
 
         }
@@ -49,44 +41,22 @@ namespace juefi2.Views.jugadas
         protected void mostrar()
         {
 
-
-            if (compracon.activarcompra()=="Activa") {
-
-
-                promedio =Convert.ToDouble( modelproe.promedio_oferta());
-                preciomp = (((Convert.ToDouble(acti.valoroferta(int.Parse( empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
+            
+                promedio = Convert.ToDouble(modelproe.promedio_oferta());
+                preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
                 op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
 
 
-                Label1.Text =Convert.ToString(op);
-                lblmateriacomprar.Enabled = false;
-                Label1.Enabled = false;
-                txtoferta.Visible = false;
-                btnhaceroferta.Visible = false;
-                labelmonto.Visible = false;
-
-
-                Label1.Visible = true;
-                lblmateriacomprar.Visible = true;
-                labelcanti.Visible = true;
-                Txtcantidad.Visible = true;
-                labelformadepago.Visible = true;
-                formadepago.Visible = true;
-                labevalorcompra.Visible = true;
-                Txtvalorcompra.Visible = true;
-                Txtvalorcompra.Enabled = true;
-                guardar.Visible = true;
-
-
+                Label1.Text = Convert.ToString(op);
+  
             }
-                              
+           
+                   
                      
-                  }
-
-        protected void comprar(double monto)
+                      protected void comprar(double monto)
         {
-            monto = Convert.ToDouble(acti.valoroferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())))));
-            preciomp = (((Convert.ToDouble(acti.valoroferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
+            monto = Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())))));
+            preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
             promedio = Convert.ToDouble(modelproe.promedio_oferta());
             op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
             
@@ -109,7 +79,7 @@ namespace juefi2.Views.jugadas
 
         protected void Guardar_Click(object sender, EventArgs e)
         {
-            if (Txtcantidad.Text == "" || Txtcantidad.Text == "0")
+            if (Txtcantidad2.Text == "" || Txtcantidad2.Text == "0")
             {
 
                 Response.Write("<script> alert('Debe llenar los campos o invertir minimo 1 unidad '); </script>");
@@ -117,7 +87,7 @@ namespace juefi2.Views.jugadas
             }
 
 
-           if (formadepago.Text == "Contado") { 
+           if (formadepago.SelectedIndex.ToString() == "Contado") { 
             comprar (monto);
             movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
@@ -151,7 +121,7 @@ namespace juefi2.Views.jugadas
             compracon.credito(movimiento);
 
 
-            Txtcantidad.Text = "";
+            Txtcantidad2.Text = "";
             Txtvalorcompra.Text = "";
             formadepago.Text = "";
             Response.Write("<script> alert('Inversion Realizada'); </script>");
@@ -161,7 +131,7 @@ namespace juefi2.Views.jugadas
 
 
 
-            if (formadepago.Text == "Credito")
+            if (formadepago.SelectedIndex.ToString() == "Credito")
             {
                 comprar(monto);
                 movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
@@ -192,7 +162,7 @@ namespace juefi2.Views.jugadas
                 compracon.credito(movimiento);
 
 
-                Txtcantidad.Text = "";
+                Txtcantidad2.Text = "";
                 Txtvalorcompra.Text = "";
                 formadepago.Text = "";
                 Response.Write("<script> alert('Inversion Realizada'); </script>");
@@ -204,15 +174,7 @@ namespace juefi2.Views.jugadas
 
         }
 
-        protected void btnhaceroferta_Click(object sender, EventArgs e)
-        {
-            movimiento.id = empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()));
-
-            movimiento.valor = Convert.ToDouble(txtoferta.Text);
-
-            compracon.oferta(movimiento);
-                       
-        }
+       
                        
     }
 }

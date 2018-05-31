@@ -61,11 +61,11 @@ namespace juefi2.Views.partida_especifica
                 return;
             }
 
-          
+
             par.fecha_inicial = Convert.ToDateTime(fechaInicio.Value);
             par.fecha_final = Convert.ToDateTime(fechaFin.Value);
 
-            partida.insertarperido(par,int.Parse( partida.consulidpartida(partida1.SelectedIndex.ToString())));
+            partida.insertarperido(par,int.Parse( partida.consulidpartida(partida1.Text)));
 
           
 

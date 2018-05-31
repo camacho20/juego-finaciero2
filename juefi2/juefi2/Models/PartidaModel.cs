@@ -36,7 +36,7 @@ namespace juefi2.Models
 
         public string idpartida( string nombre)
         {
-            string sql = "SELECT id_partida_general FROM partida_especifica where nombre_partida = '" + nombre + "'; ";
+            string sql = "SELECT id_partida_general FROM partida_especifica WHERE  nombre_partida = '" + nombre + "'; ";
 
             DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
             string idpartidas = dt.Rows[0]["id_partida_general"].ToString();
@@ -50,7 +50,7 @@ namespace juefi2.Models
             string inicial = obj.fecha_inicial.Year + "-" + obj.fecha_inicial.Month + "-" + obj.fecha_inicial.Day;
             string final = obj.fecha_final.Year + "-" + obj.fecha_final.Month + "-" + obj.fecha_final.Day;
 
-            string sql = "INSERT INTO periodos ( fecha_inicial, fecha_fin,partida_especifica_id_partida_general )  VALUES('" + inicial + "','" + final + "','" + idpartida + "')";
+            string sql = "INSERT INTO periodos ( fecha_inicial, fecha_final,partida_especifica_id_partida_general )  VALUES('" + inicial + "','" + final + "','" + idpartida + "')";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 

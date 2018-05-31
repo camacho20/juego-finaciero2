@@ -10,7 +10,7 @@ namespace juefi2.Models
     public class ActivarCompraModel
     {
         private conecMysql conn = new conecMysql();
-        public double pro=55;
+     
         
         public DataTable ofertasdecompra()
         {
@@ -24,10 +24,10 @@ namespace juefi2.Models
         public string promedio_oferta ()
         {
            
-            string sql = "SELECT avg(cantidad_oferta) as prome FROM oferta_materia_prima where Activarcompra = 'Activa';";
+            string sql = "SELECT avg(cantidad_oferta) as prome FROM oferta_materia_prima ;";
             DataTable dtt = conn.EjecutarConsulta(sql, CommandType.Text);
-           pro = Convert.ToDouble(dtt.Rows[0]["prome"].ToString());
-            return pro.ToString();
+          string pro = dtt.Rows[0]["prome"].ToString();
+            return pro;
             
         }
 
@@ -57,15 +57,21 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
-       
-
-
-             public double llamarvaloroferta(int id)
+        public double llamarvaloroferta(int id)
         {
 
-            string sql = "select cantidad_oferta from oferta_materia_prima where (empresa_id_empresa = ' " + id + "');";
+            string sql = "SELECT cantidad_oferta FROM oferta_materia_prima WHERE (empresa_id_empresa = ' " + id + "');";
             DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
-            double valoroferta = Convert.ToDouble( dt.Rows[0]["cantidad_oferta"].ToString());
+            double valoroferta = Convert.ToDouble(dt.Rows[0]["cantidad_oferta"].ToString());
+
+            return valoroferta;
+        }
+        public  string  llamardeoferta(int id)
+        {
+
+            string sql = "SELECT cantidad_oferta FROM oferta_materia_prima WHERE (empresa_id_empresa = ' " + id + "');";
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+           string valoroferta = dt.Rows[0]["cantidad_oferta"].ToString();
 
             return valoroferta;
         }
