@@ -54,5 +54,7 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+       
+
     }
 }

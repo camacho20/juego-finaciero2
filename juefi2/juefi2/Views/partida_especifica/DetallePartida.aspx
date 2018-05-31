@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/pagina_maestra/paginamaestra.Master" AutoEventWireup="true" CodeBehind="DetallePartida.aspx.cs" Inherits="juefi2.Views.partida_especifica.DetallePartida" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -22,22 +23,47 @@
           </div>
     </header>
 
+     <div class="col-md-12 ">
 
-    
 
 
-    <asp:Repeater ID="listaempresa" runat="server">
 
-        <ItemTemplate>
-            <div class="col-md-9 ">
-            <div class="card-demo">
                 <div class="card">
-
                     <div class="card-body">
-                        <h4 class="card-title">Partida #  <asp:Label ID="lblidpartida" runat="server" Text="<%#Eval("id_partida_general")%>"></asp:Label>    <%#Eval("nombre_partida")%></h4>
-                        <h6 class="card-subtitle">Fecha Inicio:<%#Eval("fecha_inicial")%>   Fecha Fin: <%#Eval("fecha_fin")%> </h6>
+                        <h4 class="card-title">Detalle partida</h4>
 
-                        <div class="col-md-5 ">
+                        <div class="row">
+                            <div class="col-md-3  col-md-offset-1 ">
+                                <div class="form-group">
+                                    <label>Fecha de Inicio</label>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3   ">
+                                <div class="form-group">
+                                    <label>Fecha de Fin</label>
+                                </div>
+
+                            </div>
+                             <div class="col-md-3  ">
+                                 <asp:DropDownList ID="partida1" CssClass="form-control select2" runat="server">
+                                     
+                                 </asp:DropDownList>
+
+                            </div>
+
+
+                            <div class="col-md-3 ">
+                                <asp:Button ID="Button1" runat="server" Text="Mirar balance" CssClass="btn btn-primary"  OnClick="Button1_Click" />
+                            </div>
+                        </div>
+
+                        <br />
+                        <br />
+
+
+                        <div class="col-md-7 ">
                             <div class="row">
                                 <div class="col-md-6 col-md-offset-1 ">
                                     <div class=" form-group">
@@ -54,48 +80,51 @@
 
 
 
-                        <asp:GridView ID="puces" runat="server" CellPadding="4" AutoPostBack="true"
-                            OnRowUpdating="TaskGridView_RowUpdating"
-                            OnRowEditing="TaskGridView_RowEditing"
-                            OnRowCancelingEdit="TaskGridView_RowCancelingEdit"
-                            OnRowDeleting="OnRowDeleting"
-                            CssClass="table table-bordered table-striped grid "
-                            AllowPaging="true" OnPageIndexChanging="puces_PageIndexChanging">
-                            <EditRowStyle BackColor="#ffffcc" />
+                    </div>
+
+                    <asp:GridView ID="puces" runat="server" CellPadding="4" AutoPostBack="true"
+                        OnRowUpdating="TaskGridView_RowUpdating"
+                        OnRowEditing="TaskGridView_RowEditing"
+                        OnRowCancelingEdit="TaskGridView_RowCancelingEdit"
+                        OnRowDeleting="OnRowDeleting"
+                        CssClass="table table-bordered table-striped grid "
+                        AllowPaging="true" OnPageIndexChanging="puces_PageIndexChanging">
+                        <EditRowStyle BackColor="#ffffcc" />
 
 
 
-                            <Columns>
+                        <Columns>
 
-                                <asp:CommandField EditText="Editar" ShowEditButton="True">
-
-
-                                    <ControlStyle CssClass="btn  btn-success " />
-                                </asp:CommandField>
+                            <asp:CommandField EditText="Editar" ShowEditButton="True">
 
 
-                                <asp:CommandField ShowDeleteButton="True">
+                                <ControlStyle CssClass="btn  btn-success " />
+                            </asp:CommandField>
 
 
-                                    <ControlStyle CssClass="btn  btn-danger" />
-                                </asp:CommandField>
+                            <asp:CommandField ShowDeleteButton="True">
 
 
-                            </Columns>
-                            <HeaderStyle BackColor=" #3c8dbc" Font-Bold="True" ForeColor="White" CssClass="#" />
-                        </asp:GridView>
+                                <ControlStyle CssClass="btn  btn-danger" />
+                            </asp:CommandField>
 
 
-
-
+                        </Columns>
+                        <HeaderStyle BackColor=" #3c8dbc" Font-Bold="True" ForeColor="White" CssClass="#" />
+                    </asp:GridView>
 
                     </div>
+                   
                 </div>
-            </div>
-            </div>
-            
-        </ItemTemplate>
-    </asp:Repeater>
 
-        
+
+
+
+
+    </div>
+
+    
+
+
+     
 </asp:Content>

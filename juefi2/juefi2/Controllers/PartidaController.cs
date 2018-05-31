@@ -38,5 +38,11 @@ namespace juefi2.Controllers
             parti.registrarperido(mod,idempreda);
             return true;
         }
+
+       
+
+
+
+
     }
 }

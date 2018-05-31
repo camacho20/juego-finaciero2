@@ -60,6 +60,28 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+        public DataTable consultarcopia(int idpartida)
+        {
+            string sql = "SELECT idpuc_copia , codigo , descripcion , valor FROM puc_copia  where partida_especifica_id_partida_general='" + idpartida + "'  order by idpuc_copia ;";
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+        public DataTable buscarcopia(int idbalan, string item)
+        {
+            string sql = " SELECT idpuc_copia, codigo , descripcion, valor  FROM puc WHERE  partida_especifica_id_partida_general= '" + idbalan + "'  CONCAT(idpuc_copia,codigo,descripcion,valor) LIKE '%" + item + "%';";
+
+            return conn.EjecutarConsulta(sql, CommandType.Text);
+        }
+        public bool editarcopiapuc(PucModel edita)
+        {
+            string sql = "UPDATE puc_copia SET  codigo ='" + edita.codigo + "',descripcion ='" + edita.descrip + "' ,valor ='" + edita.valor + "'   WHERE  idpuc_copia='" + edita.idpuc + "';";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
+        public bool eliminacopiapuc(string idpuc)
+        {
+            string sql = "DELETE FROM puc_copia  where  idpuc='" + idpuc + "';";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
 
 
     }
