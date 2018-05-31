@@ -25,7 +25,7 @@ namespace juefi2.Models
 
         public DataTable Consultarpuc()
         {
-            string sql = "SELECT pu.idpuc , pu.codigo , pu.descripcion , pu.valor FROM puc pu order by pu.idpuc ;";
+            string sql = "SELECT idpuc , codigo , descripcion , valor FROM puc order by idpuc ;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
         public bool eliminapuc(string idpuc)
@@ -53,10 +53,10 @@ namespace juefi2.Models
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
 
-        public bool copiarpuc()
+        public bool copiarpuc(PucModel obje,int idpartida)
         {
 
-            string sql = "INSERT INTO pucpuc_copia (codigo, descripcion,valor,puc_idpuc )  SELECT codigo,descripcion,valor,idpuc   FROM  puc;";
+            string sql = "INSERT INTO puc_copia (codigo, descripcion,valor,puc_idpuc,partida_especifica_id_partida_general )   VALUES('" + obje.codigo + "','" + obje.descrip + "','" + obje.valor + "','" + obje.idpuc + "','" + idpartida + "')"; 
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 

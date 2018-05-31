@@ -238,8 +238,27 @@
     <Content Include="Content\imagenes\calendar\october.jpg" />
     <Content Include="Content\imagenes\calendar\september.jpg" />
     <Content Include="Content\imagenes\imagesinicio\1.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\2.jpg" />
     <Content Include="Content\imagenes\imagesinicio\fondo.JPG" />
+    <Content Include="Content\imagenes\imagesinicio\slider1.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider2.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider3.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider4.jpg" />
+    <Content Include="Content\imagenes\imagesinicio\slider5.jpg" />
     <Content Include="Content\imagenes\imagesinicio\usuario.png" />
+    <Content Include="Content\imagenes\images\search.png" />
+    <Content Include="Content\imagenes\images\stars\1.png" />
+    <Content Include="Content\imagenes\images\stars\2.png" />
+    <Content Include="Content\imagenes\images\stars\3.png" />
+    <Content Include="Content\imagenes\images\stars\4.png" />
+    <Content Include="Content\imagenes\images\stars\5.png" />
+    <Content Include="Content\imagenes\images\tables\back_disabled.jpg" />
+    <Content Include="Content\imagenes\images\tables\back_enabled.jpg" />
+    <Content Include="Content\imagenes\images\tables\forward_disabled.jpg" />
+    <Content Include="Content\imagenes\images\tables\forward_enabled.jpg" />
+    <Content Include="Content\imagenes\images\tables\sort_asc.gif" />
+    <Content Include="Content\imagenes\images\tables\sort_both.gif" />
+    <Content Include="Content\imagenes\images\tables\sort_desc.gif" />
     <Content Include="Content\stilos\cssinicio\bootstrap.css" />
     <Content Include="Content\stilos\cssinicio\bootstrap.min.css" />
     <Content Include="Content\stilos\cssinicio\coming-sssoon-demo.css" />
@@ -556,6 +575,7 @@
     <Content Include="Views\parametrizacion\Parametrizacion_periodo.aspx" />
     <Content Include="Views\parametrizacion\paramtreiacion_año.aspx" />
     <Content Include="Views\partida_especifica\AgregarEmpresaPartida.aspx" />
+    <Content Include="Views\partida_especifica\DetallePartida.aspx" />
     <Content Include="Views\partida_especifica\partida_especifica.aspx" />
     <Content Include="Views\partida_especifica\PerioodoPartida.aspx" />
     <Content Include="Views\reglas\BalacePuc.aspx" />
@@ -887,6 +907,13 @@
     </Compile>
     <Compile Include="Views\partida_especifica\AgregarEmpresaPartida.aspx.designer.cs">
       <DependentUpon>AgregarEmpresaPartida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\partida_especifica\DetallePartida.aspx.cs">
+      <DependentUpon>DetallePartida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\partida_especifica\DetallePartida.aspx.designer.cs">
+      <DependentUpon>DetallePartida.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\partida_especifica\partida_especifica.aspx.cs">
       <DependentUpon>partida_especifica.aspx</DependentUpon>

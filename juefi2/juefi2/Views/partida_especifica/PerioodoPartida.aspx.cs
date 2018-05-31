@@ -2,6 +2,7 @@
 using juefi2.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,7 +14,10 @@ namespace juefi2.Views.partida_especifica
     {
         PartidaController partida = new PartidaController();
         PartidaModel par = new PartidaModel();
-        
+        PucController pu = new PucController();
+        PucModel puce = new PucModel();
+        int idpartidad;
+        private DataTable llamarpuc=new DataTable();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -67,7 +71,7 @@ namespace juefi2.Views.partida_especifica
 
             partida.insertarperido(par,int.Parse( partida.consulidpartida(partida1.Text)));
 
-          
+            Session["idpartida"] = partida.consulidpartida(partida1.Text);
 
 
             Response.Write("<script> alert('Perido agregado'); </script>");
@@ -83,6 +87,24 @@ namespace juefi2.Views.partida_especifica
 
         protected void Finalizar_Click(object sender, EventArgs e)
         {
+
+            idpartidad = int.Parse(Session["idpartida"].ToString());
+            llamarpuc = pu.Consultapuc();
+
+            for (int i = 0; i < llamarpuc.Rows.Count; i++)
+            {
+
+                puce.codigo =int.Parse( llamarpuc.Rows[i]["codigo"].ToString());
+                puce.descrip = llamarpuc.Rows[i]["descripcion"].ToString();
+                puce.valor = llamarpuc.Rows[i]["valor"].ToString();
+                puce.idpuc = int.Parse(llamarpuc.Rows[i]["idpuc"].ToString());
+
+
+                pu.copiarpuc(puce,idpartidad);
+
+            }
+
+
             Response.Redirect("../partida_especifica/partida_especifica.aspx");
         }
     }

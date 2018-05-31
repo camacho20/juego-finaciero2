@@ -36,20 +36,6 @@
                     <div class="card-body">
                         <h4 class="card-title">Gestionar partida</h4>
 
-                        <div class="tab-container">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Crear Partida</a>
-                                </li>
-                               
-                                <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#Liatadepartidas" role="tab">Lista de partidas Creadas</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content">
-                                <div class="tab-pane active fade show" id="home" role="tabpanel">
                                     <div class="row">
 
                                         <div class="col-md-4 col-md-offset-1">
@@ -109,38 +95,11 @@
                                         </div>
 
                                     </div>
+                         <div class="col-md-4 col-md-offset-1">
                                     <asp:Button ID="guardar" runat="server" Text="Crear partida" CssClass="btn btn-primary" OnClick="guardar_Click" />
-
+                             </div>
                                 </div>
-
-
-                                    
-                               
-
-
-
-
-                           <%--    lista de empresas--%>
-
-                                <div class="tab-pane fade" id="Liatadepartidas" role="tabpanel">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Balance de la Partida</h4>
-                                            
-                                            <asp:GridView ID="balance" runat="server">
-
-
-
-
-
-
-                                            </asp:GridView>
-                                           
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
+                   
                 </div>
 
 
@@ -148,4 +107,7 @@
 
 
     </div>
+
+
+       
 </asp:Content>
