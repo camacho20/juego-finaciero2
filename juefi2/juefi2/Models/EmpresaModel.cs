@@ -40,13 +40,13 @@ namespace juefi2.Models
         public bool registrarempresausuario(int id,int empresa)
         {
 
-            string sql = "UPDATE usuario SET  empresa_id_empresa ='" + empresa + "', tiene_empresa ='A' where id_usuario='" + id + "';";
+            string sql = "UPDATE usuario SET  empresa_id_empresa ='" + empresa + "' , tiene_empresa ='A' WHERE id_usuario=" + id + ";";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
         public string llamaridempresa(int id)
         {
-            string sql = "SELECT empresa_id_empresa FROM usuario where(id_usuario = '" + id + "'); ";
+            string sql = "SELECT empresa_id_empresa FROM usuario WHERE (id_usuario = '" + id + "'); ";
 
             DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
             string idempresa = dt.Rows[0]["empresa_id_empresa"].ToString();
