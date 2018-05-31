@@ -65,6 +65,8 @@ namespace juefi2.Models
             string sql = "SELECT idpuc_copia , codigo , descripcion , valor FROM puc_copia  where partida_especifica_id_partida_general='" + idpartida + "'  order by idpuc_copia ;";
             return conn.EjecutarConsulta(sql, CommandType.Text);
         }
+
+
         public DataTable buscarcopia(int idbalan, string item)
         {
             string sql = " SELECT idpuc_copia, codigo , descripcion, valor  FROM puc WHERE  partida_especifica_id_partida_general= '" + idbalan + "'  CONCAT(idpuc_copia,codigo,descripcion,valor) LIKE '%" + item + "%';";
@@ -83,6 +85,17 @@ namespace juefi2.Models
             return conn.EjecutarSql(sql, CommandType.Text);
         }
 
+
+
+       
+        public bool copiarpucempresa(PucModel obje, int idempresa)
+        {
+
+            string sql = "INSERT INTO puc_copy_final (codigo, descripcion,valor,id_puc_copia,id_empresa )   VALUES('" + obje.codigo + "','" + obje.descrip + "','" + obje.valor + "','" + obje.idpuc + "','" + idempresa + "')";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
+
+       
 
     }
 }

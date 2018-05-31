@@ -14,6 +14,12 @@ namespace juefi2.Views.empresa
     {
         EmpresaController empr = new EmpresaController();
         EmpresaModel emp = new EmpresaModel();
+        PartidaController partida = new PartidaController();
+        PartidaModel par = new PartidaModel();
+        PucController pu = new PucController();
+        PucModel puce = new PucModel();
+
+
         private DataTable datanombre;
         private DataTable datanombre2;
         string nombreappeli;
@@ -22,7 +28,9 @@ namespace juefi2.Views.empresa
         string tempo;
         string [] arre;
         public DataRow daronombre;
-       
+        int idempresa;
+        int idpartida;
+        private DataTable llamarpucopia = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
         {
             lblnombreempresa.Text = empr.llamarnombreempresa(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))));
@@ -125,6 +133,24 @@ namespace juefi2.Views.empresa
 
         protected void btnterminar_Click(object sender, EventArgs e)
         {
+            idempresa = int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())));
+            //llamarpucopia = puce.consultarcopia();
+            llamarpucopia = puce.consultarcopia(int.Parse(empr.llamaridpartidaempresa(idempresa)));
+
+            for (int i = 0; i < llamarpucopia.Rows.Count; i++)
+            {
+
+                puce.codigo = int.Parse(llamarpucopia.Rows[i]["codigo"].ToString());
+                puce.descrip = llamarpucopia.Rows[i]["descripcion"].ToString();
+                puce.valor = llamarpucopia.Rows[i]["valor"].ToString();
+                puce.idpuc = int.Parse(llamarpucopia.Rows[i]["idpuc_copia"].ToString());
+
+
+                pu.copiarpucempresa(puce,idempresa);
+
+            }
+
+
             Response.Redirect("../empresa/empresa.aspx");
         }
     }

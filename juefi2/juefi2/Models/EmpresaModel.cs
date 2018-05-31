@@ -102,5 +102,17 @@ namespace juefi2.Models
             string sql = "UPDATE empresa SET partida_especifica_id_partida_general='" + id + "' where  nombre_empresa='" + nomempresa + "';";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
+        public string idpartidaempresa(int nombre)
+        {
+            string sql = "SELECT partida_especifica_id_partida_general FROM empresa WHERE id_empresa  = '" + nombre + "'; ";
+
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            string idpartidas = dt.Rows[0]["partida_especifica_id_partida_general"].ToString();
+
+            return idpartidas;
+
+        }
+
+
     }
 }

@@ -102,6 +102,7 @@
                                                             <asp:Button ID="btnbuardarusuario" CssClass="btn btn-primary" runat="server" OnClick="btnbuardarusuario_Click" Text="Agregar usuario" />
                                                             
                                                             </div>
+                                               <br />
                                                <div class="col-md-4   ">
                                                
                                                 <asp:Button ID="btnterminar" CssClass="btn  btn-warning" runat="server" OnClick="btnterminar_Click" Text="terminar" />

@@ -69,7 +69,10 @@ namespace juefi2.Controllers
             return puc.eliminacopiapuc(eliregla);
         }
 
-
+        public bool copiarpucempresa(PucModel obje, int idpartida)
+        {
+            return puc.copiarpucempresa(obje, idpartida);
+        }
 
     }
 }

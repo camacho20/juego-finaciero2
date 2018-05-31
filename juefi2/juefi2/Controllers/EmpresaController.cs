@@ -82,5 +82,16 @@ namespace juefi2.Controllers
             return true;
         }
 
+
+        public string llamaridpartidaempresa(int idempresa)
+
+        {
+
+            return emp.idpartidaempresa(idempresa);
+
+        }
+
+
+
     }
 }
