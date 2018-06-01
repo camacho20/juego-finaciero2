@@ -30,6 +30,11 @@ namespace juefi2.Views.jugadas
         double preciomp;
         double canti;
         double valor;
+
+        double a;
+        double b;
+        double c;
+        double d;
         int idempresa;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -44,10 +49,14 @@ namespace juefi2.Views.jugadas
         {
 
 
+            a = Convert.ToDouble(acti.pametros_periodo(5));
+            b = Convert.ToDouble(acti.pametros_periodo(1));
+          
             promedio = Convert.ToDouble(modelproe.promedio_oferta());
             preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
-            op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
-
+            d = preciomp / 100;
+            c = (1 + d);
+            op = ((a*b) * c);
 
             Label1.Text = Convert.ToString(op);
 
@@ -109,6 +118,9 @@ namespace juefi2.Views.jugadas
             if (formadepago.SelectedIndex == 1)
 
             {
+
+                if (Convert.ToDouble( Txtvalorcompra.Text)<= 10000000) {
+
                 comprar(monto);
 
 
@@ -162,11 +174,13 @@ namespace juefi2.Views.jugadas
                     Response.Write("<script> alert('Inversion Realizada'); </script>");
                     return;
                 }
+                Response.Write("<script> alert('el efectivo no alcanza'); </script>");
+                return;
+            }
 
 
-
-                //credito
-                if (formadepago.SelectedIndex == 0)
+            //credito
+            if (formadepago.SelectedIndex == 0)
                 {
                     comprar(monto);
                     movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
@@ -226,4 +240,4 @@ namespace juefi2.Views.jugadas
 
         }
     }
-}
+
