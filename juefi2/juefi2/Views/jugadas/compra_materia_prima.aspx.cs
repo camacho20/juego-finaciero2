@@ -86,12 +86,12 @@ namespace juefi2.Views.jugadas
                 return;
             }
 
-
-           if (formadepago.SelectedIndex.ToString() == "Contado") { 
+            //credito
+           if (formadepago.SelectedIndex == 0) { 
             comprar (monto);
             movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
-            movimiento.nombre_cuenta = "Cargos Diferidos - Inversiones en Tecnología";
+            movimiento.nombre_cuenta = "Inventario de Materias Primas";
             movimiento.debito = Convert.ToDouble( Txtvalorcompra.Text);
             compracon.debito(movimiento);
 
@@ -117,7 +117,7 @@ namespace juefi2.Views.jugadas
 
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
             movimiento.nombre_cuenta = "Disponible";
-            movimiento.credito = disponible;
+            movimiento.credito =valor_total;
             compracon.credito(movimiento);
 
 
@@ -130,13 +130,13 @@ namespace juefi2.Views.jugadas
 
 
 
-
-            if (formadepago.SelectedIndex.ToString() == "Credito")
+           //contado
+            if (formadepago.SelectedIndex == 1)
             {
                 comprar(monto);
                 movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
-                movimiento.nombre_cuenta = "Cargos Diferidos - Inversiones en Tecnología";
+                movimiento.nombre_cuenta = "Inventario de Materias Primas";
                 movimiento.debito = Convert.ToDouble(Txtvalorcompra.Text);
                 compracon.debito(movimiento);
 
