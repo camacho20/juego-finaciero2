@@ -579,6 +579,7 @@
     <Content Include="Views\partida_especifica\partida_especifica.aspx" />
     <Content Include="Views\partida_especifica\PerioodoPartida.aspx" />
     <Content Include="Views\reglas\BalacePuc.aspx" />
+    <Content Include="Views\reglas\BalanceFinal.aspx" />
     <Content Include="Views\reglas\EstuPuc.aspx" />
     <Content Include="Views\reglas\EstuReglas.aspx" />
     <Content Include="Views\reglas\gestionarreglas.aspx" />
@@ -935,6 +936,13 @@
     </Compile>
     <Compile Include="Views\reglas\BalacePuc.aspx.designer.cs">
       <DependentUpon>BalacePuc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\reglas\BalanceFinal.aspx.cs">
+      <DependentUpon>BalanceFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\reglas\BalanceFinal.aspx.designer.cs">
+      <DependentUpon>BalanceFinal.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\reglas\EstuPuc.aspx.cs">
       <DependentUpon>EstuPuc.aspx</DependentUpon>

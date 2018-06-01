@@ -91,7 +91,13 @@ namespace juefi2.Controllers
 
         }
 
+        public DataTable pucfinalempresa(int idempresa)
 
+        {
+
+            return emp.pucfinalempresa(idempresa);
+
+        }
 
     }
 }

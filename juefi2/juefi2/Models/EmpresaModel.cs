@@ -113,6 +113,12 @@ namespace juefi2.Models
 
         }
 
+        public DataTable pucfinalempresa(int idempresa)
+        {
+            string sql = " SELECT  codigo,descripcion, valor FROM  puc_copy_final  where  id_empresa='" + idempresa + "'    ;";
+             return conn.EjecutarConsulta(sql, CommandType.Text); ;
+
+        }
 
     }
 }
