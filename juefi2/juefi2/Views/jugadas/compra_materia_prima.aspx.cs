@@ -76,7 +76,11 @@ namespace juefi2.Views.jugadas
 
             descuento = valor * 0.05;
             valor_total_compra = (((valor + iva) - ica) - retefuente) - descuento;
+<<<<<<< HEAD
             disponible = (((valor + iva) - retefuente) - ica) - descuento;
+=======
+            disponible = (((valor + iva - retefuente) - ica )- descuento);
+>>>>>>> 3f704825dcfca5e6b165492dd93afe951feb53b3
             proveedor = ((valor - retefuente) - ica);
 
 
@@ -105,8 +109,98 @@ namespace juefi2.Views.jugadas
             }
 
 
+<<<<<<< HEAD
             //credito
             if (formadepago.SelectedIndex == 0)
+=======
+            if (formadepago.SelectedIndex.ToString() == "Contado") { 
+      
+                comprar(monto);
+>>>>>>> 800e18f88dfee9aabe55e0dcd051e9ae3ed45d12
+            movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
+            movimiento.nombre_cuenta = "Inventario de Materias Primas";
+            movimiento.debito = Convert.ToDouble( Txtvalorcompra.Text);
+            compracon.debito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
+            movimiento.debito = iva;
+            compracon.debito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
+            movimiento.nombre_cuenta = "Descuento por Compra de Materias Primas";
+            movimiento.credito = descuento;
+            compracon.credito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
+            movimiento.credito = retefuente;
+
+            compracon.credito(movimiento);
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
+            movimiento.credito = ica;
+            compracon.credito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+            movimiento.nombre_cuenta = "Disponible";
+            movimiento.credito =valor_total;
+            compracon.credito(movimiento);
+
+
+            Txtcantidad2.Text = "";
+            Txtvalorcompra.Text = "";
+            formadepago.Text = "";
+            Response.Write("<script> alert('Inversion Realizada'); </script>");
+            return;
+        }
+
+
+
+<<<<<<< HEAD
+
+        if (formadepago.SelectedIndex.ToString() == "Credito")
+        {
+            comprar(monto);
+        movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
+            movimiento.nombre_cuenta = "Cargos Diferidos - Inversiones en Tecnología";
+            movimiento.debito = Convert.ToDouble(Txtvalorcompra.Text);
+            compracon.debito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
+            movimiento.debito = iva;
+            compracon.debito(movimiento);
+
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
+            movimiento.credito = retefuente;
+
+            compracon.credito(movimiento);
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
+            movimiento.credito = ica;
+            compracon.credito(movimiento);
+
+            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(31));
+            movimiento.nombre_cuenta = "Proveedores de Materias Primas";
+            movimiento.credito = proveedor;
+            compracon.credito(movimiento);
+
+
+            Txtcantidad2.Text = "";
+            Txtvalorcompra.Text = "";
+            formadepago.Text = "";
+            Response.Write("<script> alert('Inversion Realizada'); </script>");
+            return;
+        }
+=======
+           //contado
+            if (formadepago.SelectedIndex == 1)
+>>>>>>> 3f704825dcfca5e6b165492dd93afe951feb53b3
             {
                 comprar(monto);
 
@@ -225,6 +319,7 @@ namespace juefi2.Views.jugadas
 
 
             }
+>>>>>>> aea62a267af4c44a22dcabad626a7dba67e15b07
 
 
 
