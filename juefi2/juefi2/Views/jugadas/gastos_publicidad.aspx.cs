@@ -19,7 +19,7 @@ namespace juefi2.Views.jugadas
         double monto;
         double rtfuente;
         double disponible;
-      
+        double total_publicidad;
 
 
 
@@ -43,8 +43,8 @@ namespace juefi2.Views.jugadas
             }
 
             disponible = (monto - rtfuente) - reteica;
-           
 
+            total_publicidad = disponible + rtfuente + reteica;
 
         }
 

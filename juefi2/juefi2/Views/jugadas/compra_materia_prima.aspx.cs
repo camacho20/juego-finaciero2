@@ -21,21 +21,23 @@ namespace juefi2.Views.jugadas
         double ica;
         double retefuente;
         double descuento;
-        double valor_total;
+        double valor_total_compra;
         double disponible;
         double proveedor;
         double promedio;
         double monto;
         double op;
         double preciomp;
-      
+        double canti;
+        double valor;
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-         
-            
-            mostrar();
+            Txtvalorcompra.Enabled = false;
 
+            mostrar();
+     
         }
 
         protected void mostrar()
@@ -53,28 +55,44 @@ namespace juefi2.Views.jugadas
            
                    
                      
-                      protected void comprar(double monto)
+       protected void comprar(double dd)
         {
             monto = Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())))));
             preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
             promedio = Convert.ToDouble(modelproe.promedio_oferta());
             op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
-            
 
-            iva = monto * Convert.ToDouble(acti.pametros_año(6));
-            ica = monto * Convert.ToDouble(acti.pametros_año(5));
+            canti = Convert.ToDouble(Txtcantidad2.Text);
+            valor = monto * canti;
 
-            if (monto > 895212)
+            iva = valor * Convert.ToDouble(acti.pametros_año(6));
+            ica = valor * Convert.ToDouble(acti.pametros_año(5));
+
+            if (valor > 895212)
             {
-                retefuente = monto * Convert.ToDouble(acti.pametros_año(4));
+                retefuente = valor * Convert.ToDouble(acti.pametros_año(4));
             }
 
-            Txtvalorcompra.Text = (monto* op).ToString();
-            descuento = monto * 0.05;
-            valor_total = (((monto + iva) - ica) - retefuente) - descuento;
-            disponible = (((monto - retefuente) - ica )- descuento);
-            proveedor = ((monto - retefuente) - ica);
+         
+            descuento = valor * 0.05;
+            valor_total_compra = (((valor + iva) - ica) - retefuente) - descuento;
+            disponible = (((valor - retefuente) - ica )- descuento);
+            proveedor = ((valor - retefuente) - ica);
 
+          
+
+        }
+
+        protected void calcular_Click(object sender, EventArgs e)
+        {
+            canti = Convert.ToDouble(Txtcantidad2.Text);
+            monto = Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())))));
+            valor = monto * canti;
+
+            Txtvalorcompra.Text = Convert.ToString(valor);
+            
+           
+           
         }
 
         protected void Guardar_Click(object sender, EventArgs e)
@@ -86,9 +104,17 @@ namespace juefi2.Views.jugadas
                 return;
             }
 
+<<<<<<< HEAD
             //credito
            if (formadepago.SelectedIndex == 0) { 
             comprar (monto);
+=======
+
+
+            if (formadepago.SelectedIndex.ToString() == "Contado")
+            {
+                comprar(monto);
+>>>>>>> 800e18f88dfee9aabe55e0dcd051e9ae3ed45d12
             movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
             movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
             movimiento.nombre_cuenta = "Inventario de Materias Primas";
@@ -125,7 +151,7 @@ namespace juefi2.Views.jugadas
             Txtvalorcompra.Text = "";
             formadepago.Text = "";
             Response.Write("<script> alert('Inversion Realizada'); </script>");
-            return;
+                return;
             }
 
 
@@ -145,7 +171,7 @@ namespace juefi2.Views.jugadas
                 movimiento.debito = iva;
                 compracon.debito(movimiento);
 
-           
+
                 movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
                 movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
                 movimiento.credito = retefuente;
@@ -169,7 +195,8 @@ namespace juefi2.Views.jugadas
                 return;
             }
 
-
+            Txtcantidad2.Text = "";
+            Txtvalorcompra.Text = "";
 
 
         }

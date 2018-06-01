@@ -74,19 +74,27 @@
                 <div class="col-md-6 col-md-offset-1">
                     <div class="form-group">
                         <asp:Label ID="labevalorcompra" runat="server" Text=" valor de la compra "></asp:Label>
-                        <asp:TextBox ID="Txtvalorcompra" runat="server" CssClass=" form-control"></asp:TextBox>
+                        <asp:TextBox ID="Txtvalorcompra" runat="server" Text="" CssClass=" form-control" ></asp:TextBox>
                     </div>
 
-                    <div class="col-md-4   ">
+                    <div class="col-md-4  col-md-offset-1  ">
                         <div class="form-group">
 
-                            <asp:Button ID="guardar" runat="server" Text="Realizar jugada" OnClick="Guardar_Click" CssClass="btn btn-primary" />
-
+                            <asp:Button ID="calcular" runat="server" Text="Calcular compra" OnClick="calcular_Click" CssClass="btn btn-primary"/>
 
                         </div>
                     </div>
                        </div>
                 </div>
+
+                 <div class="col-md-4  col-md-offset-1  ">
+                        <div class="form-group">
+
+                            <asp:Button ID="guardaR" runat="server" Text="Realizar jugada" OnClick="Guardar_Click" CssClass="btn btn-primary" />
+
+
+                        </div>
+                    </div>
 
             </div>
 
