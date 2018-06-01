@@ -21,6 +21,7 @@ namespace juefi2.Views.jugadas
         double monto;
         double rtfuente;
         double disponible;
+        double valor_total_aquisicion;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,6 +42,7 @@ namespace juefi2.Views.jugadas
             }
 
             disponible = (monto - rtfuente) - reteica;
+            valor_total_aquisicion = disponible + rtfuente + reteica;
 
 
         }

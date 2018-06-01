@@ -17,6 +17,8 @@ namespace juefi2.Views.jugadas
         EmpresaController empr = new EmpresaController();
         ActivarCompraController acti = new ActivarCompraController();
         ActivarCompraModel modelproe = new ActivarCompraModel();
+
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,8 +28,9 @@ namespace juefi2.Views.jugadas
             movimiento.id = empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()));
 
             movimiento.valor = Convert.ToDouble(txtoferta.Text);
-
+            
             compracon.oferta(movimiento);
+            txtoferta.Text = "";
 
         }
     }

@@ -85,12 +85,21 @@ namespace juefi2.Views.jugadas {
         protected global::System.Web.UI.WebControls.TextBox Txtvalorcompra;
         
         /// <summary>
-        /// Control guardar.
+        /// Control calcular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button guardar;
+        protected global::System.Web.UI.WebControls.Button calcular;
+        
+        /// <summary>
+        /// Control guardaR.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button guardaR;
     }
 }
