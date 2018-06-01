@@ -36,7 +36,20 @@ namespace juefi2.Models
             string sql = "UPDATE puc  SET  valor ='" + valor + "'   WHERE idpuc='" + id + "';";
             return conn.EjecutarSql(sql, CommandType.Text);
         }
+        public double valorpucempresa(int id,int idempresa)
+        {
+            string sql = "SELECT valor FROM puc_copy_final where(codigo='" + id + "' AND  id_empresa='" + idempresa + "' );";
 
+            DataTable dt = conn.EjecutarConsulta(sql, CommandType.Text);
+            double variable =Convert.ToDouble( dt.Rows[0]["valor"].ToString());
+
+            return variable;
+        }
+        public bool editarvalorpucempresa(double valor, int id, int idempresa)
+        {
+            string sql = "UPDATE puc_copy_final SET  valor='" + valor + "'   WHERE  codigo='" + id + "'  AND  id_empresa='" + idempresa + "'  ;";
+            return conn.EjecutarSql(sql, CommandType.Text);
+        }
 
     }
 }

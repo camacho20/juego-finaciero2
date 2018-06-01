@@ -28,5 +28,16 @@ namespace juefi2.Controllers
             return com.actualizarvariable(id,valor);
         }
 
+        public double valorpucempresa(int id, int idempresa)
+        {
+            return com.valorpucempresa(id,idempresa);
+        }
+
+        public bool editarvalorpucempresa(double valor, int id, int idempresa)
+        {
+
+            return com.editarvalorpucempresa(valor,id,idempresa);
+        }
+
     }
 }

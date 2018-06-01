@@ -11,7 +11,7 @@ namespace juefi2.Views.jugadas
 {
     public partial class compra_materia_prima : System.Web.UI.Page
     {
-        ValorPucYReglaController cop =new ValorPucYReglaController();
+        ValorPucYReglaController cop = new ValorPucYReglaController();
         MovimientoModel movimiento = new MovimientoModel();
         MovimientoController compracon = new MovimientoController();
         EmpresaController empr = new EmpresaController();
@@ -30,32 +30,32 @@ namespace juefi2.Views.jugadas
         double preciomp;
         double canti;
         double valor;
-
+        int idempresa;
         protected void Page_Load(object sender, EventArgs e)
         {
 
             Txtvalorcompra.Enabled = false;
 
             mostrar();
-     
+            idempresa = int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())));
         }
 
         protected void mostrar()
         {
 
-            
-                promedio = Convert.ToDouble(modelproe.promedio_oferta());
-                preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
-                op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
+
+            promedio = Convert.ToDouble(modelproe.promedio_oferta());
+            preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
+            op = (Convert.ToDouble(acti.pametros_periodo(5)) * Convert.ToDouble(acti.pametros_periodo(1))) * (1 + preciomp);
 
 
-                Label1.Text = Convert.ToString(op);
-  
-            }
-           
-                   
-                     
-       protected void comprar(double dd)
+            Label1.Text = Convert.ToString(op);
+
+        }
+
+
+
+        protected void comprar(double dd)
         {
             monto = Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString())))));
             preciomp = (((Convert.ToDouble(acti.valordeoferta(int.Parse(empr.llamaridempresa(int.Parse(Session["id_usuario"].ToString()))))) - promedio) / promedio) * 100);
@@ -73,13 +73,13 @@ namespace juefi2.Views.jugadas
                 retefuente = valor * Convert.ToDouble(acti.pametros_año(4));
             }
 
-         
+
             descuento = valor * 0.05;
             valor_total_compra = (((valor + iva) - ica) - retefuente) - descuento;
-            disponible = (((valor - retefuente) - ica )- descuento);
+            disponible = (((valor + iva) - retefuente) - ica) - descuento;
             proveedor = ((valor - retefuente) - ica);
 
-          
+
 
         }
 
@@ -90,9 +90,9 @@ namespace juefi2.Views.jugadas
             valor = monto * canti;
 
             Txtvalorcompra.Text = Convert.ToString(valor);
-            
-           
-           
+
+
+
         }
 
         protected void Guardar_Click(object sender, EventArgs e)
@@ -104,104 +104,130 @@ namespace juefi2.Views.jugadas
                 return;
             }
 
-<<<<<<< HEAD
+
             //credito
-           if (formadepago.SelectedIndex == 0) { 
-            comprar (monto);
-=======
-
-
-            if (formadepago.SelectedIndex.ToString() == "Contado")
+            if (formadepago.SelectedIndex == 0)
             {
                 comprar(monto);
->>>>>>> 800e18f88dfee9aabe55e0dcd051e9ae3ed45d12
-            movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
-            movimiento.nombre_cuenta = "Inventario de Materias Primas";
-            movimiento.debito = Convert.ToDouble( Txtvalorcompra.Text);
-            compracon.debito(movimiento);
-
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
-            movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
-            movimiento.debito = iva;
-            compracon.debito(movimiento);
-
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
-            movimiento.nombre_cuenta = "Descuento por Compra de Materias Primas";
-            movimiento.credito = descuento;
-            compracon.credito(movimiento);
-
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
-            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
-            movimiento.credito = retefuente;
-
-            compracon.credito(movimiento);
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
-            movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
-            movimiento.credito = ica;
-            compracon.credito(movimiento);
-
-            movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
-            movimiento.nombre_cuenta = "Disponible";
-            movimiento.credito =valor_total;
-            compracon.credito(movimiento);
-
-
-            Txtcantidad2.Text = "";
-            Txtvalorcompra.Text = "";
-            formadepago.Text = "";
-            Response.Write("<script> alert('Inversion Realizada'); </script>");
-                return;
-            }
 
 
 
-           //contado
-            if (formadepago.SelectedIndex == 1)
-            {
-                comprar(monto);
-                movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
-                movimiento.nombre_cuenta = "Inventario de Materias Primas";
-                movimiento.debito = Convert.ToDouble(Txtvalorcompra.Text);
-                compracon.debito(movimiento);
+                if (formadepago.SelectedIndex.ToString() == "Contado")
+                {
+                    comprar(monto);
 
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
-                movimiento.debito = iva;
-                compracon.debito(movimiento);
+                    movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
+                    movimiento.nombre_cuenta = "Inventario de Materias Primas";
+                    movimiento.debito = Convert.ToDouble(Txtvalorcompra.Text);
+                    valor_total_compra =  cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(10)),idempresa)+ Convert.ToDouble(Txtvalorcompra.Text);
+                    cop.editarvalorpucempresa(valor_total_compra, Convert.ToInt32(cop.codigopuc(10)),idempresa);
+                    compracon.debito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
+                    movimiento.debito = iva;
+                    iva = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(40)),idempresa) - iva;
+                    cop.editarvalorpucempresa(iva, Convert.ToInt32(cop.codigopuc(40)),idempresa);
+                    compracon.debito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(60));
+                    movimiento.nombre_cuenta = "Descuento por Compra de Materias Primas";
+                    movimiento.credito = descuento;
+                    descuento = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(60)),idempresa)+descuento;
+                    cop.editarvalorpucempresa(descuento, Convert.ToInt32(cop.codigopuc(60)),idempresa);
+                    compracon.credito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
+                    movimiento.credito = retefuente;
+                    retefuente = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(41)),idempresa)+retefuente;
+                    cop.editarvalorpucempresa(retefuente, Convert.ToInt32(cop.codigopuc(41)),idempresa);
+                    compracon.credito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
+                    movimiento.credito = ica;
+                    ica = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(42)),idempresa)+ica;
+                    cop.editarvalorpucempresa(ica, Convert.ToInt32(cop.codigopuc(42)),idempresa);
+                    compracon.credito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(2));
+                    movimiento.nombre_cuenta = "Disponible";
+                    movimiento.credito = disponible;
+                    disponible = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(2)),idempresa)-disponible;
+                    cop.editarvalorpucempresa(disponible, Convert.ToInt32(cop.codigopuc(2)),idempresa);
+                    compracon.credito(movimiento);
 
 
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
-                movimiento.credito = retefuente;
+                    Txtcantidad2.Text = "";
+                    Txtvalorcompra.Text = "";
+                    formadepago.Text = "";
+                    Response.Write("<script> alert('Inversion Realizada'); </script>");
+                    return;
+                }
 
-                compracon.credito(movimiento);
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
-                movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
-                movimiento.credito = ica;
-                compracon.credito(movimiento);
 
-                movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(31));
-                movimiento.nombre_cuenta = "Proveedores de Materias Primas";
-                movimiento.credito = proveedor;
-                compracon.credito(movimiento);
 
+                //contado
+                if (formadepago.SelectedIndex == 1)
+                {
+                    comprar(monto);
+                    movimiento.nombre_movimineto = "Compra de contado de Materias Primas";
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(10));
+                    movimiento.nombre_cuenta = "Inventario de Materias Primas";
+                    movimiento.debito = Convert.ToDouble(Txtvalorcompra.Text);
+                    valor_total_compra = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(10)), idempresa) + Convert.ToDouble(Txtvalorcompra.Text);
+                    cop.editarvalorpucempresa(valor_total_compra, Convert.ToInt32(cop.codigopuc(10)), idempresa);
+
+                    compracon.debito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(40));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - IVA por Pagar";
+                    movimiento.debito = iva;
+                    iva = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(40)), idempresa) - iva;
+                    cop.editarvalorpucempresa(iva, Convert.ToInt32(cop.codigopuc(40)), idempresa);
+
+                    compracon.debito(movimiento);
+
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(41));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - Retención en la Fuente";
+                    movimiento.credito = retefuente;
+                    retefuente = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(41)), idempresa) + retefuente;
+                    cop.editarvalorpucempresa(retefuente, Convert.ToInt32(cop.codigopuc(41)), idempresa);
+                    compracon.credito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(42));
+                    movimiento.nombre_cuenta = "Impuestos por Pagar - Retención de ICA";
+                    movimiento.credito = ica;
+                    ica = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(42)), idempresa) + ica;
+                    cop.editarvalorpucempresa(ica, Convert.ToInt32(cop.codigopuc(42)), idempresa);
+                    compracon.credito(movimiento);
+
+                    movimiento.codigo_puc = Convert.ToInt32(cop.codigopuc(31));
+                    movimiento.nombre_cuenta = "Proveedores de Materias Primas";
+                    movimiento.credito = proveedor;
+                    proveedor = cop.valorpucempresa(Convert.ToInt32(cop.codigopuc(31)),idempresa)+proveedor;
+                    cop.editarvalorpucempresa(proveedor, Convert.ToInt32(cop.codigopuc(31)),idempresa);
+                    compracon.credito(movimiento);
+
+
+                    Txtcantidad2.Text = "";
+                    Txtvalorcompra.Text = "";
+                    formadepago.Text = "";
+                    Response.Write("<script> alert('Inversion Realizada'); </script>");
+                    return;
+                }
 
                 Txtcantidad2.Text = "";
                 Txtvalorcompra.Text = "";
-                formadepago.Text = "";
-                Response.Write("<script> alert('Inversion Realizada'); </script>");
-                return;
+
+
             }
 
-            Txtcantidad2.Text = "";
-            Txtvalorcompra.Text = "";
 
 
         }
-
-       
-                       
     }
 }
