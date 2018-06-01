@@ -15,7 +15,7 @@
                       <span>>> </span>
 
                       <a href='#'>
-                          <h5><i class="zmdi zmdi-money zmdi-hc-fw"></i>PUC (Plan Unico De Cuentas)</h5>
+                          <h5><i class="zmdi zmdi-money zmdi-hc-fw"></i>Balance inicial PUC </h5>
                       </a>
                   </div>
               </div>
@@ -31,13 +31,13 @@
 
              <div class="card-body">
 
-              <h3 class="card-title">Plan de cuentas</h3>
+              <h3 class="card-title">Balace incial</h3>
       <div class="table-responsive">
 
            <table id="data-table" class="table table-bordered table-striped grid">
                 <thead>
                 <tr>
-                  <th>Nº</th>
+                
                   <th>Codigo</th>
                   <th>Descripción</th>
                   <th>Valor</th>
@@ -51,7 +51,7 @@
                    <ItemTemplate>
 
                        <tr>
-                           <td><%#Eval("idpuc")%></td>
+                           
                            <td><%#Eval("codigo") %></td>
                            <td><%#Eval("descripcion") %></td>
                            <td><%#Eval("valor") %></td>
